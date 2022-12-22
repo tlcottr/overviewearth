@@ -5,14 +5,20 @@ const PageSizeTracker = () => {
 
   useEffect(() => {
     const trackPageSize = () => {
-      if (window.navigator && window.navigator.hardwareConcurrency) {
-        // The navigator.hardwareConcurrency property is supported
+      if (window.performance && window.performance.getEntriesByType) {
+        // The Performance API and the getEntriesByType method are supported
         // in this browser
-        const hardwareConcurrency = window.navigator.hardwareConcurrency;
-        const pageSizeInKB = Math.round(hardwareConcurrency * 1024);
+        const resources = window.performance.getEntriesByType("resource");
+        let totalSize = 0;
+        for (let i = 0; i < resources.length; i++) {
+          totalSize += resources[i].transferSize;
+        }
+
+        // Convert the total size to kilobytes and update the pageSize state
+        const pageSizeInKB = (totalSize / 1024).toFixed(2);
         setPageSize(pageSizeInKB);
       } else {
-        // The navigator.hardwareConcurrency property is not supported
+        // The Performance API or the getEntriesByType method are not supported
         // in this browser
         setPageSize("N/A");
       }
