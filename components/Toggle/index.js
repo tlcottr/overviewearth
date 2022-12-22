@@ -27,14 +27,14 @@ const Toggle = () => {
       {checked ? (
         <div>
           <span className="pr-2 cursor-pointer opacity-25 text-[color:var(--primary)]" onClick={() => handleToggle()}>
-            Light
+            Dark
           </span>
           /
           <span
             className="pl-2 cursor-pointer text-[color:var(--primary)]"
             onClick={() => handleToggle()}
           >
-            Dark
+            Light
           </span>
         </div>
       ) : (
@@ -43,11 +43,11 @@ const Toggle = () => {
             className="pr-2 cursor-pointer text-[color:var(--primary)]"
             onClick={() => handleToggle()}
           >
-            Light
+            Dark
           </span>
           /
           <span className="pl-2 cursor-pointer opacity-25 text-[color:var(--primary)]" onClick={() => handleToggle()}>
-            Dark
+            Light
           </span>
         </div>
       )}
