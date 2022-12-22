@@ -3,20 +3,23 @@ import { useTheme } from "next-themes";
 
 const Toggle = () => {
   const { theme, setTheme } = useTheme();
-  const [checked, setChecked] = useState(theme === "dark" ? true : false);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+    if (currentHour >= 21 || currentHour < 9) {
+      setChecked(false);
+    } else {
+      setChecked(true);
+    }
+  }, []);
 
   const handleToggle = () => {
     setChecked(!checked);
-    setTheme(checked ? "light" : "dark");
+    setTheme(checked ? "dark" : "light");
   };
 
-  useEffect(() => {
-    if (theme === "dark") {
-      setChecked(true);
-    } else {
-      setChecked(false);
-    }
-  }, [theme]);
   return (
     <div className="flex flex-row justify-between items-center">
       {checked ? (
@@ -26,7 +29,10 @@ const Toggle = () => {
       )}
       {checked ? (
         <div>
-          <span className="pr-2 cursor-pointer opacity-25 text-[color:var(--primary)]" onClick={() => handleToggle()}>
+          <span
+            className="pr-2 cursor-pointer opacity-25 text-[color:var(--primary)]"
+            onClick={() => handleToggle()}
+          >
             Dark
           </span>
           /
@@ -46,7 +52,10 @@ const Toggle = () => {
             Dark
           </span>
           /
-          <span className="pl-2 cursor-pointer opacity-25 text-[color:var(--primary)]" onClick={() => handleToggle()}>
+          <span
+            className="pl-2 cursor-pointer opacity-25 text-[color:var(--primary)]"
+            onClick={() => handleToggle()}
+          >
             Light
           </span>
         </div>
