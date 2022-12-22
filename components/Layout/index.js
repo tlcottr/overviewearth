@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
+        <meta name="title" content={constants.pageTitle} />
         <meta name="description" content={constants.pageDescription} />
         <meta name="viewport" content="width=device-width" />
       </Head>
