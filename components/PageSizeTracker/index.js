@@ -5,22 +5,24 @@ const PageSizeTracker = () => {
 
   useEffect(() => {
     const trackPageSize = () => {
-      if (window.performance && window.performance.getEntriesByType) {
-        // The Performance API and the getEntriesByType method are supported
-        // in this browser
-        const resources = window.performance.getEntriesByType("resource");
-        let totalSize = 0;
-        for (let i = 0; i < resources.length; i++) {
-          totalSize += resources[i].transferSize;
-        }
+      var resources = window.performance.getEntriesByType("resource");
+      var totalSize = 0;
+      for (var i = 0; i < resources.length; i++) {
+        totalSize += resources[i].transferSize;
+      }
+      var sizeInKB = (totalSize / 1024).toFixed(2);
 
-        // Convert the total size to kilobytes and update the pageSize state
-        const pageSizeInKB = (totalSize / 1024).toFixed(2);
-        setPageSize(pageSizeInKB);
+      // Check if page size has already been stored in localStorage
+      const storedPageSize = localStorage.getItem("pageSize");
+      if (!storedPageSize) {
+        // If not, store the current page size in localStorage
+        localStorage.setItem("pageSize", sizeInKB);
       } else {
-        // The Performance API or the getEntriesByType method are not supported
-        // in this browser
-        setPageSize("N/A");
+        // If it has, use the stored value as the initial value for pageSize
+        // if it is different from the current page size
+        if (storedPageSize !== sizeInKB) {
+          setPageSize(storedPageSize);
+        }
       }
     };
 
