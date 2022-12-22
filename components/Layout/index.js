@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header";
 import Head from "next/head";
 import { constants } from "../../constants";
+import Footer from "../Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -11,9 +12,10 @@ const Layout = ({ children }) => {
         <meta name="description" content={constants.pageDescription} />*/}
         <meta name="viewport" content="width=device-width" />
       </Head>
-      <div className="p-8">
+      <div className="h-screen p-8 flex flex-col justify-between">
         <Header />
         <main className="">{children}</main>
+        <Footer />
       </div>
     </>
   );
