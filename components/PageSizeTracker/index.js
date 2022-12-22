@@ -19,7 +19,10 @@ const PageSizeTracker = () => {
         localStorage.setItem("pageSize", sizeInKB);
       } else {
         // If it has, use the stored value as the initial value for pageSize
-        setPageSize(storedPageSize);
+        // if it is different from the current page size
+        if (storedPageSize !== sizeInKB) {
+          setPageSize(storedPageSize);
+        }
       }
     };
 
