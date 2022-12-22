@@ -11,7 +11,16 @@ const PageSizeTracker = () => {
         totalSize += resources[i].transferSize;
       }
       var sizeInKB = (totalSize / 1024).toFixed(2);
-      setPageSize(sizeInKB);
+
+      // Check if page size has already been stored in localStorage
+      const storedPageSize = localStorage.getItem("pageSize");
+      if (!storedPageSize) {
+        // If not, store the current page size in localStorage
+        localStorage.setItem("pageSize", sizeInKB);
+      } else {
+        // If it has, use the stored value as the initial value for pageSize
+        setPageSize(storedPageSize);
+      }
     };
 
     trackPageSize();
