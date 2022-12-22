@@ -91,7 +91,7 @@ const ThemeToggler = () => {
 
   return (
     <div className={theme}>
-      {theme === useState("light") ? "Dark" : "Light"} Mode in {timeRemaining}
+      {theme === "light" ? "Dark" : "Light"} Mode in {timeRemaining}
     </div>
   );
 };
