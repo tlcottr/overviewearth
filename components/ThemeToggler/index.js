@@ -1,37 +1,36 @@
-import React, { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
+import React, { useEffect, useState, useContext } from "react";
+import { SiteContext } from "/pages/_app.js";
 
 const ThemeToggler = () => {
-  const { theme, setTheme } = useTheme();
+  const [state, setState] = useState("normal");
   const [timeRemaining, setTimeRemaining] = useState("00:00:00");
 
-  useEffect(() => {
-    const currentTime = new Date();
-    const currentHour = currentTime.getHours();
-    const currentMinute = currentTime.getMinutes();
-    const currentSecond = currentTime.getSeconds();
+  const currentTime = new Date();
+  const currentHour = currentTime.getHours();
+  const currentMinute = currentTime.getMinutes();
+  const currentSecond = currentTime.getSeconds();
+  const oppState = currentHour >= 8 && currentHour < 1 ? "ONLINE" : "OFFLINE";
 
+  useEffect(() => {
     let intervalId;
 
-    if (currentHour >= 21 || currentHour < 9) {
-      // it's 9pm or later, or before 9am
-      setTheme("dark");
-      const hoursRemaining = (9 - currentHour + 24) % 24;
+    if (currentHour >= 1 && currentHour < 8) {
+      // it's between 1am and 8am
+      setState("offline");
+      const hoursRemaining = (8 - currentHour + 24) % 24;
       const minutesRemaining = 60 - currentMinute;
       const secondsRemaining = 60 - currentSecond;
       setTimeRemaining(
         `${hoursRemaining < 10 ? "0" + hoursRemaining : hoursRemaining}:${
           minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining
-        }:${
-          secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining
-        }`
+        }:${secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining}`
       );
       intervalId = setInterval(() => {
         setTimeRemaining((prevTime) => {
           const [hours, minutes, seconds] = prevTime.split(":").map(Number);
           if (minutes === 0 && hours === 0 && seconds === 0) {
             clearInterval(intervalId);
-            setTheme("light");
+            setState("normal");
             return "00:00:00";
           }
           if (seconds === 0) {
@@ -62,25 +61,22 @@ const ThemeToggler = () => {
         });
       }, 1000);
     } else {
-      // it's between 9am and 9pm
-      setTheme("light");
-      const hoursRemaining = (21 - currentHour + 24) % 24;
+      // it's between 8am and 1am
+      setState("normal");
+      const hoursRemaining = (1 - currentHour + 24) % 24;
       const minutesRemaining = 60 - currentMinute;
       const secondsRemaining = 60 - currentSecond;
       setTimeRemaining(
         `${hoursRemaining < 10 ? "0" + hoursRemaining : hoursRemaining}:${
           minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining
-        }:${
-          secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining
-        }`
+        }:${secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining}`
       );
       intervalId = setInterval(() => {
         setTimeRemaining((prevTime) => {
-          const [
-hours, minutes, seconds] = prevTime.split(":").map(Number);
+          const [hours, minutes, seconds] = prevTime.split(":").map(Number);
           if (minutes === 0 && hours === 0 && seconds === 0) {
             clearInterval(intervalId);
-            setTheme("dark");
+            setState("offline");
             return "00:00:00";
           }
           if (seconds === 0) {
@@ -115,8 +111,8 @@ hours, minutes, seconds] = prevTime.split(":").map(Number);
   }, []);
 
   return (
-    <div className={theme}>
-      {theme === "light" ? "Dark" : "Light"} Mode in {timeRemaining}
+    <div className>
+      {oppState} Mode in {timeRemaining}
     </div>
   );
 };

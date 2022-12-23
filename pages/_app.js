@@ -1,4 +1,5 @@
 import { ThemeProvider } from "next-themes";
+import {} from "react";
 
 import "../styles/reset.css";
 import "../styles/globals.scss";

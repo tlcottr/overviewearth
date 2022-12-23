@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const PageSizeTracker = () => {
   const [pageSize, setPageSize] = useState(0);
+  const [displayedPageSize, setDisplayedPageSize] = useState(0);
 
   useEffect(() => {
     const trackPageSize = () => {
@@ -18,22 +19,35 @@ const PageSizeTracker = () => {
         // If not, store the current page size in localStorage
         localStorage.setItem("pageSize", sizeInKB);
       } else {
-        // If it has, use the stored value as the initial value for pageSize
-        // if it is different from the current page size
-        if (storedPageSize !== sizeInKB) {
-          setPageSize(storedPageSize);
-        }
+        // if the current page size is different, update the storePageSize
+        localStorage.setItem("pageSize", sizeInKB);
+        setPageSize(sizeInKB);
       }
     };
 
     trackPageSize();
   }, []);
 
+  useEffect(() => {
+    // Animate the ticker
+    let currentValue = 0;
+    const interval = setInterval(() => {
+      currentValue++;
+      setDisplayedPageSize(currentValue);
+      if (currentValue >= pageSize) {
+        clearInterval(interval);
+      }
+    }, 10);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, [pageSize]);
+
   return (
     <div className="flex flex-row items-center">
       <span className="uppercase">Data load</span>
       <span className="bg-[color:var(--blue)] py-[1px] px-2 mx-2 rounded-full text-white">
-        {pageSize}kb
+        {displayedPageSize}kb
       </span>
     </div>
   );
