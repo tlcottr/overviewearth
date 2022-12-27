@@ -17,10 +17,10 @@ const DataCluster = () => {
       </div>
       <hr className="border-[0.5px] border-[color:var(--primary)] w-full"></hr>
       <div className="w-full flex flex-row justify-between items-center uppercase">
-        <div className="px-3 py-2">
+        <div className="px-3 py-2 border-r border-[color:var(--primary)] border-solid">
           <Comparison />
         </div>
-        <div className="px-4 py-2 border-black border-l border-solid">
+        <div className="px-4 py-2">
           <Toggle />
         </div>
       </div>
