@@ -1,7 +1,7 @@
 import React from "react";
 
 const Comparison = () => {
-  return <div>LIGHTER THAN % OF WEBSITES TESTED</div>;
+  return <div>LIGHTER THAN 97% OF WEBSITES TESTED</div>;
 };
 
 export default Comparison;
