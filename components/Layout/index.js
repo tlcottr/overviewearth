@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <meta name="description" content={constants.pageDescription} />*/}
         <meta name="viewport" content="width=device-width" />
       </Head>
-      <div className="h-screen p-8 flex flex-col justify-between">
+      <div className="h-screen p-4 md:p-8 flex flex-col justify-between">
         <Header />
         <main className="">{children}</main>
         <Footer />
