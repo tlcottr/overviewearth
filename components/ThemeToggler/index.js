@@ -62,7 +62,8 @@ const ThemeToggler = () => {
     } else {
       // it's between 8am and 1am
       setState("normal");
-      const hoursRemaining = (1 - currentHour + 24) % 24;
+      const hoursRemaining =
+        (currentHour < 1 ? 1 - currentHour : 24 - currentHour) % 24;
       const minutesRemaining = 60 - currentMinute;
       const secondsRemaining = 60 - currentSecond;
       setTimeRemaining(
