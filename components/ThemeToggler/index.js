@@ -20,9 +20,7 @@ const ThemeToggler = () => {
       const minutesRemaining = 60 - currentMinute;
       const secondsRemaining = 60 - currentSecond;
       setTimeRemaining(
-        `${hoursRemaining < 10 ? "0" + hoursRemaining : hoursRemaining}:${
-          minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining
-        }:${secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining}`
+        `${hoursRemaining}:${minutesRemaining}:${secondsRemaining}`
       );
       intervalId = setInterval(() => {
         setTimeRemaining((prevTime) => {
@@ -63,13 +61,11 @@ const ThemeToggler = () => {
       // it's between 8am and 1am
       setState("normal");
       const hoursRemaining =
-        (currentHour < 1 ? 1 - currentHour : 24 - currentHour) % 24;
+        (currentHour < 1 ? 1 - currentHour : 25 - currentHour) % 24;
       const minutesRemaining = 60 - currentMinute;
       const secondsRemaining = 60 - currentSecond;
       setTimeRemaining(
-        `${hoursRemaining < 10 ? "0" + hoursRemaining : hoursRemaining}:${
-          minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining
-        }:${secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining}`
+        `${hoursRemaining}:${minutesRemaining}:${secondsRemaining}`
       );
       intervalId = setInterval(() => {
         setTimeRemaining((prevTime) => {
