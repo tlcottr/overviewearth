@@ -5,27 +5,20 @@ const PageSizeTracker = () => {
   const [displayedPageSize, setDisplayedPageSize] = useState(0);
 
   useEffect(() => {
-    const trackPageSize = () => {
-      var resources = window.performance.getEntriesByType("resource");
-      var totalSize = 0;
-      for (var i = 0; i < resources.length; i++) {
-        totalSize += resources[i].transferSize;
-      }
-      var sizeInKB = (totalSize / 1024).toFixed(2);
-
-      // Check if page size has already been stored in localStorage
-      const storedPageSize = localStorage.getItem("pageSize");
-      if (!storedPageSize) {
-        // If not, store the current page size in localStorage
-        localStorage.setItem("pageSize", sizeInKB);
-      } else {
-        // if the current page size is different, update the storePageSize
-        localStorage.setItem("pageSize", sizeInKB);
-        setPageSize(sizeInKB);
-      }
+    const fetchPageSize = async () => {
+      // Make a request to the page size checker website
+      const response = await fetch(
+        `https://ettvi.com/technical/page-size-checker?url=${encodeURIComponent(
+          window.location.href
+        )}`
+      );
+      // Parse the response as JSON
+      const data = await response.json();
+      // Set the page size to the value returned by the page size checker
+      setPageSize(data.size);
     };
 
-    trackPageSize();
+    fetchPageSize();
   }, []);
 
   useEffect(() => {

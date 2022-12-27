@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from "react";
-import { SiteContext } from "/pages/_app.js";
 
 const ThemeToggler = () => {
   const [state, setState] = useState("normal");
