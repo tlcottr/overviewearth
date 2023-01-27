@@ -4,8 +4,8 @@ import styles from "./styles.module.scss";
 const OELogo = () => {
   return (
     <svg
-      width="170.26"
-      height="30"
+      width="auto"
+      height="40"
       viewBox="0 0 273 39"
       fill="#ece9dc"
       xmlns="http://www.w3.org/2000/svg"
