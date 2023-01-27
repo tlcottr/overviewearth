@@ -14,6 +14,7 @@ const BlurDiscMobile = () => {
       width={1080}
       height={377}
       className="pointer-events-none"
+      priority={true}
     />
   );
 };
@@ -26,6 +27,7 @@ const BlurDiscDesktop = () => {
       width={1920}
       height={283}
       className="pointer-events-none"
+      priority={true}
     />
   );
 };
