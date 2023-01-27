@@ -353,7 +353,7 @@ const LandingLayout = ({ children }) => {
                 )}
               </div>
             </div>
-            <div className="w-full absolute z-0 bottom-0">
+            <div className="w-full fixed z-0 bottom-0">
               <BlurDiscDesktop />
             </div>
           </div>
