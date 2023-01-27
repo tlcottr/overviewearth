@@ -86,7 +86,7 @@ const LandingLayout = ({ children }) => {
               Overview is a venture capital firm investing in climate change
               solutions.
             </div>
-            <div className="absolute bottom-4">
+            <div className="absolute bottom-2">
               <div className="flex flex-row items-center">
                 <div
                   className="text-xs max-w-sm leading-tight uppercase cursor-pointer"
