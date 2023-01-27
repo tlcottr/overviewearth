@@ -295,16 +295,6 @@ const Description = () => {
 
 const LandingLayout = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(false);
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText("contact@overview.earth");
-    setShowTooltip(true);
-  };
-
-  setTimeout(() => {
-    setShowTooltip(false);
-  }, 4000);
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -340,17 +330,9 @@ const LandingLayout = ({ children }) => {
             </div>
             <div className="fixed bottom-8 left-8 z-10">
               <div className="py-2 h-3 flex flex-row justify-center items-center">
-                <div
-                  className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#DDD7C9] p-2 border-solid border rounded-md border-[#DDD7C9]"
-                  onClick={copyToClipboard}
-                >
-                  CONTACT US
+                <div className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#DDD7C9] p-2">
+                  CONTACT@OVERVIEW.EARTH
                 </div>
-                {showTooltip && (
-                  <div className="ml-2 tooltip font-inconsolata text-xs bg-[#DDD7C9] text-[#1A1A1A] rounded-md w-[70px] p-2 border-solid border rounded-md border-[#1A1A1A] text-center uppercase">
-                    Copied
-                  </div>
-                )}
               </div>
             </div>
             <div className="w-full fixed z-0 bottom-0">
@@ -380,17 +362,9 @@ const LandingLayout = ({ children }) => {
             </div>
             <div className="fixed bottom-8 z-10">
               <div className="py-2 h-3 flex flex-row justify-center items-center">
-                <div
-                  className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#1A1A1A] p-2 border-solid border rounded-md border-[#1A1A1A]"
-                  onClick={copyToClipboard}
-                >
-                  CONTACT US
+                <div className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#1A1A1A] p-2">
+                  CONTACT@OVERVIEW.EARTH
                 </div>
-                {showTooltip && (
-                  <div className="ml-2 tooltip font-inconsolata text-xs bg-[#1A1A1A] text-[#DDD7C9] rounded-md w-[70px] p-2 border-solid border rounded-md border-[#1A1A1A] text-center uppercase">
-                    Copied
-                  </div>
-                )}
               </div>
             </div>
           </div>
