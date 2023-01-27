@@ -13,6 +13,7 @@ const BlurDiscMobile = () => {
       alt="blurred oval"
       width={1080}
       height={377}
+      className="pointer-events-none"
     />
   );
 };
@@ -24,6 +25,7 @@ const BlurDiscDesktop = () => {
       alt="blurred oval"
       width={1920}
       height={283}
+      className="pointer-events-none"
     />
   );
 };
