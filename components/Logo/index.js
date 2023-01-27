@@ -5,7 +5,7 @@ const OELogo = () => {
   return (
     <svg
       width="auto"
-      height="40"
+      height="28"
       viewBox="0 0 273 39"
       fill="#ece9dc"
       xmlns="http://www.w3.org/2000/svg"

@@ -31,8 +31,8 @@ const BlurDiscDesktop = () => {
 const Description = () => {
   return (
     <svg
-      width="auto"
-      height="58"
+      width="300"
+      height="auto"
       viewBox="0 0 722 114"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -291,6 +291,12 @@ const Description = () => {
 
 const LandingLayout = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("contact@overview.earth");
+    setShowTooltip(true);
+  };
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -308,6 +314,10 @@ const LandingLayout = ({ children }) => {
     };
   }, []);
 
+  setTimeout(() => {
+    setShowTooltip(false);
+  }, 5000);
+
   const DesktopLayout = () => {
     return (
       <>
@@ -324,11 +334,19 @@ const LandingLayout = ({ children }) => {
             <div className="flex flex-col">
               <Description />
             </div>
-            <div className="fixed bottom-8 left-8 z-10">
+            <div className="fixed top-8 right-8 z-10">
               <div className="py-2 h-3 flex flex-row justify-center items-center">
-                <div className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#DDD7C9] p-2">
+                <div
+                  className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#DDD7C9] rounded-md p-2 border-solid border border-[#DDD7C9]"
+                  onClick={copyToClipboard}
+                >
                   CONTACT@OVERVIEW.EARTH
                 </div>
+                {showTooltip && (
+                  <div className="ml-2 p-2 tooltip font-inconsolata text-xs bg-[#DDD7C9] text-[#1A1A1A] rounded-md w-[130px] px-1 text-center border-solid border border-[#1A1A1A] uppercase">
+                    Copied to clipboard
+                  </div>
+                )}
               </div>
             </div>
             <div className="w-full fixed z-0 bottom-0">
@@ -348,9 +366,9 @@ const LandingLayout = ({ children }) => {
         <meta name="description" content={constants.pageDescription} />*/}
           <meta name="viewport" content="width=device-width" />
         </Head>
-        <div className="h-screen p-4 md:p-8 flex flex-col items-center justify-center">
+        <div className="p-4 md:p-8 flex flex-col items-center justify-center">
           <div className="h-auto flex flex-col items-center justify-center font-inconsolata max-w-5xl m-2">
-            <div className="pt-1 mb-8">
+            <div className="pt-1 mb-8 mt-[200px]">
               <Logo />
             </div>
             <div className="flex flex-col">
@@ -358,9 +376,17 @@ const LandingLayout = ({ children }) => {
             </div>
             <div className="fixed bottom-8 z-10">
               <div className="py-2 h-3 flex flex-row justify-center items-center">
-                <div className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#1A1A1A] p-2">
+                <div
+                  className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#1A1A1A] rounded-md p-2 border-solid border border-[#1A1A1A]"
+                  onClick={copyToClipboard}
+                >
                   CONTACT@OVERVIEW.EARTH
                 </div>
+                {showTooltip && (
+                  <div className="ml-2 p-2 tooltip font-inconsolata text-xs bg-[#1A1A1A] text-[#DDD7C9] rounded-md w-[130px] px-1 text-center uppercase">
+                    Copied to clipboard
+                  </div>
+                )}
               </div>
             </div>
           </div>
