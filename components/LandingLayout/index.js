@@ -79,14 +79,14 @@ const LandingLayout = ({ children }) => {
         </Head>
         <div className="h-screen p-4 md:p-8 flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center font-inconsolata max-w-5xl">
-            <div className="pt-1 absolute top-2">
+            <div className="pt-1 fixed top-2">
               <Logo />
             </div>
             <div className="text-center md:text-left text-xl max-w-sm leading-tight">
               Overview is a venture capital firm investing in climate change
               solutions.
             </div>
-            <div className="absolute bottom-2">
+            <div className="fixed bottom-2">
               <div className="flex flex-row items-center">
                 <div
                   className="text-xs max-w-sm leading-tight uppercase cursor-pointer"
