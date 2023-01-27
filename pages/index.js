@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="../static/favicon.ico" />
+        <link rel="shortcut icon" href="../static/faviconLatest.ico" />
         <title>Overview</title>
         <meta name="title" content="Overview" />
         <meta
