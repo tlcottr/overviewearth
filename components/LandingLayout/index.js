@@ -317,7 +317,7 @@ const LandingLayout = ({ children }) => {
           <meta name="viewport" content="width=device-width" />
         </Head>
         <div className="h-screen p-4 md:p-8 flex flex-col items-center justify-center">
-          <div className="h-screen md:h-auto flex flex-col items-center justify-between font-inconsolata max-w-5xl m-2">
+          <div className="h-screen md:h-auto flex flex-col items-center justify-center font-inconsolata max-w-5xl m-2">
             <div className="pt-1 mb-8">
               <Logo />
             </div>
@@ -349,7 +349,7 @@ const LandingLayout = ({ children }) => {
           <meta name="viewport" content="width=device-width" />
         </Head>
         <div className="h-screen p-4 md:p-8 flex flex-col items-center justify-center">
-          <div className="h-auto flex flex-col items-center font-inconsolata max-w-5xl m-2">
+          <div className="h-auto flex flex-col items-center justify-center font-inconsolata max-w-5xl m-2">
             <div className="pt-1 mb-8">
               <Logo />
             </div>

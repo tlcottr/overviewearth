@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="title" content="Overview" />
         <meta
           name="description"
-          content="Overview is a venture capital firm investing in early-stage climate change solutions.
+          content="Overview is a venture capital form investing in climate change solutions
 "
         />
         <meta property="og:type" content="website" />
@@ -20,29 +20,29 @@ export default function Home() {
         <meta property="og:title" content="Overview" />
         <meta
           property="og:description"
-          content="Overview is a venture capital firm investing in early-stage climate change solutions.
+          content="Overview is a venture capital form investing in climate change solutions
 "
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/tlcottr/portfolio/main/img/overviewShareCard.png"
+          content="https://github.com/tlcottr/portfolio/blob/main/img/ShareOverview.png?raw=true"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://raw.githubusercontent.com/tlcottr/portfolio/main/img/overviewShareCard.png"
+          content="https://github.com/tlcottr/portfolio/blob/main/img/ShareOverview.png?raw=true"
         />
         <meta property="twitter:title" content="Overview" />
         <meta
           property="twitter:description"
-          content="Overview is a venture capital firm investing in early-stage climate change solutions.
+          content="Overview is a venture capital form investing in climate change solutions
 "
         />
         <meta
           property="twitter:image"
-          content="https://raw.githubusercontent.com/tlcottr/portfolio/main/img/overviewShareCard.png"
+          content="https://github.com/tlcottr/portfolio/blob/main/img/ShareOverview.png?raw=true"
         />
         <meta name="twitter:image:width" content="1200" />
         <meta name="twitter:image:height" content="630" />
