@@ -32,7 +32,7 @@ const Description = () => {
   return (
     <svg
       width="auto"
-      height="60"
+      height="58"
       viewBox="0 0 722 114"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
