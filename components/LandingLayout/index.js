@@ -9,7 +9,7 @@ import Image from "next/image";
 const BlurDiscMobile = () => {
   return (
     <Image
-      src="/static/images/blurDisc.png"
+      src="/static/images/blurDisc-min.png"
       alt="blurred oval"
       width={1080}
       height={377}
@@ -20,7 +20,7 @@ const BlurDiscMobile = () => {
 const BlurDiscDesktop = () => {
   return (
     <Image
-      src="/static/images/blurDiscLarge.png"
+      src="/static/images/blurDiscLarge-min.png"
       alt="blurred oval"
       width={1920}
       height={283}
@@ -393,9 +393,9 @@ const LandingLayout = ({ children }) => {
                 )}
               </div>
             </div>
-            <div className="w-full fixed z-0 bottom-0">
-              <BlurDiscMobile />
-            </div>
+          </div>
+          <div className="w-full fixed z-0 bottom-0">
+            <BlurDiscMobile />
           </div>
         </div>
       </>
