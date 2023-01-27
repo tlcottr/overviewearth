@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: "Helvetica",
+        inconsolata: ["mono", "mono"],
       },
       screens: {
         xxs: "350px",

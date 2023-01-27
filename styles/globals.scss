@@ -5,3 +5,8 @@
 html {
   background-color: var(--bg-color);
 }
+
+@font-face {
+  font-family: "mono";
+  src: url("../public/fonts/Inconsolata-Regular.ttf");
+}
