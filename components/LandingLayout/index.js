@@ -298,13 +298,10 @@ const copyToClipboard = () => {
   setShowTooltip(true);
 };
 
-setTimeout(() => {
-  setShowTooltip(false);
-}, 5000);
-
 const LandingLayout = ({ children }) => {
   const [isMobile, setIsMobile] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
+
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -321,6 +318,7 @@ const LandingLayout = ({ children }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
 
   const DesktopLayout = () => {
     return (
