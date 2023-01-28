@@ -294,7 +294,7 @@ const Description = () => {
 };
 
 const LandingLayout = ({ children }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
 
   const copyToClipboard = () => {
