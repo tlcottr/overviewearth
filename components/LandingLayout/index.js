@@ -293,14 +293,18 @@ const Description = () => {
   );
 };
 
+const copyToClipboard = () => {
+  navigator.clipboard.writeText("contact@overview.earth");
+  setShowTooltip(true);
+};
+
+setTimeout(() => {
+  setShowTooltip(false);
+}, 5000);
+
 const LandingLayout = ({ children }) => {
   const [isMobile, setIsMobile] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText("contact@overview.earth");
-    setShowTooltip(true);
-  };
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -317,10 +321,6 @@ const LandingLayout = ({ children }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  setTimeout(() => {
-    setShowTooltip(false);
-  }, 5000);
 
   const DesktopLayout = () => {
     return (
