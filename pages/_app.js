@@ -9,9 +9,7 @@ import LandingLayout from "../components/LandingLayout";
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider>
-      <LandingLayout>
-        <Component {...pageProps} />
-      </LandingLayout>
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }
