@@ -4,9 +4,27 @@
 
 html {
   background-color: var(--bg-color-alt);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 @font-face {
-  font-family: "mono";
+  font-family: "Inconsolata";
   src: url("../public/fonts/Inconsolata-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Garamond-Regular";
+  src: url("../public/fonts/Garamond/AppleGaramond.ttf");
+}
+@font-face {
+  font-family: "Garamond-Light";
+  src: url("../public/fonts/Garamond/AppleGaramond-Light.ttf");
+}
+@font-face {
+  font-family: "Garamond-Bold";
+  src: url("../public/fonts/Garamond/AppleGaramond-Bold.ttf");
+}
+
+// COLOR TOKENS

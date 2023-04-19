@@ -1,0 +1,25 @@
+.container {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100vh;
+  font-family: "Garamond-Regular", sans-serif;
+  letter-spacing: 1%;
+  font-size: 2.5rem;
+  color: var(--color);
+  max-width: 1080px;
+  font-weight: 400;
+  margin: 0 auto;
+  line-height: 3rem;
+  text-align: left;
+}
+.title {
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}

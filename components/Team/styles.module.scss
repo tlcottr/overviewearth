@@ -1,0 +1,56 @@
+.container {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100vh;
+  font-family: "Garamond-Regular", sans-serif;
+  letter-spacing: 1%;
+  font-size: 2.5rem;
+  color: var(--color);
+  max-width: 1080px;
+  font-weight: 400;
+  margin: 0 auto;
+  line-height: 3rem;
+  text-align: left;
+}
+.title {
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 2rem;
+  line-height: 2.5rem;
+}
+.role {
+  font-size: 1.6rem;
+}
+.socialIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.icon {
+  padding: .75rem;
+  border: solid white 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  opacity: 1;
+}
+.icon:hover {
+  opacity: 50%;
+  cursor: pointer;
+}

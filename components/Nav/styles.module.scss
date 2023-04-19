@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100vh;
+}
+.horizontalContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.verticalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flipLeft {
+  transform: rotate(180deg);
+}
+.flipUp {
+  transform: rotate(180deg);
+}
+.linkVertical {
+  color: var(--color);
+  font-family: "Inconsolata", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.linkHorizontal {
+  color: var(--color);
+  font-family: "Inconsolata", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.linkVerticalInner {
+  padding: 1rem;
+  cursor: pointer;
+}
+.linkVerticalInner:hover {
+  opacity: 50%;
+}
+.linkVerticalFlip {
+  padding: 1rem;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+.linkVerticalFlip:hover {
+  opacity: 50%;
+}
+.linkHorizontalInner {
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+  padding: 1rem;
+}
+.linkHorizontalInner:hover {
+  opacity: 50%;
+}
+.linkHorizontalFlip {
+  text-orientation: sideways;
+  writing-mode: vertical-rl;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem;
+}
+.linkHorizontalFlip:hover {
+  opacity: 50%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: var(--color);
+  font-family: "Garamond-Regular", serif;
+}
