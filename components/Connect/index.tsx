@@ -8,7 +8,7 @@ const Contact = (props: Props) => {
   return (
     <div className={styles.container}>
       <span className={styles.border}>
-        <h1 className={styles.title}>Team</h1>
+        <h1 className={styles.title}>Connect</h1>
       </span>
       <div className={styles.center}>
         <div>contact@overview.earth</div>
