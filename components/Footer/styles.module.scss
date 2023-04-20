@@ -10,5 +10,92 @@
   letter-spacing: 0.05rem;
   font-size: 0.75rem;
   width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  z-index: 1;
+}
+.email {
+  cursor: pointer;
+}
+.email:hover {
+  opacity: 0.5;
+}
+.copied {
+  background: var(--color);
+  color: var(--bg-color-alt);
+  padding: 0.25rem;
+  border-radius: 3px;
+}
+.popupAnchor {
+  cursor: pointer;
+}
+.popupAnchor:hover {
+  opacity: 0.5;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1a1a1af5;
+  border: solid var(--color) 0.5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.popupContent {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
+}
+
+.popupSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.popupQuestion {
+  font-family: "Inconsolata", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  max-width: 200px;
+  padding-right: 1rem;
+}
+
+.popupAnswer {
+  font-family: "Inconsolata", sans-serif;
+  max-width: 500px;
+}
+.popupHeadline {
+  max-width: 740px;
+}
+.popupTitle {
+  font-family: "Garamond-Regular", serif;
+  font-size: 1.5rem;
+  width: 100%;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.popupFootline {
+  max-width: 740px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+  color: var(--color);
 }

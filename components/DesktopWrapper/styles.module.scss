@@ -1,0 +1,42 @@
+.container {
+  overflow: hidden;
+  height: 100vh;
+}
+.navContainer,
+.aboutContainer,
+.contactContainer,
+.teamContainer,
+.portfolioContainer {
+  transition: transform 3s ease-in-out;
+}
+.horizontalContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.aboutContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.contactContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  top: 0;
+}
+.teamContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.portfolioContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}

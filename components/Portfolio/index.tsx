@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import Return from "./Return";
 
 type Props = {};
 
 const Portfolio = (props: Props) => {
   return (
     <div className={styles.container}>
+      <Return size={50}/>
       <span className={styles.border}>
         <h1 className={styles.title}>Portfolio</h1>
       </span>

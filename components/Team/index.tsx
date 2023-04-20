@@ -3,12 +3,14 @@ import { LinkedInIcon } from "./Social";
 import { TwitterIcon } from "./Social";
 import { InstagramIcon } from "./Social";
 import styles from "./styles.module.scss";
+import Return from "./Return";
 
 type Props = {};
 
 const Team = (props: Props) => {
   return (
     <div className={styles.container}>
+      <Return size={50} />
       <span className={styles.border}>
         <h1 className={styles.title}>Team</h1>
       </span>

@@ -1,8 +1,28 @@
 import React, { createContext, useState } from "react";
 
-const NavContext = createContext();
+interface NavContextType {
+  showAbout: boolean;
+  setShowAbout: React.Dispatch<React.SetStateAction<boolean>>;
+  showPortfolio: boolean;
+  setShowPortfolio: React.Dispatch<React.SetStateAction<boolean>>;
+  showTeam: boolean;
+  setShowTeam: React.Dispatch<React.SetStateAction<boolean>>;
+  showContact: boolean;
+  setShowContact: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export const NavProvider = ({ children }) => {
+export const NavContext = createContext<NavContextType>({
+  showAbout: false,
+  setShowAbout: () => {},
+  showPortfolio: false,
+  setShowPortfolio: () => {},
+  showTeam: false,
+  setShowTeam: () => {},
+  showContact: false,
+  setShowContact: () => {},
+});
+
+export const NavProvider: React.FC = ({ children }) => {
   const [showAbout, setShowAbout] = useState(false);
   const [showPortfolio, setShowPortfolio] = useState(false);
   const [showTeam, setShowTeam] = useState(false);
