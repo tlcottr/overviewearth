@@ -7,8 +7,8 @@ interface Props {
 const Arrow: React.FC<Props> = ({ size }) => {
   return (
     <svg
-      width={size}
-      height="15px"
+      width="35vh"
+      height="autoc"
       viewBox="0 0 477 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

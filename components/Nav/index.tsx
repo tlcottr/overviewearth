@@ -94,7 +94,7 @@ const Nav = (props: Props) => {
             onClick={handleContactClick}
           >
             <a className={styles.linkVertical}>
-              <ShortArrow size={200} />
+              <ShortArrow size={20} />
               <span className={styles.linkVerticalInner}>Connect</span>
             </a>
           </span>

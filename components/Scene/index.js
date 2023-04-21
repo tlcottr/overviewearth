@@ -1,27 +1,49 @@
-import React, { Suspense, useMemo } from "react";
+import React, { Suspense, useMemo, useContext, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Html } from "@react-three/drei";
-import { useRef } from "react";
+import { OrbitControls } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { extend } from "@react-three/fiber";
-import { HTML } from "@react-three/drei";
 import { MeshStandardMaterial } from "three";
-
-// Extend the HTML element to create a custom element called MyCustomElement
-extend({ HTML });
+import { NavContext } from "../NavContext";
+import * as THREE from "three";
 
 const Model = (props) => {
   const groupRef = useRef();
   const { nodes } = useGLTF("./static/models/earthModel.glb");
-  console.log("useGLTF called");
+  const { showAbout, showPortfolio, showTeam, showContact } =
+    useContext(NavContext);
+  const [currentPosition, setCurrentPosition] = useState([0, 0, 0]);
 
   useFrame((state, delta) => {
     groupRef.current.rotation.y += delta * 0.05;
+
+    // Get the target position based on the state of the context
+    let targetPosition = [0, 0, 0];
+    if (showAbout) {
+      targetPosition = [-.75, 0, 0];
+    } else if (showPortfolio) {
+      targetPosition = [.75, 0, 0];
+    } else if (showTeam) {
+      targetPosition = [0, -1, 0];
+    } else if (showContact) {
+      targetPosition = [0, 1, 0];
+    }
+
+    // Move the model towards the target position
+    const duration = 3; // Adjust this value to control the duration of the animation
+    const t = Math.min(1.0, delta / duration);
+    const smoothstep = (x) => x * x * (3 - 2 * x);
+    const easeT = smoothstep(t);
+    const speed = THREE.MathUtils.lerp(1.5, 1.5, easeT); // Adjust these values to control the start and end speeds of the animation
+    const newPosition = currentPosition.map((coord, index) =>
+      THREE.MathUtils.lerp(coord, targetPosition[index], delta * speed)
+    );
+    setCurrentPosition(newPosition);
+    groupRef.current.position.set(...newPosition);
   });
 
   const material = useMemo(
-    () => new MeshStandardMaterial({ color: "#eeeeee", roughness: 1 }),
+    () => new MeshStandardMaterial({ color: "#ffffff", roughness: 1 }),
     []
   );
 
@@ -30,10 +52,10 @@ const Model = (props) => {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Earth_Glass.geometry}
-        material={material}
+        geometry={nodes.Earth_dry_elevation.geometry}
+        material={nodes.Earth_dry_elevation.material}
         position={[0, 0, 0]}
-        scale={1}
+        scale={0.015}
       />
     </group>
   );
@@ -54,7 +76,7 @@ const Scene = () => {
         left: 0,
       }}
     >
-      <directionalLight position={[-200, 200, 10]} intensity={0.25} />
+      <spotLight position={[-100, 100, 0]} intensity={0.25} />
       <Suspense>
         <Model position={[0, 0, 0]} />
       </Suspense>
@@ -67,4 +89,5 @@ const Scene = () => {
   );
 };
 
+useGLTF.preload("./static/models/earthModel.glb");
 export default Scene;

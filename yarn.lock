@@ -1558,6 +1558,11 @@ glsl-noise@^0.0.0:
   resolved "https://registry.yarnpkg.com/glsl-noise/-/glsl-noise-0.0.0.tgz#367745f3a33382c0eeec4cb54b7e99cfc1d7670b"
   integrity sha512-b/ZCF6amfAUb7dJM/MxRs7AetQEahYzJ8PtgfrmEdtw6uyGOr+ZSGtgjFm6mfsBkxJ4d2W7kg+Nlqzqvn3Bc0w==
 
+gltfpack@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/gltfpack/-/gltfpack-0.18.0.tgz#cb7dd31893ee9a1757ee766c069b4cee6998b3a6"
+  integrity sha512-EgMFTbd+N1uhOqn0XN+97aQHVOTM7gdoZRx8EB4LssT2OXxkN92pVQ+6FxRcELIySkOH+AO60qDHTZgD3HI1CQ==
+
 gopd@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gopd/-/gopd-1.0.1.tgz#29ff76de69dac7489b7c0918a5788e56477c332c"

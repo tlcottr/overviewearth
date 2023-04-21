@@ -14,6 +14,7 @@
     "@react-three/fiber": "^8.12.2",
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
+    "gltfpack": "^0.18.0",
     "next": "13.0.7",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
