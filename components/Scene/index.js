@@ -1,4 +1,11 @@
-import React, { Suspense, useMemo, useContext, useRef, useState } from "react";
+import React, {
+  Suspense,
+  useMemo,
+  useContext,
+  useRef,
+  useState,
+  useEffect,
+} from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
@@ -13,6 +20,7 @@ const Model = (props) => {
   const { showAbout, showPortfolio, showTeam, showContact } =
     useContext(NavContext);
   const [currentPosition, setCurrentPosition] = useState([0, 0, 0]);
+  const [scale, setScale] = useState(0.018);
 
   useFrame((state, delta) => {
     groupRef.current.rotation.y += delta * 0.05;
@@ -42,6 +50,25 @@ const Model = (props) => {
     groupRef.current.position.set(...newPosition);
   });
 
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 768; // Change the breakpoint according to your needs
+      if (isMobile) {
+        setScale(0.010); // Adjust this value to change the scale on mobile viewports
+      } else {
+        setScale(0.018); // Adjust this value to change the scale on desktop viewports
+      }
+    };
+
+    handleResize(); // Call it once to set the initial value
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const material = useMemo(
     () => new MeshStandardMaterial({ color: "#ffffff", roughness: 1 }),
     []
@@ -55,7 +82,7 @@ const Model = (props) => {
         geometry={nodes.Earth_dry_elevation.geometry}
         material={nodes.Earth_dry_elevation.material}
         position={[0, 0, 0]}
-        scale={0.018}
+        scale={scale}
       />
     </group>
   );
