@@ -1,16 +1,16 @@
 .footer {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   font-family: "Inconsolata", serif;
   color: var(--text-dark);
   letter-spacing: 0.05rem;
   font-size: 0.75rem;
   width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
   z-index: 1;
 }
 .email {
@@ -27,6 +27,7 @@
 }
 .popupAnchor {
   cursor: pointer;
+  max-width: 140px;
 }
 .popupAnchor:hover {
   opacity: 0.5;
@@ -100,6 +101,12 @@
 }
 
 @media (min-width: 400px) {
+  .footer {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    font-size: 0.5rem;
+  }
   .popupTitle {
     font-size: 0.05rem;
     line-height: 0.05rem;
@@ -114,6 +121,12 @@
 }
 
 @media (min-width: 600px) {
+  .footer {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    font-size: 0.5rem;
+  }
   .popupTitle {
     font-size: 0.05rem;
     line-height: 0.05rem;
@@ -127,6 +140,12 @@
   }
 }
 @media (min-width: 1080px) {
+  .footer {
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    font-size: 0.75rem;
+  }
   .popupTitle {
     font-size: 2rem;
     line-height: 2rem;
@@ -141,5 +160,8 @@
   }
   .popupContent {
     padding: 2rem;
+  }
+  .popupAnchor {
+    max-width: 300px;
   }
 }
