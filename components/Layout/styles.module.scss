@@ -1,3 +1,50 @@
 .container {
   overflow: hidden;
 }
+.offline {
+  font-family: "Garamond-Light";
+  font-size: 2.25rem;
+  color: var(--color);
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1%;
+  line-height: 2.75rem;
+  text-align: center;
+}
+.inner {
+  max-width: 800px;
+}
+
+@media (min-width: 400px) {
+  .offline {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+  .inner {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 600px) {
+  .offline {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+  .inner {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .offline {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .inner {
+    max-width: 1080px;
+  }
+}

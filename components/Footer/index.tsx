@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import styles from "./styles.module.scss";
 import Exit from "./Exit";
 
@@ -7,9 +8,41 @@ type Props = {
 };
 
 const Popup = ({ onClose }: Props) => {
+  const [countdown, setCountdown] = useState("00:00:00");
+
   const handleExit = () => {
     onClose();
   };
+
+  useEffect(() => {
+    // Get the current time
+    const now = new Date();
+
+    // Calculate the next 5am time
+    const next5am = new Date();
+    next5am.setHours(1);
+    next5am.setMinutes(0);
+    next5am.setSeconds(0);
+    if (now.getHours() >= 1) {
+      next5am.setDate(next5am.getDate() + 1);
+    }
+
+    // Update the countdown every second
+    const interval = setInterval(() => {
+      const diff = next5am.getTime() - new Date().getTime();
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      setCountdown(
+        `${hours.toString().padStart(2, "0")}:${minutes
+          .toString()
+          .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
+      );
+    }, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className={styles.popup}>
@@ -62,7 +95,7 @@ const Popup = ({ onClose }: Props) => {
         <span onClick={handleExit}>
           <Exit />
         </span>
-        <div>Night mode in 04:33:21</div>
+        <div>Night mode in {countdown}</div>
       </div>
     </div>
   );
