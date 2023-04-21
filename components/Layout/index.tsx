@@ -26,12 +26,7 @@ const Layout = ({ children }: Props) => {
   if (hour >= 1 && hour < 5) {
     return <OfflineLayout />;
   } else {
-    return (
-      <div className={styles.container}>
-        {children}
-        <Footer />
-      </div>
-    );
+    return <div className={styles.container}>{children}</div>;
   }
 };
 
