@@ -96,7 +96,7 @@ const Scene = () => {
       camera={{ position: [0, 0, 10], fov: 10 }}
       style={{
         width: "100vw",
-        minheight: "100vh",
+        minHeight: "100vh",
         zIndex: -100,
         position: "absolute",
         top: 0,
