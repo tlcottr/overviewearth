@@ -91,11 +91,11 @@ const Popup = ({ onClose }: Props) => {
         </div>
       </div>
       <div className={styles.popupFootline}>
-        <div>Data load: 573kb</div>
+        <div className={styles.dataLoad}>Data load: 573kb</div>
         <span onClick={handleExit}>
           <Exit />
         </span>
-        <div>Night mode in {countdown}</div>
+        <div className={styles.nightMode}>Night mode in {countdown}</div>
       </div>
     </div>
   );

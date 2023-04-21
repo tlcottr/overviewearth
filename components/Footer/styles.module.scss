@@ -97,9 +97,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-top: 0.5rem;
   color: var(--color);
+}
+.nightMode {
+  max-width: 80px;
+}
+.dataLoad {
+  max-width: 80px;
 }
 
 @media (min-width: 400px) {
@@ -120,6 +127,12 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  .nightMode {
+    max-width: 80px;
+  }
+  .dataLoad {
+    max-width: 80px;
+  }
 }
 
 @media (min-width: 600px) {
@@ -139,6 +152,12 @@
   .popupSection {
     flex-direction: column;
     justify-content: space-between;
+  }
+  .nightMode {
+    max-width: 80px;
+  }
+  .dataLoad {
+    max-width: 80px;
   }
 }
 @media (min-width: 1080px) {
@@ -165,5 +184,11 @@
   }
   .popupAnchor {
     max-width: 300px;
+  }
+  .nightMode {
+    max-width: 200px;
+  }
+  .dataLoad {
+    max-width: 200px;
   }
 }
