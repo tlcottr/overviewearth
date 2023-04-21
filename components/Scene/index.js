@@ -54,7 +54,7 @@ const Model = (props) => {
     const handleResize = () => {
       const isMobile = window.innerWidth < 768; // Change the breakpoint according to your needs
       if (isMobile) {
-        setScale(0.01); // Adjust this value to change the scale on mobile viewports
+        setScale(0.010); // Adjust this value to change the scale on mobile viewports
       } else {
         setScale(0.018); // Adjust this value to change the scale on desktop viewports
       }
@@ -95,15 +95,12 @@ const Scene = () => {
     <Canvas
       camera={{ position: [0, 0, 10], fov: 10 }}
       style={{
-        minHeight: "100%",
-        height: "100%",
-        width: "100%",
+        width: "100vw",
+        minheight: "100vh",
         zIndex: -100,
         position: "absolute",
         top: 0,
         left: 0,
-        right: 0,
-        bottom: 0,
       }}
     >
       <spotLight position={[-100, 100, 0]} intensity={0.25} />

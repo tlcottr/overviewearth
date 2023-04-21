@@ -7,7 +7,6 @@ import Team from "../Team";
 import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import Scene from "../Scene";
-import Footer from "../Footer";
 
 const MobileWrapper: React.FC = () => {
   const navContext = useContext(NavContext) as {
@@ -23,7 +22,6 @@ const MobileWrapper: React.FC = () => {
         <Nav />
       </div>
       <Scene />
-      <Footer />
     </>
   );
 };
