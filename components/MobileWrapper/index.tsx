@@ -8,7 +8,7 @@ import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import Scene from "../Scene";
 
-const DesktopWrapper: React.FC = () => {
+const MobileWrapper: React.FC = () => {
   const navContext = useContext(NavContext) as {
     showAbout: boolean;
     showContact: boolean;
@@ -79,4 +79,4 @@ const DesktopWrapper: React.FC = () => {
   );
 };
 
-export default DesktopWrapper;
+export default MobileWrapper;

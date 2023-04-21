@@ -1,3 +1,16 @@
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.arrowContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .container {
   padding-top: 5rem;
   display: flex;
@@ -6,9 +19,9 @@
   align-items: left;
   margin-top: auto;
   margin-bottom: auto;
-  font-family: "Garamond-Regular", sans-serif;
+  font-family: "Garamond-Light", sans-serif;
   letter-spacing: 1%;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: var(--color);
   max-width: 1080px;
   font-weight: 400;

@@ -20,9 +20,9 @@ const Model = (props) => {
     // Get the target position based on the state of the context
     let targetPosition = [0, 0, 0];
     if (showAbout) {
-      targetPosition = [-.75, 0, 0];
+      targetPosition = [-0.75, 0, 0];
     } else if (showPortfolio) {
-      targetPosition = [.75, 0, 0];
+      targetPosition = [0.75, 0, 0];
     } else if (showTeam) {
       targetPosition = [0, -1, 0];
     } else if (showContact) {
@@ -55,7 +55,7 @@ const Model = (props) => {
         geometry={nodes.Earth_dry_elevation.geometry}
         material={nodes.Earth_dry_elevation.material}
         position={[0, 0, 0]}
-        scale={0.015}
+        scale={0.018}
       />
     </group>
   );

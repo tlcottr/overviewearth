@@ -7,7 +7,7 @@
   margin-top: auto;
   margin-bottom: auto;
   min-height: 100vh;
-  font-family: "Garamond-Regular", sans-serif;
+  font-family: "Garamond-Light", sans-serif;
   letter-spacing: 1%;
   font-size: 2.5rem;
   color: var(--color);
@@ -16,6 +16,20 @@
   margin: 0 auto;
   line-height: 3rem;
   text-align: left;
+  width: 100%;
+}
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.arrowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .title {
   margin-bottom: 1rem;
@@ -42,7 +56,7 @@
   margin-top: 1rem;
 }
 .icon {
-  padding: .75rem;
+  padding: 0.75rem;
   border: solid white 1px;
   display: flex;
   justify-content: center;

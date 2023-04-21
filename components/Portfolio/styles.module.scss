@@ -16,6 +16,20 @@
   margin: 0 auto;
   line-height: 3rem;
   text-align: left;
+  width: 100%;
+}
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.arrowContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .title {
   margin-bottom: 1rem;
@@ -38,4 +52,3 @@
   justify-content: center;
   display: flex;
 }
-

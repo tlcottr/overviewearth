@@ -1,8 +1,25 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import DesktopWrapper from "../components/DesktopWrapper";
-import Scene from "../components/Scene";
+import MobileWrapper from "../components/MobileWrapper";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Change the breakpoint according to your needs
+    };
+
+    handleResize(); // Call it once to set the initial value
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -46,8 +63,7 @@ export default function Home() {
         <meta name="twitter:image:width" content="1200" />
         <meta name="twitter:image:height" content="630" />
       </Head>
-      <DesktopWrapper />
-      <Scene />
+      {isMobile ? <MobileWrapper /> : <DesktopWrapper />}
     </>
   );
 }
