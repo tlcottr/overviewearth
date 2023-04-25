@@ -17,6 +17,17 @@
 }
 .contactContainer {
   width: 100%;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+.verticalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
 }
 .aboutContainer {
   position: absolute;

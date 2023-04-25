@@ -8,11 +8,11 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <div className={styles.navContainer}>
+    <div className={styles.container}>
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
-      <div className={styles.container}>
+      <div className={styles.top}>
         <span className={styles.border}>
           <h1 className={styles.title}>Connect</h1>
         </span>

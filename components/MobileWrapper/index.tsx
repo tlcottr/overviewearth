@@ -19,17 +19,18 @@ const MobileWrapper: React.FC = () => {
   return (
     <>
       <div className={styles.container}>
-        <div
-          className={styles.teamContainer}
-          style={{
-            transform: navContext.showTeam
-              ? "translateY(0)"
-              : "translateY(-100%)",
-          }}
-        >
-          <Team />
-        </div>
-        {/*<div
+        <div className={styles.verticalContainer}>
+          <div
+            className={styles.teamContainer}
+            style={{
+              transform: navContext.showTeam
+                ? "translateY(0)"
+                : "translateY(-100%)",
+            }}
+          >
+            <Team />
+          </div>
+          {/*<div
           className={styles.portfolioContainer}
           style={{
             transform: navContext.showPortfolio
@@ -39,19 +40,19 @@ const MobileWrapper: React.FC = () => {
         >
           <Portfolio />
         </div>*/}
-        <div
-          className={styles.navContainer}
-          style={{
-            transform:
-              (navContext.showContact ? "translateY(-100%)" : "") +
-              (navContext.showAbout ? " translateX(-100%)" : "") +
-              (navContext.showTeam ? " translateY(100%)" : "") +
-              (navContext.showPortfolio ? " translateX(100%)" : ""),
-          }}
-        >
-          <Nav />
-        </div>
-        {/*<div
+          <div
+            className={styles.navContainer}
+            style={{
+              transform:
+                (navContext.showContact ? "translateY(-100%)" : "") +
+                (navContext.showAbout ? " translateX(-100%)" : "") +
+                (navContext.showTeam ? " translateY(100%)" : "") +
+                (navContext.showPortfolio ? " translateX(100%)" : ""),
+            }}
+          >
+            <Nav />
+          </div>
+          {/*<div
           className={styles.aboutContainer}
           style={{
             transform: navContext.showAbout
@@ -61,7 +62,17 @@ const MobileWrapper: React.FC = () => {
         >
           <About />
         </div>*/}
-
+          <div
+            className={styles.contactContainer}
+            style={{
+              transform: navContext.showContact
+                ? "translateY(0)"
+                : "translateY(100%)",
+            }}
+          >
+            <Contact />
+          </div>
+        </div>
         <Video />
       </div>
     </>
