@@ -68,3 +68,35 @@
   opacity: 50%;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1080px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 767px) {
+  .container {
+    padding-top: 2rem;
+  }
+  .teamGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+  }
+}
+
+/* Media Query for screens between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .teamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Media Query for screens larger than 1024px */
+@media (min-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

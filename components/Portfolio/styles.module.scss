@@ -94,3 +94,10 @@
   max-width: 180px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

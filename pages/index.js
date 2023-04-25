@@ -63,7 +63,7 @@ export default function Home() {
         <meta name="twitter:image:width" content="1200" />
         <meta name="twitter:image:height" content="630" />
       </Head>
-      {isMobile ? <MobileWrapper /> : <DesktopWrapper />}
+      <DesktopWrapper />
     </>
   );
 }
