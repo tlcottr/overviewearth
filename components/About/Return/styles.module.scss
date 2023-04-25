@@ -25,3 +25,15 @@
 .arrow {
   transform: rotate(180deg);
 }
+/* For screens smaller than 768px */
+/* Media Query for screens smaller than 768px */
+@media (max-width: 767px) {
+  .container {
+    padding-left: 0rem;
+  }
+  .return {
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
+    padding-left: 0rem;
+  }
+}

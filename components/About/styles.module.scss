@@ -47,8 +47,8 @@
 /* Media Query for screens smaller than 768px */
 @media (max-width: 767px) {
   .container {
-    padding-top: 2rem;
     font-size: 1.25rem;
+    line-height: 1.5rem;
     min-height: auto;
   }
   .title {

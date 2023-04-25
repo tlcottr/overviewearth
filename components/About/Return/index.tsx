@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import NavContext from "../../NavContext";
 import styles from "./styles.module.scss";
+import { isMobile } from "react-device-detect";
 
 interface Props {
   size: number;
@@ -46,7 +47,7 @@ const Return: React.FC<Props> = ({ size }) => {
   return (
     <div className={styles.container} onClick={handleAboutClick}>
       <span className={styles.arrow}>
-        <Arrow size={size} />
+        {isMobile ? "" : <Arrow size={size} />}
       </span>
       <span className={styles.return}>Back</span>
     </div>
