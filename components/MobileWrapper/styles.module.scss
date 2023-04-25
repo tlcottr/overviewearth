@@ -20,8 +20,7 @@
 }
 .aboutContainer {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  width: auto;
   overflow: scroll;
 }
 .horizontalContainer {
@@ -30,12 +29,10 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  height: 100vh;
 
 }
 .portfolioContainer {
   position: absolute;
-  height: 100%;
   overflow: scroll;
   width: 100%;
 }
