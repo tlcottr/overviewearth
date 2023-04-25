@@ -35,7 +35,7 @@ const MobileWrapper: React.FC = () => {
             style={{
               transform: navContext.showPortfolio
                 ? "translateX(0)"
-                : "translateX(-100%)",
+                : "translateX(-115%)",
             }}
           >
             <Portfolio />
@@ -57,7 +57,7 @@ const MobileWrapper: React.FC = () => {
             style={{
               transform: navContext.showAbout
                 ? "translateX(0)"
-                : "translateX(100%)",
+                : "translateX(115%)",
             }}
           >
             <About />
