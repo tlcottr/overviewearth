@@ -6,7 +6,7 @@ import Portfolio from "../Portfolio";
 import Team from "../Team";
 import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
-import Scene from "../Scene";
+import Video from "../Video";
 
 const DesktopWrapper: React.FC = () => {
   const navContext = useContext(NavContext) as {
@@ -74,7 +74,7 @@ const DesktopWrapper: React.FC = () => {
           <Contact />
         </div>
       </div>
-      <Scene />
+      <Video />
     </>
   );
 };

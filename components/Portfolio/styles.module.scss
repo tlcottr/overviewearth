@@ -48,7 +48,49 @@
   border-radius: 10px;
   padding: 3rem;
   object-fit: fill;
-  align-items: center;
-  justify-content: center;
   display: flex;
+  min-height: 200px;
+  min-width: 200px;
+  cursor: pointer;
+  position: relative;
+  display: flex; /* add flexbox to center child elements */
+  justify-content: center;
+  align-items: center;
+}
+.portfolioItem:hover {
+  background-color: #1a1a1aea;
+}
+.portfolioItem:hover .imageContainer {
+  display: none; /* hide the image container on hover */
+}
+
+.portfolioItem:hover .textContainer {
+  display: block; /* show the text container on hover */
+  position: absolute; /* position the text container absolute to the portfolio item */
+  top: 50%; /* vertically center the text container */
+  left: 50%; /* horizontally center the text container */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* adjust the position to center the text container */
+}
+
+.imageContainer {
+  /* set width and height of the container to match the image size */
+  width: 75px;
+  height: 10px;
+  display: flex; /* add flexbox to center child elements */
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  display: none; /* hide the text container by default */
+  /* set styles for the body text */
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Inconsolata", sans-serif;
+  line-height: 1.25rem;
+  max-width: 180px;
+  cursor: pointer;
 }

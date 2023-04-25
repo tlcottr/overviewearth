@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { LinkedInIcon, InstagramIcon, TwitterIcon } from "../Team/Social";
 import Return from "./Return";
+import Link from "next/link";
 
 type Props = {};
 
@@ -18,12 +19,33 @@ const Contact = (props: Props) => {
         <div className={styles.center}>
           <div>contact@overview.earth</div>
           <div className={styles.socialIcons}>
-            <span className={styles.icon}>
-              <LinkedInIcon />
-            </span>
-            <span className={styles.icon}>
-              <TwitterIcon />
-            </span>
+            <Link
+              href={"https://www.instagram.com/overview.capital/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.icon}>
+                <InstagramIcon />
+              </span>
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/company/overview-capital/about/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.icon}>
+                <LinkedInIcon />
+              </span>
+            </Link>
+            <Link
+              href={"https://twitter.com/OverviewCapital"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.icon}>
+                <TwitterIcon />
+              </span>
+            </Link>
           </div>
         </div>
       </div>

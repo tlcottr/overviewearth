@@ -6,7 +6,7 @@ import Portfolio from "../Portfolio";
 import Team from "../Team";
 import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
-import Scene from "../Scene";
+import Video from "../Video";
 
 const MobileWrapper: React.FC = () => {
   const navContext = useContext(NavContext) as {
@@ -21,7 +21,7 @@ const MobileWrapper: React.FC = () => {
       <div className={styles.container}>
         <Nav />
       </div>
-      <Scene />
+      <Video />
     </>
   );
 };
