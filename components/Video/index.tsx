@@ -8,7 +8,6 @@ const Video: React.FC<Props> = (props: Props) => {
     <div className={styles.videoContainer}>
       <video autoPlay loop muted playsInline>
         <source
-          src="/static/video/EarthTransparent.webm"
           src="/static/video/EarthTransparent.mp4"
           type="video/webm"
           width="100%"
