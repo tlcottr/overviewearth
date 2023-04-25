@@ -29,7 +29,7 @@ const MobileWrapper: React.FC = () => {
         >
           <Team />
         </div>
-        <div
+        {/*<div
           className={styles.portfolioContainer}
           style={{
             transform: navContext.showPortfolio
@@ -38,7 +38,7 @@ const MobileWrapper: React.FC = () => {
           }}
         >
           <Portfolio />
-        </div>
+        </div>*/}
         <div
           className={styles.navContainer}
           style={{
@@ -51,7 +51,7 @@ const MobileWrapper: React.FC = () => {
         >
           <Nav />
         </div>
-        <div
+        {/*<div
           className={styles.aboutContainer}
           style={{
             transform: navContext.showAbout
@@ -60,7 +60,7 @@ const MobileWrapper: React.FC = () => {
           }}
         >
           <About />
-        </div>
+        </div>*/}
 
         <Video />
       </div>
