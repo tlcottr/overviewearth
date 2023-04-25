@@ -5,26 +5,12 @@ import ShortArrow from "./ShortArrow";
 import styles from "./styles.module.scss";
 import NavContext from "../NavContext";
 import MobileArrow from "./MobileArrow";
+import { isMobile } from "react-device-detect";
+import MobileLong from "./MobileLong";
 
 type Props = {};
 
 const Nav = (props: Props) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Change the breakpoint according to your needs
-    };
-
-    handleResize(); // Call it once to set the initial value
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   const {
     showAbout,
     setShowAbout,
@@ -75,7 +61,7 @@ const Nav = (props: Props) => {
             onClick={handleTeamClick}
           >
             <a className={styles.linkVertical}>
-              <ShortArrow size={200} />
+              {isMobile ? <MobileLong /> : <ShortArrow size={200} />}
               <span className={styles.linkVerticalFlip}>Team</span>
             </a>
           </span>
@@ -111,7 +97,7 @@ const Nav = (props: Props) => {
             onClick={handleContactClick}
           >
             <a className={styles.linkVertical}>
-              <ShortArrow size={20} />
+              {isMobile ? <MobileLong /> : <ShortArrow size={20} />}
               <span className={styles.linkVerticalInner}>Connect</span>
             </a>
           </span>
