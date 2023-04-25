@@ -1,5 +1,6 @@
 .container {
   overflow: hidden;
+  width: 100%;
 }
 .navContainer,
 .aboutContainer,
@@ -13,4 +14,12 @@
   top: 0;
   z-index: 1;
   width: 100%;
+}
+.contactContainer {
+  width: 100%;
+}
+.aboutContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }

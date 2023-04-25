@@ -10,8 +10,8 @@ type Props = {};
 
 const Team = (props: Props) => {
   return (
-    <div className={styles.navContainer}>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className="top">
         <span className={styles.border}>
           <h1 className={styles.title}>Team</h1>
         </span>
