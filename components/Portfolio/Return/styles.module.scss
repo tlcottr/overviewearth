@@ -22,3 +22,13 @@
   color: var(--color);
   font-size: 1rem;
 }
+@media (max-width: 767px) {
+  .container {
+    padding-right: 0rem;
+  }
+  .return {
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
+    padding-right: 0rem;
+  }
+}

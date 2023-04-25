@@ -31,6 +31,16 @@ const MobileWrapper: React.FC = () => {
         </div>
         <div className={styles.horizontalContainer}>
           <div
+            className={styles.portfolioContainer}
+            style={{
+              transform: navContext.showPortfolio
+                ? "translateX(0)"
+                : "translateX(-100%)",
+            }}
+          >
+            <Portfolio />
+          </div>
+          <div
             className={styles.navContainer}
             style={{
               transform:
