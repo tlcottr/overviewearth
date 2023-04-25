@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styles from "./styles.module.scss";
 import { NavContext } from "../NavContext";
+import { isMobile } from "react-device-detect";
 
 type Props = {};
 
@@ -26,15 +27,10 @@ const Video: React.FC<Props> = (props: Props) => {
         muted
         playsInline
         className={
-          showAbout
-            ? "about"
-            : "" + showPortfolio
-            ? "portfolio"
-            : "" + showTeam
-            ? "team"
-            : "" + showContact
-            ? "contact"
-            : ""
+          (showAbout ? "about " : "") +
+          (showPortfolio ? "portfolio " : "") +
+          (showTeam ? "team " : "") +
+          (showContact ? "contact " : "")
         }
         style={{
           position: "absolute",
@@ -47,15 +43,27 @@ const Video: React.FC<Props> = (props: Props) => {
           transition: "transform 2s ease",
           ...(showAbout && {
             transform: "translate(-50%, -50%) translateX(-50%)",
+            ...(isMobile && {
+              transform: "translate(-50%, -50%) translateX(-25%)",
+            }),
           }),
           ...(showPortfolio && {
             transform: "translate(-50%, -50%) translateX(50%)",
+            ...(isMobile && {
+              transform: "translate(-50%, -50%) translateX(25%)",
+            }),
           }),
           ...(showTeam && {
             transform: "translate(-50%, -50%) translateY(50%)",
+            ...(isMobile && {
+              transform: "translate(-50%, -50%) translateY(25%)",
+            }),
           }),
           ...(showContact && {
             transform: "translate(-50%, -50%) translateY(-50%)",
+            ...(isMobile && {
+              transform: "translate(-50%, -50%) translateY(-25%)",
+            }),
           }),
         }}
       >
@@ -65,7 +73,10 @@ const Video: React.FC<Props> = (props: Props) => {
           width="160%"
           height="160%"
         />
-        <source src="/static/video/EarthTransparent.webm" type="video/webm" />
+        <source
+          src="/static/video/EarthTransparentSlow.webm"
+          type="video/webm"
+        />
       </video>
     </div>
   );
