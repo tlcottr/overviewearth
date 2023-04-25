@@ -8,30 +8,9 @@
 .portfolioContainer {
   transition: transform 2s ease;
 }
-.horizontalContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-.aboutContainer {
-  width: 100vw;
-  height: 100vh;
-}
-.contactContainer {
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  top: 0;
-}
 .teamContainer {
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 0;
   z-index: 1;
-}
-.portfolioContainer {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
 }

@@ -44,9 +44,6 @@
   margin-top: 2rem;
   line-height: 2.5rem;
 }
-.role {
-  font-size: 1.6rem;
-}
 .socialIcons {
   display: flex;
   flex-direction: row;
@@ -80,10 +77,24 @@
 @media (max-width: 767px) {
   .container {
     padding-top: 2rem;
+    font-size: 1.25rem;
   }
   .teamGrid {
     grid-template-columns: 1fr;
-    grid-gap: 4rem;
+    grid-gap: 2rem;
+    line-height: 1.5rem;
+    margin-top: 0;
+  }
+  .title {
+    margin-bottom: 2rem;
+  }
+  .socialIcons {
+    gap: 0.3rem;
+    margin-top: 0.6rem;
+  }
+  .arrowContainer {
+    left: 50%;
+    right: 50%;
   }
 }
 
