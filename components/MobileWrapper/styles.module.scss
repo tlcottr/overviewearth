@@ -22,6 +22,7 @@
   position: absolute;
   width: auto;
   overflow: scroll;
+  right: 0;
 }
 .horizontalContainer {
   display: flex;
@@ -29,10 +30,10 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-
 }
 .portfolioContainer {
   position: absolute;
+  left: 0;
   overflow: scroll;
   width: 100%;
 }
