@@ -19,16 +19,6 @@ const MobileWrapper: React.FC = () => {
   return (
     <>
       <div className={styles.horizontalContainer}>
-        <div
-          className={styles.aboutContainer}
-          style={{
-            transform: navContext.showAbout
-              ? "translateX(0)"
-              : "translateX(100%)",
-          }}
-        >
-          <About />
-        </div>
         <div className={styles.container}>
           <div
             className={styles.contactContainer}
@@ -62,16 +52,6 @@ const MobileWrapper: React.FC = () => {
           >
             <Nav />
           </div>
-        </div>
-        <div
-          className={styles.portfolioContainer}
-          style={{
-            transform: navContext.showPortfolio
-              ? "translateX(0)"
-              : "translateX(-100%)",
-          }}
-        >
-          <Portfolio />
         </div>
       </div>
       <Video />
