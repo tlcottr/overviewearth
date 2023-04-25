@@ -1,43 +1,19 @@
 .container {
-  overflow: hidden;
+  position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .navContainer,
 .aboutContainer,
-.contactContainer,
+.portfolioContainer,
 .teamContainer,
-.portfolioContainer {
-  transition: transform 2s ease;
+.contactContainer {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
-.navContainer {
-  z-index: 3;
-}
-
-.aboutContainer {
-  z-index: 2;
-  transform: translateX(-100%);
-}
-
-.contactContainer {
-  z-index: 1;
-  transform: translateY(100%);
-}
-
-.teamContainer {
-  z-index: 4;
-  transform: translateY(-100%);
-}
-
-.portfolioContainer {
-  z-index: 2;
-  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  transition: transform 2s ease;
 }
