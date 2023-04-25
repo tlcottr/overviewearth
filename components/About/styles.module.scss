@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .arrowContainer {
   display: flex;
   flex-direction: column;
@@ -11,6 +12,7 @@
   align-items: center;
   height: 100vh;
 }
+
 .container {
   padding-top: 5rem;
   display: flex;
@@ -29,9 +31,24 @@
   line-height: 3rem;
   text-align: left;
 }
+
 .title {
   margin-bottom: 1rem;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+}
+
+/* For screens between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* For screens larger than 1024px */
+@media (min-width: 1024px) {
 }
