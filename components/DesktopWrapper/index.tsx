@@ -44,10 +44,10 @@ const DesktopWrapper: React.FC = () => {
             className={styles.navContainer}
             style={{
               transform:
-                (navContext.showContact ? "translateY(-100%)" : "") +
-                (navContext.showAbout ? " translateX(-100%)" : "") +
-                (navContext.showTeam ? " translateY(100%)" : "") +
-                (navContext.showPortfolio ? " translateX(100%)" : ""),
+                (navContext.showContact ? "translateY(-125%)" : "") +
+                (navContext.showAbout ? " translateX(-115%)" : "") +
+                (navContext.showTeam ? " translateY(125%)" : "") +
+                (navContext.showPortfolio ? " translateX(115%)" : ""),
             }}
           >
             <Nav />
