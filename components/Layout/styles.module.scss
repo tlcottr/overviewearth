@@ -2,6 +2,8 @@
   overflow: hidden;
   flex-direction: column;
   display: flex;
+  height: 100%;
+  justify-content: space-between;
 }
 .offline {
   font-family: "Garamond";
