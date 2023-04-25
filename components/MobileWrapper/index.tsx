@@ -18,17 +18,7 @@ const MobileWrapper: React.FC = () => {
 
   return (
     <>
-      <div className={styles.container}>
-        <div
-          className={styles.contactContainer}
-          style={{
-            transform: navContext.showContact
-              ? "translateY(0)"
-              : "translateY(100%)",
-          }}
-        >
-          <Contact />
-        </div>
+      <div className={styles.horizontalContainer}>
         <div
           className={styles.aboutContainer}
           style={{
@@ -39,6 +29,40 @@ const MobileWrapper: React.FC = () => {
         >
           <About />
         </div>
+        <div className={styles.container}>
+          <div
+            className={styles.contactContainer}
+            style={{
+              transform: navContext.showContact
+                ? "translateY(0)"
+                : "translateY(100%)",
+            }}
+          >
+            <Contact />
+          </div>
+          <div
+            className={styles.teamContainer}
+            style={{
+              transform: navContext.showTeam
+                ? "translateY(0)"
+                : "translateY(-100%)",
+            }}
+          >
+            <Team />
+          </div>
+          <div
+            className={styles.navContainer}
+            style={{
+              transform:
+                (navContext.showContact ? "translateY(-100%)" : "") +
+                (navContext.showAbout ? " translateX(-100%)" : "") +
+                (navContext.showTeam ? " translateY(100%)" : "") +
+                (navContext.showPortfolio ? " translateX(100%)" : ""),
+            }}
+          >
+            <Nav />
+          </div>
+        </div>
         <div
           className={styles.portfolioContainer}
           style={{
@@ -48,27 +72,6 @@ const MobileWrapper: React.FC = () => {
           }}
         >
           <Portfolio />
-        </div>
-        <div
-          className={styles.teamContainer}
-          style={{
-            transform: navContext.showTeam
-              ? "translateY(0)"
-              : "translateY(-100%)",
-          }}
-        >
-          <Team />
-        </div>
-        <div
-          className={styles.navContainer}
-          style={{
-            transform:
-              navContext.showContact || navContext.showAbout
-                ? "translateX(-100%)"
-                : "",
-          }}
-        >
-          <Nav />
         </div>
       </div>
       <Video />
