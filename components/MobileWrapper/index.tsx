@@ -51,6 +51,16 @@ const MobileWrapper: React.FC = () => {
         >
           <Nav />
         </div>
+        <div
+          className={styles.aboutContainer}
+          style={{
+            transform: navContext.showAbout
+              ? "translateX(0)"
+              : "translateX(100%)",
+          }}
+        >
+          <About />
+        </div>
       </div>
       <Video />
     </>
