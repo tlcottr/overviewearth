@@ -17,4 +17,9 @@ html {
   src: url("../public/fonts/AppleGaramond.ttf");
 }
 
+video {
+  max-width: 150%;
+  min-width: 100%;
+}
+
 // COLOR TOKENS
