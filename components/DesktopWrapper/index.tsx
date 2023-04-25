@@ -73,8 +73,8 @@ const DesktopWrapper: React.FC = () => {
         >
           <Contact />
         </div>
+        <Video />
       </div>
-      <Video />
     </>
   );
 };

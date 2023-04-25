@@ -20,8 +20,8 @@ const MobileWrapper: React.FC = () => {
     <>
       <div className={styles.container}>
         <Nav />
+        <Video />
       </div>
-      <Video />
     </>
   );
 };

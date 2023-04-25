@@ -1,13 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Logo from "./Logo";
 import LongArrow from "./LongArrow";
 import ShortArrow from "./ShortArrow";
 import styles from "./styles.module.scss";
 import NavContext from "../NavContext";
+import MobileArrow from "./MobileArrow";
 
 type Props = {};
 
 const Nav = (props: Props) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Change the breakpoint according to your needs
+    };
+
+    handleResize(); // Call it once to set the initial value
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const {
     showAbout,
     setShowAbout,
@@ -70,7 +87,7 @@ const Nav = (props: Props) => {
               onClick={handlePortfolioClick}
             >
               <a className={styles.linkHorizontal}>
-                <LongArrow size={300} />
+                {isMobile ? <MobileArrow /> : <LongArrow size={300} />}
                 <span className={styles.linkHorizontalFlip}>Portfolio</span>
               </a>
             </span>
@@ -82,7 +99,7 @@ const Nav = (props: Props) => {
               onClick={handleAboutClick}
             >
               <a className={styles.linkHorizontal}>
-                <LongArrow size={300} />
+                {isMobile ? <MobileArrow /> : <LongArrow size={300} />}
                 <span className={styles.linkHorizontalInner}>About</span>
               </a>
             </span>
