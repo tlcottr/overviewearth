@@ -6,7 +6,7 @@ type Props = {};
 const Video: React.FC<Props> = (props: Props) => {
   return (
     <div className={styles.videoContainer}>
-      <video autoPlay loop muted>
+      <video autoPlay loop muted playsInline>
         <source src="/static/video/Earth Transparent.webm" type="video/webm" />
       </video>
     </div>
