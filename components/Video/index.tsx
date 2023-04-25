@@ -25,7 +25,6 @@ const Video: React.FC<Props> = (props: Props) => {
         loop
         muted
         playsInline
-        src="/static/video/EarthTransparent.webm"
         className={
           showAbout
             ? "about"
@@ -66,7 +65,7 @@ const Video: React.FC<Props> = (props: Props) => {
           width="160%"
           height="160%"
         />
-        <source src="/static/video/EarthTransparent.mov" type="video/mov" />
+        <source src="/static/video/EarthTransparent.webm" type="video/webm" />
       </video>
     </div>
   );
