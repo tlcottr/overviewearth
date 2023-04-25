@@ -20,10 +20,6 @@ const Video: React.FC<Props> = (props: Props) => {
           height="100%"
         />
         <source
-          src="/static/video/EarthTransparent.mp4"
-          type="video/mp4"
-        ></source>
-        <source
           src="/static/video/EarthTransparent.mov"
           type="video/mov"
         ></source>
