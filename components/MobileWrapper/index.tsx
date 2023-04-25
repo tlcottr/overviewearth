@@ -41,16 +41,6 @@ const MobileWrapper: React.FC = () => {
         >
           <Nav />
         </div>
-        <div
-          className={styles.contactContainer}
-          style={{
-            transform: navContext.showContact
-              ? "translateY(0)"
-              : "translateY(100%)",
-          }}
-        >
-          <Contact />
-        </div>
         <Video />
       </div>
     </>
