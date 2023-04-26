@@ -321,7 +321,7 @@ const LandingLayout = ({ children }) => {
 
   setTimeout(() => {
     setShowTooltip(false);
-  }, 5000);
+  }, 4999);
 
   const DesktopLayout = () => {
     return (
