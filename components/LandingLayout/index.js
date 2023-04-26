@@ -269,11 +269,28 @@ const Description = () => {
 };
 
 const LandingLayout = ({ children }) => {
+  const [isMobile, setIsMobile] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
 
   const copyToClipboard = useCallback(() => {
     navigator.clipboard.writeText("contact@overview.earth");
     setShowTooltip(true);
+  }, []);
+
+  const handleResize = () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   setTimeout(() => {
@@ -358,7 +375,11 @@ const LandingLayout = ({ children }) => {
 
   return (
     <>
-      <DesktopLayout>{children}</DesktopLayout>
+      {isMobile ? (
+        <MobileLayout>{children}</MobileLayout>
+      ) : (
+        <DesktopLayout>{children}</DesktopLayout>
+      )}
     </>
   );
 };
