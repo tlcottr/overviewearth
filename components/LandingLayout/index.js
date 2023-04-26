@@ -345,7 +345,7 @@ const LandingLayout = ({ children }) => {
         </Head>
         <div className="flex flex-col items-center justify-center">
           <div className="h-screen flex flex-col items-center justify-center font-inconsolata max-w-5xl m-auto overflow-hidden">
-            <div>
+            <div className="flex flex-col items-center justify-center">
               <div className="pt-1 mb-8">
                 <Logo />
               </div>
