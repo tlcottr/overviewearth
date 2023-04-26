@@ -377,7 +377,7 @@ const LandingLayout = ({ children }) => {
             <div className="flex flex-col">
               <Description />
             </div>
-            <div className="fixed bottom-8 z-10">
+            <div className="fixed bottom-8 z-[1000]">
               <div className="py-2 h-3 flex flex-row justify-center items-center">
                 <div
                   className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#1A1A1A] rounded-md p-2 border-solid border border-[#1A1A1A]"

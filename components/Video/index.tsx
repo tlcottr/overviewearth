@@ -1,9 +1,28 @@
-import React, { useContext } from "react";
-import { isMobile } from "react-device-detect";
+import React, { useContext, useEffect, useState } from "react";
 
 type Props = {};
 
 const Video: React.FC<Props> = (props: Props) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768); // or use any other mobile breakpoint
+    }
+  }, []);
+
+  const videoStyles = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "160%",
+    height: "160%",
+    minHeight: isMobile ? "250%" : "400%",
+    minWidth: isMobile ? "250%" : "400%",
+    zIndex: "-1",
+  };
+
   return (
     <div
       style={{
@@ -16,23 +35,7 @@ const Video: React.FC<Props> = (props: Props) => {
         zIndex: "-10",
       }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "160%",
-          height: "160%",
-          minHeight: isMobile ? "100%" : "400%",
-          minWidth: isMobile ? "100%" : "400%",
-          zIndex: "-1",
-        }}
-      >
+      <video autoPlay loop muted playsInline style={videoStyles}>
         <source
           src="/static/video/EarthMobile.mov"
           type="video/quicktime"
