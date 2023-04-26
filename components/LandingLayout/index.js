@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Header from "../Header";
 import Head from "next/head";
 import { constants } from "../../constants";
@@ -269,28 +269,11 @@ const Description = () => {
 };
 
 const LandingLayout = ({ children }) => {
-  const [isMobile, setIsMobile] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const copyToClipboard = () => {
+  const copyToClipboard = useCallback(() => {
     navigator.clipboard.writeText("contact@overview.earth");
     setShowTooltip(true);
-  };
-
-  const handleResize = () => {
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   setTimeout(() => {
@@ -375,11 +358,7 @@ const LandingLayout = ({ children }) => {
 
   return (
     <>
-      {isMobile ? (
-        <MobileLayout>{children}</MobileLayout>
-      ) : (
-        <DesktopLayout>{children}</DesktopLayout>
-      )}
+      <DesktopLayout>{children}</DesktopLayout>
     </>
   );
 };
