@@ -336,6 +336,12 @@ const LandingLayout = ({ children }) => {
   };
 
   const MobileLayout = () => {
+    const [containerHeight, setContainerHeight] = useState(null);
+
+    useEffect(() => {
+      setContainerHeight(window.innerHeight);
+    }, []);
+
     return (
       <>
         <Head>
@@ -343,7 +349,10 @@ const LandingLayout = ({ children }) => {
           <meta name="description" content={constants.pageDescription} />*/}
           <meta name="viewport" content="width=device-width" />
         </Head>
-        <div className="p-4 md:p-8 flex flex-col items-center justify-center">
+        <div
+          className="p-4 md:p-8 flex flex-col items-center justify-center h-screen"
+          style={{ height: containerHeight }}
+        >
           <div className="h-auto flex flex-col items-center justify-center font-inconsolata max-w-5xl m-2">
             <div className="flex flex-col items-center justify-center">
               <div className="pt-1 mb-8">
