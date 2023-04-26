@@ -5,6 +5,7 @@ import { constants } from "../../constants";
 import Footer from "../Footer";
 import Logo from "../Logo";
 import Image from "next/image";
+import Video from "../Video";
 
 const BlurDiscMobile = () => {
   return (
@@ -293,7 +294,6 @@ const Description = () => {
   );
 };
 
-
 const LandingLayout = ({ children }) => {
   const [isMobile, setIsMobile] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
@@ -354,11 +354,9 @@ const LandingLayout = ({ children }) => {
                 )}
               </div>
             </div>
-            <div className="w-full fixed z-0 bottom-0">
-              <BlurDiscDesktop />
-            </div>
           </div>
         </div>
+        <Video />
       </>
     );
   };
@@ -395,10 +393,8 @@ const LandingLayout = ({ children }) => {
               </div>
             </div>
           </div>
-          <div className="w-full fixed z-0 bottom-0">
-            <BlurDiscMobile />
-          </div>
         </div>
+        <Video />
       </>
     );
   };
