@@ -28,6 +28,8 @@ const Video: React.FC<Props> = (props: Props) => {
           transform: "translate(-50%, -50%)",
           width: "160%",
           height: "160%",
+          minHeight: isMobile ? "100%" : "400%",
+          minWidth: isMobile ? "100%" : "400%",
           zIndex: "-1",
         }}
       >
@@ -37,7 +39,7 @@ const Video: React.FC<Props> = (props: Props) => {
           width="200%"
           height="200%"
         />
-        <source src="/static/video/EarthTransparent.webm" type="video/webm" />
+        <source src="/static/video/Earth.webm" type="video/webm" />
       </video>
     </div>
   );

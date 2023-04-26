@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 html {
-  background-color: var(--bg-color-alt);
+  background-color: #1a1a1a;
 }
 
 @font-face {
   font-family: "mono";
   src: url("../public/fonts/Inconsolata-Regular.ttf");
+}
+
+video {
+  max-width: 150%;
+  min-width: 100%;
 }
