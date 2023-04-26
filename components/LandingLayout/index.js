@@ -336,6 +336,12 @@ const LandingLayout = ({ children }) => {
   };
 
   const MobileLayout = () => {
+    const [containerHeight, setContainerHeight] = useState(null);
+
+    useEffect(() => {
+      setContainerHeight(window.innerHeight);
+    }, []);
+
     return (
       <>
         <Head>
@@ -343,9 +349,12 @@ const LandingLayout = ({ children }) => {
           <meta name="description" content={constants.pageDescription} />*/}
           <meta name="viewport" content="width=device-width" />
         </Head>
-        <div className="flex flex-col items-center justify-center h-screen relative">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="font-inconsolata max-w-5xl">
+        <div
+          className="p-4 md:p-8 flex flex-col items-center justify-center h-screen"
+          style={{ height: containerHeight }}
+        >
+          <div className="h-auto flex flex-col items-center justify-center font-inconsolata max-w-5xl m-2">
+            <div className="">
               <div className="pt-1 mb-8">
                 <Logo />
               </div>
@@ -353,20 +362,20 @@ const LandingLayout = ({ children }) => {
                 <Description />
               </div>
             </div>
-          </div>
-          <div className="fixed bottom-8 z-2">
-            <div className="py-2 h-3 flex flex-row justify-center items-center">
-              <div
-                className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#DDD7C9] rounded-md p-2 border-solid border border-[#DDD7C9]"
-                onClick={copyToClipboard}
-              >
-                CONTACT@OVERVIEW.EARTH
-              </div>
-              {showTooltip && (
-                <div className="ml-2 p-2 tooltip font-inconsolata text-xs bg-[#DDD7C9] text-[#1a1a1a] rounded-md w-[130px] px-1 text-center uppercase">
-                  Copied to clipboard
+            <div className="fixed bottom-8 z-2">
+              <div className="py-2 h-3 flex flex-row justify-center items-center">
+                <div
+                  className="text-xs max-w-sm leading-tight uppercase cursor-pointer text-[#DDD7C9] rounded-md p-2 border-solid border border-[#DDD7C9]"
+                  onClick={copyToClipboard}
+                >
+                  CONTACT@OVERVIEW.EARTH
                 </div>
-              )}
+                {showTooltip && (
+                  <div className="ml-2 p-2 tooltip font-inconsolata text-xs bg-[#DDD7C9] text-[#1a1a1a] rounded-md w-[130px] px-1 text-center uppercase">
+                    Copied to clipboard
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
