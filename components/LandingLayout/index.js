@@ -343,9 +343,9 @@ const LandingLayout = ({ children }) => {
         <meta name="description" content={constants.pageDescription} />*/}
           <meta name="viewport" content="width=device-width" />
         </Head>
-        <div className="p-4 md:p-8 flex flex-col items-center justify-center">
-          <div className="h-auto flex flex-col items-center justify-center font-inconsolata max-w-5xl m-2">
-            <div className="pt-1 mb-8 mt-[200px]">
+        <div className="flex flex-col items-center justify-center">
+          <div className="h-auto min-h-screen flex flex-col items-center justify-center font-inconsolata max-w-5xl">
+            <div className="pt-1 mb-8">
               <Logo />
             </div>
             <div className="flex flex-col">
