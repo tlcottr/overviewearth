@@ -39,7 +39,7 @@
 }
 .portfolioGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
   margin-top: 1rem;
 }
@@ -49,7 +49,7 @@
   padding: 3rem;
   object-fit: fill;
   display: flex;
-  min-height: 200px;
+  min-height: 150px;
   min-width: 200px;
   cursor: pointer;
   position: relative;
@@ -100,6 +100,18 @@
     line-height: 1.5rem;
     min-height: auto;
     padding-top: 2rem;
+  }
+  .portfolioGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolioItem {
+    min-width: 100px;
+    min-height: 80px;
+    padding: 1rem;
+  }
+  .imageContainer {
+    width: 50px;
+    height: 50px;
   }
 }
 

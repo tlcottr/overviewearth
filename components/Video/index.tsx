@@ -73,10 +73,7 @@ const Video: React.FC<Props> = (props: Props) => {
           width="200%"
           height="200%"
         />
-        <source
-          src="/static/video/EarthTransparentSlow.webm"
-          type="video/webm"
-        />
+        <source src="/static/video/EarthTransparent.webm" type="video/webm" />
       </video>
     </div>
   );

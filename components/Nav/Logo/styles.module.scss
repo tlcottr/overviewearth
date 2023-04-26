@@ -10,3 +10,22 @@
     margin: 3rem;
   }
 }
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+.logo {
+  width: 25%;
+  height: auto;
+  margin: 4rem;
+}
+/* For desktops */
+@media (min-width: 1024px) {
+  .logo {
+    width: 30%;
+    height: auto;
+    margin-left: 6rem;
+    margin-left: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
