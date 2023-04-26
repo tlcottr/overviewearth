@@ -340,16 +340,18 @@ const LandingLayout = ({ children }) => {
       <>
         <Head>
           {/*<meta name="title" content={constants.pageTitle} />
-            <meta name="description" content={constants.pageDescription} />*/}
+          <meta name="description" content={constants.pageDescription} />*/}
           <meta name="viewport" content="width=device-width" />
         </Head>
-        <div className="p-4 md:p-8 flex flex-col items-center justify-center h-screen relative">
-          <div className="h-auto flex flex-col items-center justify-center font-inconsolata max-w-5xl absolute top-1/2 transform -translate-y-1/2">
-            <div className="pt-1 mb-8">
-              <Logo />
-            </div>
-            <div className="flex flex-col">
-              <Description />
+        <div className="flex flex-col items-center justify-center h-screen relative">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="font-inconsolata max-w-5xl">
+              <div className="pt-1 mb-8">
+                <Logo />
+              </div>
+              <div className="flex flex-col">
+                <Description />
+              </div>
             </div>
           </div>
           <div className="fixed bottom-8 z-2">
