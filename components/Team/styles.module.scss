@@ -7,7 +7,7 @@
   margin-top: auto;
   margin-bottom: auto;
   min-height: 100vh;
-  font-family: "Garamond", erif;
+  font-family: "Garamond-Light", serif;
   letter-spacing: 1%;
   font-size: 2.5rem;
   color: var(--color);
@@ -63,6 +63,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.role {
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1080px) {
@@ -123,7 +126,7 @@
     margin-top: auto;
     margin-bottom: auto;
     min-height: 100vh;
-    font-family: "Garamond", serif;
+    font-family: "Garamond-Light", serif;
     letter-spacing: 1%;
     font-size: 2.5rem;
     color: var(--color);

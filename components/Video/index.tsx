@@ -40,15 +40,15 @@ const Video: React.FC<Props> = (props: Props) => {
           width: "160%",
           height: "160%",
           zIndex: "-1",
-          transition: "transform 2s ease",
+          transition: "transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0)",
           ...(showAbout && {
-            transform: "translate(-50%, -50%) translateX(-50%)",
+            transform: "translate(-50%, -50%) translateX(-20%)",
             ...(isMobile && {
               transform: "translate(-50%, -50%) translateX(-25%)",
             }),
           }),
           ...(showPortfolio && {
-            transform: "translate(-50%, -50%) translateX(50%)",
+            transform: "translate(-50%, -50%) translateX(20%)",
             ...(isMobile && {
               transform: "translate(-50%, -50%) translateX(25%)",
             }),
