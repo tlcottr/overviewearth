@@ -1,23 +1,22 @@
 .logo {
-  width: 25%;
+  width: 100%;
   height: auto;
-  margin: 4rem;
+  margin: 1rem;
 }
 @media (max-width: 768px) {
   .logo {
-    width: 100%;
+    width: 50%;
     height: auto;
-    margin: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 /* For tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 769px) and (max-width: 1023px) {
 }
-.logo {
-  width: 25%;
-  height: auto;
-  margin: 4rem;
-}
+
 /* For desktops */
 @media (min-width: 1024px) {
   .logo {
