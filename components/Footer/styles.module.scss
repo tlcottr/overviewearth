@@ -109,7 +109,7 @@
   max-width: 80px;
 }
 
-@media (min-width: 400px) {
+@media (max-width: 787px) {
   .footer {
     display: flex;
     flex-direction: row;
@@ -123,9 +123,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    z-index: 1;
-    position: fixed;
-    bottom: 0;
     height: 10vh;
   }
   .popupTitle {
@@ -147,31 +144,6 @@
   }
 }
 
-@media (min-width: 600px) {
-  .footer {
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
-    font-size: 0.5rem;
-  }
-  .popupTitle {
-    font-size: 0.05rem;
-    line-height: 0.05rem;
-  }
-  .popup {
-    justify-content: flex-start;
-  }
-  .popupSection {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .nightMode {
-    max-width: 80px;
-  }
-  .dataLoad {
-    max-width: 80px;
-  }
-}
 @media (min-width: 1080px) {
   .footer {
     padding-left: 2rem;
