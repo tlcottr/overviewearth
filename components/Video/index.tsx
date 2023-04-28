@@ -39,8 +39,8 @@ const Video: React.FC<Props> = (props: Props) => {
           transform: "translate(-50%, -50%)",
           width: "160%",
           height: "160%",
-          minHeight: isMobile ? "200%" : "100%",
-          minWidth: isMobile ? "200%" : "100%",
+          minHeight: isMobile ? "225%" : "100%",
+          minWidth: isMobile ? "225%" : "100%",
           zIndex: "-1",
           transition: "transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0)",
           ...(showAbout && {
