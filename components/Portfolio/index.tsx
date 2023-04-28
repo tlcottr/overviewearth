@@ -29,8 +29,9 @@ const Portfolio = (props: Props) => {
             <h1 className={styles.title}>Portfolio</h1>
           </span>
           <div className={styles.reachOut}>
-            Is your company addressing climate change?<br></br> We’d love to
-            talk. contact@overview.earth
+            Is your company addressing climate change?
+            {isMobile ? "" : <br></br>} We’d love to talk.
+            contact@overview.earth
           </div>
         </div>
         <div className={styles.portfolioGrid}>
