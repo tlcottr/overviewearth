@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .arrowContainer {
@@ -10,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 90vh;
 }
 
 .container {
