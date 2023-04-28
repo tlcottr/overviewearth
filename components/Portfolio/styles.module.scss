@@ -134,7 +134,7 @@
     align-items: left;
   }
   .arrowContainer {
-    height: 90vh;
+    min-height: 90vh;
   }
   .portfolioGrid {
     grid-template-columns: repeat(2, 1fr);
