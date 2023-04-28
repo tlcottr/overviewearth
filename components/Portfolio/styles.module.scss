@@ -133,9 +133,6 @@
     padding-right: 1rem;
     align-items: left;
   }
-  .arrowContainer {
-    min-height: 90vh;
-  }
   .portfolioGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -181,6 +178,12 @@
     line-height: 0.75rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+  .arrowContainer {
+    min-height: 100%;
+  }
+  .navContainer {
+    height: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
