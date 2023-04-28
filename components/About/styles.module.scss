@@ -50,6 +50,7 @@
     font-size: 1.25rem;
     line-height: 1.5rem;
     min-height: auto;
+    padding-top: 2rem;
   }
   .title {
     margin-bottom: 2rem;
@@ -63,7 +64,31 @@
 /* For screens between 768px and 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
 }
+.container {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  min-height: auto;
+}
 
 /* For screens larger than 1024px */
 @media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: "Garamond-Light", serif;
+    letter-spacing: 1%;
+    font-size: 2.25rem;
+    color: var(--color);
+    max-width: 1080px;
+    font-weight: 400;
+    margin: 0 auto;
+    line-height: 2.5rem;
+    text-align: left;
+  }
 }
