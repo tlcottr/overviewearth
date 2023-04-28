@@ -79,7 +79,7 @@
 @media (max-width: 767px) {
   .container {
     padding-top: 2rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     min-height: auto;
   }
   .teamGrid {
@@ -98,6 +98,9 @@
   .arrowContainer {
     left: 50%;
     right: 50%;
+  }
+  .role {
+    font-size: 1.5rem;
   }
 }
 
