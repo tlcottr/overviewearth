@@ -23,13 +23,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  overflow: hidden;
 }
 .arrowContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 90vh;
 }
 .title {
   text-decoration: underline;
@@ -131,6 +132,9 @@
     padding-left: 1rem;
     padding-right: 1rem;
     align-items: left;
+  }
+  .arrowContainer {
+    height: 100%;
   }
   .portfolioGrid {
     grid-template-columns: repeat(2, 1fr);

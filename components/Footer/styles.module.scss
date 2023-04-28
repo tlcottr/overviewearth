@@ -111,10 +111,22 @@
 
 @media (min-width: 400px) {
   .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-family: "Inconsolata", serif;
+    color: var(--text-dark);
+    letter-spacing: 0.05rem;
+    font-size: 0.75rem;
+    width: 100%;
     padding-left: 1rem;
-    padding-bottom: 1rem;
     padding-right: 1rem;
-    font-size: 0.5rem;
+    padding-bottom: 1rem;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
   }
   .popupTitle {
     font-size: 0.05rem;
