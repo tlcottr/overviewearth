@@ -118,12 +118,15 @@
     font-family: "Inconsolata", serif;
     color: var(--text-dark);
     letter-spacing: 0.05rem;
-    font-size: 0.75rem;
-    width: 100%;
+    font-size: 0.55rem;
+    line-height: 0.7rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    height: 10vh;
+  }
+  .popupAnchor {
+    cursor: pointer;
+    max-width: 100px;
   }
   .popupTitle {
     font-family: "Garamond-Regular", serif;
@@ -135,6 +138,7 @@
   }
   .popup {
     justify-content: space-between;
+    font-size: 0.75rem;
   }
   .popupSection {
     flex-direction: column;
