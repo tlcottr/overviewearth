@@ -144,6 +144,7 @@
   }
   .portfolioGrid {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem 1rem;
   }
   .portfolioItem {
     min-width: 100px;
