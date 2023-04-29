@@ -79,7 +79,7 @@
 
 .imageContainer {
   /* set width and height of the container to match the image size */
-  width: 75px;
+  width: 60px;
   height: 10px;
   display: flex; /* add flexbox to center child elements */
   justify-content: center;
@@ -122,6 +122,20 @@
 }
 .imageContainerMobile:hover {
   background-color: transparent;
+}
+.email {
+  cursor: pointer;
+  font-size: 1rem;
+}
+.email:hover {
+  opacity: 0.5;
+}
+.copied {
+  background: var(--color);
+  color: var(--bg-color-alt);
+  padding: 0.2rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
 }
 @media screen and (max-width: 767px) {
   .container {
@@ -187,6 +201,10 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   .portfolioTop {
     display: flex;
     flex-direction: row;
@@ -194,6 +212,9 @@
     align-items: center;
     width: 100%;
     margin-bottom: 2rem;
+  }
+  .portfolioGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, calc(25% - 1rem)));
   }
 }
 @media screen and (min-width: 1024px) {
@@ -208,5 +229,8 @@
     align-items: center;
     width: 100%;
     margin-bottom: 2rem;
+  }
+  .portfolioGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, calc(25% - 1rem)));
   }
 }

@@ -85,8 +85,7 @@ const Popup = ({ onClose }: Props) => {
         <div className={styles.popupSection}>
           <div className={styles.popupQuestion}>ENERGY FOOTPRINT</div>
           <div className={styles.popupAnswer}>
-            This site is lighter than 97% of other webpages. Real-time energy
-            use is displayed in the footer.
+            This site is lighter than 97% of other webpages.
           </div>
         </div>
       </div>

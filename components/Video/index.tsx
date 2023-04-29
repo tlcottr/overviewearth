@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { NavContext } from "../NavContext";
 import { isMobile } from "react-device-detect";
@@ -8,6 +8,12 @@ type Props = {};
 const Video: React.FC<Props> = (props: Props) => {
   const { showAbout, showPortfolio, showTeam, showContact } =
     useContext(NavContext);
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
     <div
@@ -42,7 +48,8 @@ const Video: React.FC<Props> = (props: Props) => {
           minHeight: isMobile ? "250%" : "100%",
           minWidth: isMobile ? "250%" : "100%",
           zIndex: "-1",
-          transition: "transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0)",
+          opacity: isLoaded ? 1 : 0, // Set opacity based on whether the video is loaded or not
+          transition: "opacity 2s ease-in-out", // Add a fade-in animation with a 2-second duration and ease-in-out timing function
           ...(showAbout && {
             transform: "translate(-50%, -50%) translateX(-20%)",
             ...(isMobile && {

@@ -8,6 +8,13 @@ type Props = {};
 
 const Portfolio = (props: Props) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("contact@overview.earth");
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000); // reset after 2 seconds
+  };
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -29,9 +36,17 @@ const Portfolio = (props: Props) => {
             <h1 className={styles.title}>Portfolio</h1>
           </span>
           <div className={styles.reachOut}>
-            Is your company addressing climate change?
-            {isMobile ? "" : <br></br>} We’d love to talk.
-            contact@overview.earth
+            <p>
+              Is your company addressing climate change?
+              {isMobile ? "" : <br></br>} We’d love to talk.{" "}
+              <span onClick={handleCopy} className={styles.email}>
+                {isCopied ? (
+                  <span className={styles.copied}>COPIED TO CLIPBOARD</span>
+                ) : (
+                  "contact@overview.earth"
+                )}
+              </span>
+            </p>
           </div>
         </div>
         <div className={styles.portfolioGrid}>
@@ -93,37 +108,6 @@ const Portfolio = (props: Props) => {
                 </div>
                 <div className={styles.textContainer}>
                   <p>Eliminating enteric methane emissions at-scale.</p>
-                </div>
-              </div>
-            )}
-          </Link>
-          <Link href={"https://www.mojavehvac.com/"} rel="" target="_blank">
-            {isMobile ? (
-              <>
-                <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerMobile}>
-                    <Image
-                      height={10}
-                      width={75}
-                      src={"/static/images/mojave.png"}
-                    />
-                  </div>
-                </div>
-                <div className={styles.textContainerMobile}>
-                  <p>Changing the physics of air conditioning.</p>
-                </div>
-              </>
-            ) : (
-              <div className={styles.portfolioItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    height={10}
-                    width={75}
-                    src={"/static/images/mojave.png"}
-                  />
-                </div>
-                <div className={styles.textContainer}>
-                  <p>Changing the physics of air conditioning.</p>
                 </div>
               </div>
             )}
