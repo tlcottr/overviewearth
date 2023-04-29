@@ -26,3 +26,15 @@
 .arrow {
   transform: rotate(180deg);
 }
+
+@media (max-height: 787px) {
+  .container {
+    padding-bottom: 0;
+  }
+  .return {
+    padding: 0;
+  }
+  .arrow {
+    display: none;
+  }
+}
