@@ -54,7 +54,7 @@
   }
   .arrowContainer {
     min-height: 100%;
-    transform: translatey(50%);
+    transform: translatey(47.5%);
   }
   .navContainer {
     height: 100%;
@@ -70,6 +70,10 @@
   }
   .arrowContainer {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -96,5 +100,9 @@
   }
   .arrowContainer {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -26,10 +26,6 @@
   overflow: hidden;
 }
 .arrowContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .title {
   text-decoration: underline;
@@ -200,6 +196,7 @@
   }
   .arrowContainer {
     min-height: 100%;
+    transform: translatey(47.5%);
   }
   .navContainer {
     height: 100%;
@@ -223,6 +220,10 @@
   }
   .arrowContainer {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -243,5 +244,9 @@
   }
   .arrowContainer {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
