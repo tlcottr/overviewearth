@@ -11,7 +11,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .container {
@@ -72,6 +71,9 @@
     line-height: 1.9rem;
     min-height: auto;
   }
+  .arrowContainer {
+    min-height: 100vh;
+  }
 }
 
 /* For screens larger than 1024px */
@@ -94,5 +96,8 @@
     margin: 0 auto;
     line-height: 2.5rem;
     text-align: left;
+  }
+  .arrowContainer {
+    min-height: 100vh;
   }
 }

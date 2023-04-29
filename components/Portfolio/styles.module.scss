@@ -30,7 +30,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 .title {
   text-decoration: underline;
@@ -222,6 +221,9 @@
   .portfolioGrid {
     grid-template-columns: repeat(auto-fit, minmax(200px, calc(25% - 1rem)));
   }
+  .arrowContainer {
+    min-height: 100vh;
+  }
 }
 @media screen and (min-width: 1024px) {
   .container {
@@ -238,5 +240,8 @@
   }
   .portfolioGrid {
     grid-template-columns: repeat(auto-fit, minmax(200px, calc(25% - 1rem)));
+  }
+  .arrowContainer {
+    min-height: 100vh;
   }
 }
