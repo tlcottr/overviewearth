@@ -78,9 +78,10 @@
 /* Media Query for screens smaller than 768px */
 @media (max-width: 767px) {
   .container {
-    padding-top: 2rem;
+    padding-top: 0rem;
     font-size: 1.5rem;
     min-height: auto;
+    height: 100%;
   }
   .teamGrid {
     grid-template-columns: 1fr;
