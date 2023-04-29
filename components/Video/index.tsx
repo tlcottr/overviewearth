@@ -49,7 +49,7 @@ const Video: React.FC<Props> = (props: Props) => {
           minWidth: isMobile ? "250%" : "100%",
           zIndex: "-1",
           opacity: isLoaded ? 1 : 0, // Set opacity based on whether the video is loaded or not
-          transition: "opacity 2s ease-in-out", // Add a fade-in animation with a 2-second duration and ease-in-out timing function
+          transition: isMobile ? "opacity 1s linear" : "opacity 2s ease-in-out", // Add a fade-in animation with a 2-second duration and ease-in-out timing function
           ...(showAbout && {
             transform: "translate(-50%, -50%) translateX(-20%)",
             ...(isMobile && {
