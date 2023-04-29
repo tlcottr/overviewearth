@@ -123,6 +123,7 @@ const Footer = (props: Props) => {
       <p onClick={handlePopup} className={styles.popupAnchor}>
         overview.earth is a low-impact site.
       </p>
+
       <p onClick={handleCopy} className={styles.email}>
         {isCopied ? (
           <span className={styles.copied}>COPIED TO CLIPBOARD</span>
@@ -130,6 +131,7 @@ const Footer = (props: Props) => {
           "contact@overview.earth"
         )}
       </p>
+
       {isPopupVisible && <Popup onClose={handleClosePopup} />}
     </div>
   );

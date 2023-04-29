@@ -1,22 +1,20 @@
 .footer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
   font-family: "Inconsolata", serif;
   color: var(--text-dark);
   letter-spacing: 0.05rem;
   font-size: 0.75rem;
-  width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
-  z-index: 1;
-  position: fixed;
+  position: absolute;
   bottom: 0;
 }
+
 .email {
   cursor: pointer;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }
 .email:hover {
   opacity: 0.5;
@@ -30,6 +28,9 @@
 .popupAnchor {
   cursor: pointer;
   max-width: 140px;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
 }
 .popupAnchor:hover {
   opacity: 0.5;
@@ -111,10 +112,6 @@
 
 @media (max-width: 787px) {
   .footer {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
     font-family: "Inconsolata", serif;
     color: var(--text-dark);
     letter-spacing: 0.05rem;
@@ -127,6 +124,12 @@
   .popupAnchor {
     cursor: pointer;
     max-width: 100px;
+    left: 1rem;
+    bottom: 1rem;
+  }
+  .email {
+    right: 1rem;
+    bottom: 1rem;
   }
   .popupTitle {
     font-family: "Garamond-Regular", serif;
