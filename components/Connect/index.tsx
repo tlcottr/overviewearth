@@ -29,7 +29,7 @@ const Contact = (props: Props) => {
               </span>
             </Link>
             <Link
-              href={"https://www.linkedin.com/company/overview-capital/about/"}
+              href={"https://www.linkedin.com/company/overviewcapital/about/"}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -38,7 +38,7 @@ const Contact = (props: Props) => {
               </span>
             </Link>
             <Link
-              href={"https://twitter.com/OverviewCapital"}
+              href={"https://twitter.com/overviewcap"}
               target="_blank"
               rel="noopener noreferrer"
             >
