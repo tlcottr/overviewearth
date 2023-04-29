@@ -23,16 +23,16 @@ const Layout = ({ children }: Props) => {
   const now = new Date();
   const hour = now.getHours();
 
-  /*if (hour >= 1 && hour < 5) {
+  if (hour >= 1 && hour < 5) {
     return <OfflineLayout />;
-  } else {*/
-  return (
-    <div className={styles.container}>
-      {children}
-      <Footer />
-    </div>
-  );
-  /*}*/
+  } else {
+    return (
+      <div className={styles.container}>
+        {children}
+        <Footer />
+      </div>
+    );
+  }
 };
 
 export default Layout;

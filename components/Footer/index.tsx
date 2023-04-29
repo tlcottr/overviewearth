@@ -9,6 +9,7 @@ type Props = {
 
 const Popup = ({ onClose }: Props) => {
   const [countdown, setCountdown] = useState("00:00:00");
+  const [dataLoad, setDataLoad] = useState(0);
 
   const handleExit = () => {
     onClose();
@@ -38,11 +39,22 @@ const Popup = ({ onClose }: Props) => {
           .toString()
           .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
       );
-    }, 1000);
+    }, 0);
 
-    // Clear the interval when the component unmounts
-    return () => clearInterval(interval);
-  }, []);
+    // Update the data load every 10 milliseconds
+    let intervalDataLoad: ReturnType<typeof setInterval>;
+    if (dataLoad < 573) {
+      intervalDataLoad = setInterval(() => {
+        setDataLoad((prevDataLoad) => prevDataLoad + 1);
+      }, 2);
+    }
+
+    // Clear the intervals when the component unmounts
+    return () => {
+      clearInterval(interval);
+      clearInterval(intervalDataLoad);
+    };
+  }, [dataLoad]);
 
   return (
     <div className={styles.popup}>
@@ -85,12 +97,13 @@ const Popup = ({ onClose }: Props) => {
         <div className={styles.popupSection}>
           <div className={styles.popupQuestion}>ENERGY FOOTPRINT</div>
           <div className={styles.popupAnswer}>
-            This site is lighter than 97% of other webpages.
+            This site is lighter than 97% of other webpages. Our current build
+            size is displayed below.
           </div>
         </div>
       </div>
       <div className={styles.popupFootline}>
-        <div className={styles.dataLoad}>Data load: 573kb</div>
+        <div className={styles.dataLoad}>Data load: {dataLoad}kb</div>
         <span onClick={handleExit}>
           <Exit />
         </span>

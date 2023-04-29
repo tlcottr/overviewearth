@@ -25,6 +25,7 @@ const DesktopWrapper: React.FC = () => {
             transform: navContext.showTeam
               ? "translateY(0)"
               : "translateY(-100%)",
+            opacity: navContext.showTeam ? 1 : 0,
           }}
         >
           <Team />
@@ -36,6 +37,7 @@ const DesktopWrapper: React.FC = () => {
               transform: navContext.showPortfolio
                 ? "translateX(0)"
                 : "translateX(-100%)",
+              opacity: navContext.showPortfolio ? 1 : 0,
             }}
           >
             <Portfolio />
@@ -48,6 +50,13 @@ const DesktopWrapper: React.FC = () => {
                 (navContext.showAbout ? " translateX(-115%)" : "") +
                 (navContext.showTeam ? " translateY(125%)" : "") +
                 (navContext.showPortfolio ? " translateX(115%)" : ""),
+              opacity:
+                navContext.showContact ||
+                navContext.showAbout ||
+                navContext.showTeam ||
+                navContext.showPortfolio
+                  ? 0
+                  : 1,
             }}
           >
             <Nav />
@@ -58,6 +67,7 @@ const DesktopWrapper: React.FC = () => {
               transform: navContext.showAbout
                 ? "translateX(0)"
                 : "translateX(100%)",
+              opacity: navContext.showAbout ? 1 : 0,
             }}
           >
             <About />
@@ -69,6 +79,7 @@ const DesktopWrapper: React.FC = () => {
             transform: navContext.showContact
               ? "translateY(0)"
               : "translateY(100%)",
+            opacity: navContext.showContact ? 1 : 0,
           }}
         >
           <Contact />

@@ -1,22 +1,24 @@
 .footer {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   font-family: "Inconsolata", serif;
   color: var(--text-dark);
   letter-spacing: 0.05rem;
   font-size: 0.75rem;
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  z-index: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
 }
 .email {
   cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+.popupAnchor {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
 }
 .email:hover {
   opacity: 0.5;
@@ -92,4 +94,47 @@
   width: 100%;
   margin-top: 0.5rem;
   color: var(--color);
+}
+@media (max-width: 787px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .offline {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .inner {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .email {
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .popupAnchor {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .email {
+    cursor: pointer;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+  }
+  .popupAnchor {
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+  }
 }

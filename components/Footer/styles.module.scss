@@ -9,7 +9,6 @@
   position: absolute;
   bottom: 0;
 }
-
 .email {
   cursor: pointer;
   position: fixed;
@@ -110,7 +109,7 @@
   max-width: 80px;
 }
 
-@media (max-width: 787px) {
+@media (max-width: 786px) {
   .footer {
     font-family: "Inconsolata", serif;
     color: var(--text-dark);
@@ -149,12 +148,30 @@
   }
   .nightMode {
     max-width: 80px;
+    line-height: 0.9rem;
   }
   .dataLoad {
     max-width: 80px;
+    line-height: 0.9rem;
   }
 }
-
+@media (min-width: 787px) and (max-width: 1080px) {
+  .popupTitle {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .popup {
+    justify-content: center;
+    margin: 30px;
+  }
+  .popupSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .popupContent {
+    padding: 2rem;
+  }
+}
 @media (min-width: 1080px) {
   .footer {
     padding-left: 2rem;

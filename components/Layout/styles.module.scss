@@ -25,7 +25,7 @@
   max-width: 800px;
 }
 
-@media (min-width: 400px) {
+@media (max-width: 787px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
     align-items: center;
   }
   .offline {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 2rem;
   }
   .inner {
@@ -41,7 +41,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -53,11 +53,12 @@
     line-height: 2.25rem;
   }
   .inner {
-    max-width: 500px;
+    max-width: 1080px;
+    padding: 1rem;
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
   .container {
     height: 100vh;
   }
