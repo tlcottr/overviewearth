@@ -171,6 +171,9 @@
   .popupContent {
     padding: 2rem;
   }
+  .popupAnswer {
+    min-width: 500px;
+  }
 }
 @media (min-width: 1080px) {
   .footer {
@@ -196,6 +199,9 @@
   }
   .popupAnchor {
     max-width: 300px;
+  }
+  .popupAnswer {
+    min-width: 500px;
   }
   .nightMode {
     max-width: 200px;
