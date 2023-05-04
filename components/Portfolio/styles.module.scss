@@ -84,7 +84,7 @@
 .textContainer {
   display: none; /* hide the text container by default */
   /* set styles for the body text */
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-align: center;
   font-family: "Inconsolata", sans-serif;
   line-height: 1.25rem;
@@ -217,7 +217,7 @@
     margin-bottom: 2rem;
   }
   .portfolioGrid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, calc(25% - 1rem)));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
   .arrowContainer {
     min-height: 100vh;
@@ -241,7 +241,7 @@
     margin-bottom: 2rem;
   }
   .portfolioGrid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, calc(25% - 1rem)));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
   .arrowContainer {
     min-height: 100vh;
