@@ -10,10 +10,13 @@ const Video: React.FC<Props> = (props: Props) => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [earthSize, setEarthSize] = useState("50%");
+  const [mobileEarthSize, setMobileEarthSize] = useState("100%");
 
   useEffect(() => {
     setTimeout(() => setEarthSize("100%"), 3000);
     setTimeout(() => setEarthSize("160%"), 8000);
+    setTimeout(() => setMobileEarthSize("190%"), 3000);
+    setTimeout(() => setMobileEarthSize("250%"), 8000);
     setTimeout(() => setIsLoaded(true), 8000);
   }, []);
 
@@ -49,10 +52,10 @@ const Video: React.FC<Props> = (props: Props) => {
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: earthSize,
-          height: earthSize,
-          minHeight: isMobile ? "250%" : earthSize,
-          minWidth: isMobile ? "250%" : earthSize,
+          width: isMobile ? mobileEarthSize : earthSize,
+          height: isMobile ? mobileEarthSize : earthSize,
+          minHeight: isMobile ? mobileEarthSize : earthSize,
+          minWidth: isMobile ? mobileEarthSize : earthSize,
           zIndex: "-1",
           opacity: isLoaded ? 1 : 0, // Set opacity based on whether the video is loaded or not
           transition:
