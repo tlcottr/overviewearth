@@ -27,12 +27,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10000;
-  width: 100vw;
+  width: 100%;
 }
 
 .preMainText {
@@ -45,11 +46,5 @@
   line-height: 2.7rem;
   max-width: 100%;
   text-align: center;
-}
-@media (max-width: 768px) {
-  @media (min-height: 600px) {
-    .preMainContainer {
-      height: 80vh;
-    }
-  }
+  margin: 0 auto;
 }
