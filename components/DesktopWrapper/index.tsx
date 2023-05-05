@@ -25,7 +25,7 @@ const DesktopWrapper: React.FC = () => {
       setShowMain(true);
       setTimeout(() => {
         setShowMainFade(true);
-      }); // Wait 1 second for preMainContainer to finish fading out
+      }, 1000); // Wait 1 second for preMainContainer to finish fading out
     }, 8000);
     return () => clearTimeout(timer);
   }, []);
@@ -48,7 +48,7 @@ const DesktopWrapper: React.FC = () => {
             className={styles.mainContainer}
             style={{
               opacity: showMainFade ? 1 : 0,
-              transition: showMainFade ? "opacity 1s linear" : "none",
+              transition: showMainFade && showMain ? "opacity 2s linear" : "none",
             }}
           >
             <div
