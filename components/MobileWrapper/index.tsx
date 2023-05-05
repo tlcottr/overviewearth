@@ -17,7 +17,7 @@ const MobileWrapper: React.FC = () => {
   };
 
   const [showMain, setShowMain] = useState(false);
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowText] = useState(true);
   const [showMainFade, setShowMainFade] = useState(false);
 
   return (
