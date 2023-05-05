@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import styles from "./styles.module.scss";
 import { NavContext } from "../NavContext";
 import { isMobile } from "react-device-detect";
 
@@ -10,6 +9,13 @@ const Video: React.FC<Props> = (props: Props) => {
     useContext(NavContext);
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const [earthSize, setEarthSize] = useState("50%");
+
+  useEffect(() => {
+    setTimeout(() => setEarthSize("100%"), 3000);
+    setTimeout(() => setEarthSize("160%"), 8000);
+    setTimeout(() => setIsLoaded(true), 8000);
+  }, []);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -43,14 +49,14 @@ const Video: React.FC<Props> = (props: Props) => {
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: "160%",
-          height: "160%",
-          minHeight: isMobile ? "250%" : "100%",
-          minWidth: isMobile ? "250%" : "100%",
+          width: earthSize,
+          height: earthSize,
+          minHeight: isMobile ? "250%" : earthSize,
+          minWidth: isMobile ? "250%" : earthSize,
           zIndex: "-1",
           opacity: isLoaded ? 1 : 0, // Set opacity based on whether the video is loaded or not
           transition:
-            "opacity 2s ease-in-out, transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0)",
+            "opacity 2s ease-in-out, transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0), min-height 2s cubic-bezier(0.61,0.0,0.0,1.0), min-width 2s cubic-bezier(0.61,0.0,0.0,1.0), width 2s cubic-bezier(0.61,0.0,0.0,1.0), height 2s cubic-bezier(0.61,0.0,0.0,1.0)",
           ...(showAbout && {
             transform: "translate(-50%, -50%) translateX(-20%)",
             ...(isMobile && {

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Nav from "../Nav";
 import Contact from "../Connect";
 import About from "../About";
@@ -16,74 +16,130 @@ const DesktopWrapper: React.FC = () => {
     showPortfolio: boolean;
   };
 
+  const [showMain, setShowMain] = useState(false);
+  const [showText, setShowText] = useState(false);
+  const [showMainFade, setShowMainFade] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMain(true);
+      setTimeout(() => {
+        setShowMainFade(true);
+      }); // Wait 1 second for preMainContainer to finish fading out
+    }, 8000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const textTimer = setTimeout(() => {
+      setShowText(true);
+      setTimeout(() => {
+        setShowText(false);
+      }, 4000);
+    }, 3200);
+    return () => clearTimeout(textTimer);
+  }, []);
+
   return (
     <>
       <div className={styles.container}>
-        <div
-          className={styles.teamContainer}
-          style={{
-            transform: navContext.showTeam
-              ? "translateY(0)"
-              : "translateY(-100%)",
-            opacity: navContext.showTeam ? 1 : 0,
-          }}
-        >
-          <Team />
-        </div>
-        <div className={styles.horizontalContainer}>
+        {showMain ? (
           <div
-            className={styles.portfolioContainer}
+            className={styles.mainContainer}
             style={{
-              transform: navContext.showPortfolio
-                ? "translateX(0)"
-                : "translateX(-100%)",
-              opacity: navContext.showPortfolio ? 1 : 0,
+              opacity: showMainFade ? 1 : 0,
+              transition: showMainFade ? "opacity 2s linear" : "none",
             }}
           >
-            <Portfolio />
+            <div
+              className={styles.teamContainer}
+              style={{
+                transform: navContext.showTeam
+                  ? "translateY(0)"
+                  : "translateY(-100%)",
+                opacity: navContext.showTeam ? 1 : 0,
+              }}
+            >
+              <Team />
+            </div>
+            <div className={styles.horizontalContainer}>
+              <div
+                className={styles.portfolioContainer}
+                style={{
+                  transform: navContext.showPortfolio
+                    ? "translateX(0)"
+                    : "translateX(-100%)",
+                  opacity: navContext.showPortfolio ? 1 : 0,
+                }}
+              >
+                <Portfolio />
+              </div>
+              <div
+                className={styles.navContainer}
+                style={{
+                  transform:
+                    (navContext.showContact ? "translateY(-125%)" : "") +
+                    (navContext.showAbout ? " translateX(-115%)" : "") +
+                    (navContext.showTeam ? " translateY(125%)" : "") +
+                    (navContext.showPortfolio ? " translateX(115%)" : ""),
+                  opacity:
+                    navContext.showContact ||
+                    navContext.showAbout ||
+                    navContext.showTeam ||
+                    navContext.showPortfolio
+                      ? 0
+                      : 1,
+                }}
+              >
+                <Nav />
+              </div>
+              <div
+                className={styles.aboutContainer}
+                style={{
+                  transform: navContext.showAbout
+                    ? "translateX(0)"
+                    : "translateX(100%)",
+                  opacity: navContext.showAbout ? 1 : 0,
+                }}
+              >
+                <About />
+              </div>
+            </div>
+            <div
+              className={styles.contactContainer}
+              style={{
+                transform: navContext.showContact
+                  ? "translateY(0)"
+                  : "translateY(100%)",
+                opacity: navContext.showContact ? 1 : 0,
+              }}
+            >
+              <Contact />
+            </div>
           </div>
+        ) : (
           <div
-            className={styles.navContainer}
+            className={styles.preMainContainer}
             style={{
-              transform:
-                (navContext.showContact ? "translateY(-125%)" : "") +
-                (navContext.showAbout ? " translateX(-115%)" : "") +
-                (navContext.showTeam ? " translateY(125%)" : "") +
-                (navContext.showPortfolio ? " translateX(115%)" : ""),
-              opacity:
-                navContext.showContact ||
-                navContext.showAbout ||
-                navContext.showTeam ||
-                navContext.showPortfolio
-                  ? 0
-                  : 1,
+              opacity: 1,
+              zIndex: 2,
+              transition: "opacity 1s linear",
+              animationDelay: "3000",
             }}
           >
-            <Nav />
+            <h1
+              className={styles.preMainText}
+              style={{
+                opacity: showText ? 1 : 0,
+                transition: "opacity 1s linear",
+                animationDelay: "3000",
+              }}
+            >
+              We are Overview, a venture capital firm investing in climate
+              change solutions.
+            </h1>
           </div>
-          <div
-            className={styles.aboutContainer}
-            style={{
-              transform: navContext.showAbout
-                ? "translateX(0)"
-                : "translateX(100%)",
-              opacity: navContext.showAbout ? 1 : 0,
-            }}
-          >
-            <About />
-          </div>
-        </div>
-        <div
-          className={styles.contactContainer}
-          style={{
-            transform: navContext.showContact
-              ? "translateY(0)"
-              : "translateY(100%)",
-            opacity: navContext.showContact ? 1 : 0,
-          }}
-        >
-          <Contact />
-        </div>
+        )}
         <Video />
       </div>
     </>
