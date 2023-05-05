@@ -46,3 +46,10 @@
   max-width: 100%;
   text-align: center;
 }
+@media (max-width: 768px) {
+  @media (min-height: 600px) {
+    .preMainContainer {
+      height: 80vh;
+    }
+  }
+}
