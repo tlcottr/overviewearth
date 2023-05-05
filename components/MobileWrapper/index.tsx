@@ -22,7 +22,7 @@ const MobileWrapper: React.FC = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowMain(true);
+      setShowMain(false);
       setTimeout(() => {
         setShowMainFade(true);
       }, 1000); // Wait 1 second for preMainContainer to finish fading out
