@@ -1,0 +1,140 @@
+.footer {
+  font-family: "Inconsolata", serif;
+  color: var(--text-dark);
+  letter-spacing: 0.05rem;
+  font-size: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
+}
+.email {
+  cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+.popupAnchor {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+}
+.email:hover {
+  opacity: 0.5;
+}
+.copied {
+  background: var(--color);
+  color: var(--bg-color-alt);
+  padding: 0.25rem;
+  border-radius: 3px;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1a1a1af5;
+  border: solid var(--color) 0.5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.popupContent {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.popupSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.popupQuestion {
+  font-family: "Inconsolata", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  max-width: 200px;
+  padding-right: 1rem;
+}
+
+.popupAnswer {
+  font-family: "Inconsolata", sans-serif;
+  max-width: 500px;
+}
+.popupHeadline {
+  max-width: 740px;
+}
+.popupTitle {
+  font-family: "Garamond-Light", serif;
+  font-size: 1.5rem;
+  width: 100%;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.popupFootline {
+  max-width: 740px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+  color: var(--color);
+}
+@media (max-width: 787px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .offline {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .inner {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .email {
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .popupAnchor {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .email {
+    cursor: pointer;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+  }
+  .popupAnchor {
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+  }
+}

@@ -1,0 +1,100 @@
+.container {
+  overflow: hidden;
+  height: 100vh;
+}
+.navContainer,
+.aboutContainer,
+.contactContainer,
+.teamContainer,
+.portfolioContainer {
+  transition: transform 2.7s cubic-bezier(0.61, 0, 0, 1),
+    opacity 2.7s cubic-bezier(0.61, 0, 0, 1);
+}
+.horizontalContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.aboutContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.contactContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.teamContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+.portfolioContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.mainContainer {
+  transition: opacity 2.7s cubic-bezier(0.61, 0, 0, 1);
+  opacity: 0;
+}
+.preMainContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  min-width: 900px;
+}
+
+.preMainText {
+  text-align: center;
+  color: var(--color);
+  opacity: 1;
+  font-family: "Garamond-Light";
+  font-size: 4rem;
+  letter-spacing: 1%;
+  line-height: 4.2rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+@media (max-width: 787px) {
+  .preMainText {
+    font-size: 2.4rem;
+    letter-spacing: 1%;
+    line-height: 2.7rem;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .preMainText {
+    font-size: 3.4rem;
+    letter-spacing: 1%;
+    line-height: 3.4rem;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .preMainText {
+    font-size: 4rem;
+    letter-spacing: 1%;
+    line-height: 4.2rem;
+    max-width: 900px;
+  }
+}

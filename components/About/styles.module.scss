@@ -1,0 +1,108 @@
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.arrowContainer {
+}
+
+.container {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: "Garamond-Light", serif;
+  letter-spacing: 1%;
+  color: var(--color);
+  max-width: 1080px;
+  font-weight: 400;
+  margin: 0 auto;
+  line-height: 3rem;
+  text-align: left;
+}
+
+.title {
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px */
+/* Media Query for screens smaller than 768px */
+@media (max-width: 767px) {
+  .container {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    min-height: auto;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .title {
+    margin-bottom: 2rem;
+  }
+  .arrowContainer {
+    min-height: 100%;
+    transform: translatey(40%);
+  }
+  .navContainer {
+    height: 100%;
+  }
+}
+
+/* For screens between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    font-size: 1.75rem;
+    line-height: 1.9rem;
+    min-height: auto;
+  }
+  .arrowContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* For screens larger than 1024px */
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: "Garamond-Light", serif;
+    letter-spacing: 1%;
+    font-size: 2.25rem;
+    color: var(--color);
+    max-width: 1080px;
+    font-weight: 400;
+    margin: 0 auto;
+    line-height: 2.5rem;
+    text-align: left;
+  }
+  .arrowContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

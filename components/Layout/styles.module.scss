@@ -1,0 +1,82 @@
+.container {
+  overflow: hidden;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.offline {
+  font-family: "Garamond-Light";
+  font-size: 2.25rem;
+  color: var(--color);
+  margin: 0 auto;
+  width: 100vw;
+  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1%;
+  line-height: 2.75rem;
+  text-align: center;
+}
+
+.inner {
+  max-width: 800px;
+}
+
+@media (max-width: 787px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .offline {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .inner {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .offline {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+  .inner {
+    max-width: 1080px;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 100vh;
+  }
+  .offline {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .inner {
+    max-width: 1080px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .offline {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .inner {
+    max-width: 1080px;
+  }
+}

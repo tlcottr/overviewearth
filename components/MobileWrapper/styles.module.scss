@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navContainer,
+.aboutContainer,
+.portfolioContainer,
+.teamContainer,
+.contactContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 2.7s cubic-bezier(0.61, 0, 0, 1),
+    opacity 2.7s cubic-bezier(0.61, 0, 0, 1);
+  overflow: hidden;
+}

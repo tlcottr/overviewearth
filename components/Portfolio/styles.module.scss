@@ -1,0 +1,253 @@
+.container {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100vh;
+  font-family: "Garamond-Light", sans-serif;
+  letter-spacing: 1%;
+  font-size: 2.5rem;
+  color: var(--color);
+  max-width: 1080px;
+  font-weight: 400;
+  margin: 0 auto;
+  line-height: 3rem;
+  text-align: left;
+  width: 100%;
+}
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.arrowContainer {
+}
+.title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 0rem;
+}
+.portfolioItem {
+  border: 1px solid var(--color);
+  border-radius: 10px;
+  padding: 3rem;
+  object-fit: fill;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-height: 100px;
+  min-width: 200px;
+  cursor: pointer;
+  position: relative;
+  display: flex; /* add flexbox to center child elements */
+  justify-content: center;
+  align-items: center;
+}
+.portfolioItem:hover {
+  background-color: #1a1a1aea;
+}
+.portfolioItem:hover .imageContainer {
+  display: none; /* hide the image container on hover */
+}
+
+.portfolioItem:hover .textContainer {
+  display: block; /* show the text container on hover */
+  position: absolute; /* position the text container absolute to the portfolio item */
+  top: 50%; /* vertically center the text container */
+  left: 50%; /* horizontally center the text container */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* adjust the position to center the text container */
+}
+
+.imageContainer {
+  /* set width and height of the container to match the image size */
+  width: 60px;
+  height: 10px;
+  display: flex; /* add flexbox to center child elements */
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  display: none; /* hide the text container by default */
+  /* set styles for the body text */
+  font-size: 0.75rem;
+  text-align: center;
+  font-family: "Inconsolata", sans-serif;
+  line-height: 1.25rem;
+  cursor: pointer;
+}
+.portfolioTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.reachOut {
+  font-size: 1rem;
+  font-family: "Inconsolata", sans-serif;
+  line-height: 1.25rem;
+  text-align: right;
+  color: var(--text-dark);
+  letter-spacing: 1%;
+}
+.textContainerMobile {
+  font-size: 0.75rem;
+  font-family: "Inconsolata", sans-serif;
+  line-height: 1rem;
+  text-align: center;
+  color: var(--text-dark);
+  letter-spacing: 0.06rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.imageContainerMobile:hover {
+  background-color: transparent;
+}
+.email {
+  cursor: pointer;
+  font-size: 1rem;
+}
+.email:hover {
+  opacity: 0.5;
+}
+.copied {
+  background: var(--color);
+  color: var(--bg-color-alt);
+  padding: 0.2rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    min-height: auto;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: left;
+  }
+  .portfolioGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem 1rem;
+  }
+  .portfolioItem {
+    min-width: 100px;
+    min-height: 70px;
+    padding: 1rem;
+    height: auto;
+    width: auto;
+  }
+  .imageContainer {
+    width: 50px;
+    height: 50px;
+  }
+  .imageContainerMobile {
+    /* set width and height of the container to match the image size */
+    width: 40px;
+    height: 40px;
+    display: flex; /* add flexbox to center child elements */
+    justify-content: center;
+    align-items: center;
+  }
+  .portfolioTop {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+  }
+  .reachOut {
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .email {
+    font-size: 0.75rem;
+  }
+  .copied {
+    font-size: 0.6rem;
+  }
+  .portfolioItem:hover {
+    background-color: transparent;
+  }
+  .textContainerMobile {
+    text-align: left;
+    font-size: 0.6;
+    line-height: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .arrowContainer {
+    min-height: 100%;
+    transform: translatey(40%);
+  }
+  .navContainer {
+    height: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .portfolioTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .portfolioGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .arrowContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .portfolioTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .portfolioGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .arrowContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

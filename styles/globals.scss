@@ -3,10 +3,36 @@
 @tailwind utilities;
 
 html {
-  background-color: var(--bg-color-alt);
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+body {
+  min-height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 @font-face {
-  font-family: "mono";
+  font-family: "Inconsolata";
   src: url("../public/fonts/Inconsolata-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Garamond-Regular";
+  src: url("../public/fonts/AppleGaramond.ttf");
+}
+@font-face {
+  font-family: "Garamond-Light";
+  src: url("../public/fonts/AppleGaramond-Light.ttf");
+}
+
+video {
+  max-width: 150%;
+  min-width: 100%;
+}
+
+// COLOR TOKENS

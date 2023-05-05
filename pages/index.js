@@ -1,7 +1,7 @@
-import Layout from "../components/Layout";
-import LandingLayout from "../components/LandingLayout";
-import { SiteProvider } from "../components/context/SiteContext";
 import Head from "next/head";
+import { isMobile } from "react-device-detect";
+import DesktopWrapper from "../components/DesktopWrapper";
+import MobileWrapper from "../components/MobileWrapper";
 
 export default function Home() {
   return (
@@ -47,10 +47,7 @@ export default function Home() {
         <meta name="twitter:image:width" content="1200" />
         <meta name="twitter:image:height" content="630" />
       </Head>
-      <SiteProvider>
-        <LandingLayout />
-        {/*<Layout></Layout>*/}
-      </SiteProvider>
+      {isMobile ? <MobileWrapper /> : <DesktopWrapper />}
     </>
   );
 }
