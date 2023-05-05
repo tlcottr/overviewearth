@@ -19,3 +19,28 @@
     opacity 2.7s cubic-bezier(0.61, 0, 0, 1);
   overflow: hidden;
 }
+.mainContainer {
+  transition: opacity 2s linear;
+}
+.preMainContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.preMainText {
+  text-align: center;
+  color: var(--color);
+  opacity: 1;
+  font-family: "Garamond-Light";
+  font-size: 2.4rem;
+  letter-spacing: 1%;
+  line-height: 2.7rem;
+  max-width: 400px;
+  text-align: center;
+}
