@@ -59,7 +59,7 @@ const Video: React.FC<Props> = (props: Props) => {
           zIndex: "-1",
           opacity: isLoaded ? 1 : 0, // Set opacity based on whether the video is loaded or not
           transition: isMobile
-            ? "opacity 2s ease-in-out, transform 2s cubic-bezier(0.61,0.0,0.0,1.0), min-height 2s ease-in-out, min-width 2s ease-in-out, width 2s ease-in-out, height 2s ease-in-out"
+            ? "opacity 2s ease-in-out, transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0), min-height 2s ease-in-out, min-width 2s ease-in-out, width 2s ease-in-out, height 2s ease-in-out"
             : "opacity 2s ease-in-out, transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0), min-height 2.7s cubic-bezier(0.61,0.0,0.0,1.0), min-width 2.7s cubic-bezier(0.61,0.0,0.0,1.0), width 2.7s cubic-bezier(0.61,0.0,0.0,1.0), height 2.7s cubic-bezier(0.61,0.0,0.0,1.0)",
           ...(showAbout && {
             transform: "translate(-50%, -50%) translateX(-20%)",
