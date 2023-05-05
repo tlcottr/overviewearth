@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Nav from "../Nav";
 import Contact from "../Connect";
 import About from "../About";
@@ -17,8 +17,28 @@ const MobileWrapper: React.FC = () => {
   };
 
   const [showMain, setShowMain] = useState(false);
-  const [showText, setShowText] = useState(true);
+  const [showText, setShowText] = useState(false);
   const [showMainFade, setShowMainFade] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMain(true);
+      setTimeout(() => {
+        setShowMainFade(true);
+      }, 1000); // Wait 1 second for preMainContainer to finish fading out
+    }, 8000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const textTimer = setTimeout(() => {
+      setShowText(true);
+      setTimeout(() => {
+        setShowText(false);
+      }, 4000);
+    }, 3200);
+    return () => clearTimeout(textTimer);
+  }, []);
 
   return (
     <>
