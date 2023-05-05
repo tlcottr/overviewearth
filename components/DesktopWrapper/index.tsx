@@ -48,7 +48,7 @@ const DesktopWrapper: React.FC = () => {
             className={styles.mainContainer}
             style={{
               opacity: showMainFade ? 1 : 0,
-              transition: showMainFade ? "opacity 2s linear" : "none",
+              transition: showMainFade ? "opacity 1s linear" : "none",
             }}
           >
             <div
