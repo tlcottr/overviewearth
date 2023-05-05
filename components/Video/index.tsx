@@ -10,12 +10,12 @@ const Video: React.FC<Props> = (props: Props) => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [earthSize, setEarthSize] = useState("50%");
-  const [mobileEarthSize, setMobileEarthSize] = useState("100%");
+  const [mobileEarthSize, setMobileEarthSize] = useState("50%");
 
   useEffect(() => {
     setTimeout(() => setEarthSize("100%"), 3000);
     setTimeout(() => setEarthSize("160%"), 8000);
-    setTimeout(() => setMobileEarthSize("190%"), 3000);
+    setTimeout(() => setMobileEarthSize("100%"), 3000);
     setTimeout(() => setMobileEarthSize("250%"), 8000);
     setTimeout(() => setIsLoaded(true), 8000);
   }, []);
