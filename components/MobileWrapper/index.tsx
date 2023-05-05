@@ -67,8 +67,8 @@ const MobileWrapper: React.FC = () => {
               className={styles.portfolioContainer}
               style={{
                 transform: navContext.showPortfolio
-                  ? "translateY(0)"
-                  : "translateY(-100%)",
+                  ? "translateX(0)"
+                  : "translateX(-100%)",
                 opacity: navContext.showPortfolio ? 1 : 0,
               }}
             >
@@ -78,8 +78,8 @@ const MobileWrapper: React.FC = () => {
               className={styles.aboutContainer}
               style={{
                 transform: navContext.showAbout
-                  ? "translateY(0)"
-                  : "translateY(-100%)",
+                  ? "translateX(0)"
+                  : "translateX(100%)",
                 opacity: navContext.showAbout ? 1 : 0,
               }}
             >
@@ -124,9 +124,9 @@ const MobileWrapper: React.FC = () => {
           className={styles.navContainer}
           style={{
             transform:
-              (navContext.showAbout ? "translateY(-100%)" : "") +
-              (navContext.showPortfolio ? "translateY(-100%)" : "") +
-              (navContext.showTeam ? "translateY(-100%)" : "") +
+              (navContext.showAbout ? "translateX(-100%)" : "") +
+              (navContext.showPortfolio ? "translateX(100%)" : "") +
+              (navContext.showTeam ? "translateY(100%)" : "") +
               (navContext.showContact ? "translateY(-100%)" : ""),
             opacity:
               navContext.showContact ||
