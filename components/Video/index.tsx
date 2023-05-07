@@ -14,10 +14,10 @@ const Video: React.FC<Props> = (props: Props) => {
 
   useEffect(() => {
     setTimeout(() => setEarthSize("100%"), 3000);
-    setTimeout(() => setEarthSize("160%"), 8000);
+    setTimeout(() => setEarthSize("160%"), 10000);
     setTimeout(() => setMobileEarthSize("100%"), 3000);
     setTimeout(() => setMobileEarthSize("250%"), 8000);
-    setTimeout(() => setIsLoaded(true), 8000);
+    setTimeout(() => setIsLoaded(true), 10000);
   }, []);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const Video: React.FC<Props> = (props: Props) => {
           opacity: isLoaded ? 1 : 0, // Set opacity based on whether the video is loaded or not
           transition: isMobile
             ? "opacity 2s ease-in-out, transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0), min-height 2s ease-in-out, min-width 2s ease-in-out, width 2s ease-in-out, height 2s ease-in-out"
-            : "opacity 2s ease-in-out, transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0), min-height 2.7s cubic-bezier(0.61,0.0,0.0,1.0), min-width 2.7s cubic-bezier(0.61,0.0,0.0,1.0), width 2.7s cubic-bezier(0.61,0.0,0.0,1.0), height 2.7s cubic-bezier(0.61,0.0,0.0,1.0)",
+            : "opacity 2s ease-in-out, transform 2.7s cubic-bezier(0.61,0.0,0.0,1.0), min-height 2.7s ease-in-out, min-width 2.7s ease-in-out, width 2.7s ease-in-out, height 2.7s ease-in-out",
           ...(showAbout && {
             transform: "translate(-50%, -50%) translateX(-20%)",
             ...(isMobile && {

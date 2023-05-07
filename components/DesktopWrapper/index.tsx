@@ -26,7 +26,7 @@ const DesktopWrapper: React.FC = () => {
       setTimeout(() => {
         setShowMainFade(true);
       }, 1000); // Wait 1 second for preMainContainer to finish fading out
-    }, 8000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -35,8 +35,8 @@ const DesktopWrapper: React.FC = () => {
       setShowText(true);
       setTimeout(() => {
         setShowText(false);
-      }, 4000);
-    }, 4200);
+      }, 9000);
+    }, 5100);
     return () => clearTimeout(textTimer);
   }, []);
 
@@ -124,16 +124,13 @@ const DesktopWrapper: React.FC = () => {
             style={{
               opacity: 1,
               zIndex: 2,
-              transition: "opacity 1s linear .2s",
-              animationDelay: "3000",
             }}
           >
             <h1
               className={styles.preMainText}
               style={{
                 opacity: showText ? 1 : 0,
-                transition: "opacity 1s linear .2s",
-                animationDelay: "3000",
+                transition: "opacity 2s linear .7s",
               }}
             >
               We are Overview, a venture capital firm investing in climate

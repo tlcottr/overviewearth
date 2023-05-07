@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
+import { isMobile } from "react-device-detect";
 import Exit from "./Exit";
 
 type Props = {
@@ -131,9 +132,12 @@ const Footer = (props: Props) => {
   };
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsFadeIn(true);
-    }, 9000);
+    const timeoutId = setTimeout(
+      () => {
+        setIsFadeIn(true);
+      },
+      isMobile ? 9000 : 11000
+    );
     return () => clearTimeout(timeoutId);
   }, []);
 

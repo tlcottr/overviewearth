@@ -45,7 +45,6 @@
   height: 100vh;
 }
 .mainContainer {
-  transition: opacity 2s linear;
 }
 .preMainContainer {
   position: absolute;
@@ -57,7 +56,6 @@
   align-items: center;
   z-index: 10000;
   min-width: 900px;
-  transition: opacity 2s linear;
 }
 
 .preMainText {
@@ -70,7 +68,6 @@
   line-height: 4.2rem;
   max-width: 900px;
   text-align: center;
-  transition: opacity 2s linear;
 }
 
 @media (max-width: 787px) {
@@ -97,6 +94,5 @@
     letter-spacing: 1%;
     line-height: 4.2rem;
     max-width: 900px;
-    transition: opacity 2s linear;
   }
 }
