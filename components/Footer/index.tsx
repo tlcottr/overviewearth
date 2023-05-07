@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import styles from "./styles.module.scss";
 import Exit from "./Exit";
 
@@ -115,6 +114,7 @@ const Popup = ({ onClose }: Props) => {
 const Footer = (props: Props) => {
   const [isCopied, setIsCopied] = useState(false);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [isFadeIn, setIsFadeIn] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("contact@overview.earth");
@@ -130,8 +130,15 @@ const Footer = (props: Props) => {
     setIsPopupVisible(false);
   };
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setIsFadeIn(true);
+    }, 9000);
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} ${isFadeIn ? styles.fadeIn : ""}`}>
       <p onClick={handlePopup} className={styles.popupAnchor}>
         overview.earth is a low-impact site.
       </p>
