@@ -36,7 +36,7 @@ const MobileWrapper: React.FC = () => {
       setTimeout(() => {
         setShowText(false);
       }, 4000);
-    }, 3200);
+    }, 4200);
     return () => clearTimeout(textTimer);
   }, []);
 

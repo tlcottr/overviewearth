@@ -48,7 +48,8 @@ const DesktopWrapper: React.FC = () => {
             className={styles.mainContainer}
             style={{
               opacity: showMainFade ? 1 : 0,
-              transition: showMainFade && showMain ? "opacity 2s linear" : "none",
+              transition:
+                showMainFade && showMain ? "opacity 2s linear" : "none",
             }}
           >
             <div
@@ -123,7 +124,7 @@ const DesktopWrapper: React.FC = () => {
             style={{
               opacity: 1,
               zIndex: 2,
-              transition: "opacity 1s linear",
+              transition: "opacity 1s linear .2s",
               animationDelay: "3000",
             }}
           >
@@ -131,7 +132,7 @@ const DesktopWrapper: React.FC = () => {
               className={styles.preMainText}
               style={{
                 opacity: showText ? 1 : 0,
-                transition: "opacity 1s linear",
+                transition: "opacity 1s linear .2s",
                 animationDelay: "3000",
               }}
             >
