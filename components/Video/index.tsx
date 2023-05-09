@@ -53,6 +53,8 @@ const Video: React.FC<Props> = (props: Props) => {
           position: "absolute",
           top: "50%",
           left: "50%",
+          right: "50%",
+          bottom: "50%",
           transform: "translate(-50%, -50%)",
           width: isMobile ? mobileEarthSize : earthSize,
           height: isMobile ? mobileEarthSize : earthSize,
