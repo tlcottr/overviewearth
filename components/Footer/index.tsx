@@ -144,7 +144,7 @@ const Footer = (props: Props) => {
   return (
     <div className={`${styles.footer} ${isFadeIn ? styles.fadeIn : ""}`}>
       <p onClick={handlePopup} className={styles.popupAnchor}>
-        overview.earth is a low-impact site.
+        overview.earth is a low-impact site
       </p>
 
       <p onClick={handleCopy} className={styles.email}>

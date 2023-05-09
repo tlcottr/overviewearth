@@ -5,7 +5,6 @@
   align-items: left;
   margin-top: auto;
   margin-bottom: auto;
-  min-height: 100vh;
   font-family: "Garamond-Light", serif;
   letter-spacing: 1%;
   font-size: 2.5rem;
@@ -89,5 +88,15 @@
     top: 0rem;
     left: 0;
     right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .emailSymbol {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .emailSymbol {
+    font-size: 1.75rem;
   }
 }

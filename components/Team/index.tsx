@@ -17,6 +17,40 @@ const Team = (props: Props) => {
         </span>
         <div className={styles.teamGrid}>
           <div>
+            <div>
+              <div>Julia Arnhold</div>
+              <div className={styles.role}>Managing Partner</div>
+              <div className={styles.socialIcons}>
+                <Link
+                  href={"https://www.linkedin.com/in/juliaarnhold/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className={styles.icon}>
+                    <LinkedInIcon />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>Kelsey Rudin</div>
+              <div className={styles.role}>Managing Partner</div>
+              <div className={styles.socialIcons}>
+                <Link
+                  href={"https://www.linkedin.com/in/kelsey-rudin-41623743/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className={styles.icon}>
+                    <LinkedInIcon />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div>
             <div>Lauren Singer</div>
             <div className={styles.role}>Managing Partner</div>
             <div className={styles.socialIcons}>
@@ -49,49 +83,6 @@ const Team = (props: Props) => {
                   <InstagramIcon />
                 </span>
               </Link>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div>Kelsey Rudin</div>
-              <div className={styles.role}>Managing Partner</div>
-              <div className={styles.socialIcons}>
-                <Link
-                  href={"https://www.linkedin.com/in/kelsey-rudin-41623743/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles.icon}>
-                    <LinkedInIcon />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div>Julia Arnhold</div>
-              <div className={styles.role}>Managing Partner</div>
-              <div className={styles.socialIcons}>
-                <Link
-                  href={"https://www.linkedin.com/in/juliaarnhold/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles.icon}>
-                    <LinkedInIcon />
-                  </span>
-                </Link>
-                <Link
-                  href={"https://www.instagram.com/heyarnhold/?hl=en"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles.icon}>
-                    <InstagramIcon />
-                  </span>
-                </Link>
-              </div>
             </div>
           </div>
         </div>

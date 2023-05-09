@@ -13,11 +13,11 @@ const Contact = (props: Props) => {
         <Return size={50} />
       </div>
       <div className={styles.top}>
-        <span className={styles.border}>
-          <h1 className={styles.title}>Connect</h1>
-        </span>
+        <span className={styles.border}></span>
         <div className={styles.center}>
-          <div>contact@overview.earth</div>
+          <div>
+            contact<span className={styles.emailSymbol}>@</span>overview.earth
+          </div>
           <div className={styles.socialIcons}>
             <Link
               href={"https://www.instagram.com/overview.capital/"}

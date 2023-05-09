@@ -37,8 +37,8 @@ const Portfolio = (props: Props) => {
           </span>
           <div className={styles.reachOut}>
             <p>
-              Is your company addressing climate change?
-              {isMobile ? "" : <br></br>} We’d love to talk.{" "}
+              Is your company addressing climate change?<br></br>
+              {isMobile ? "" : ""} We’d love to talk. <br></br>
               <span onClick={handleCopy} className={styles.email}>
                 {isCopied ? (
                   <span className={styles.copied}>COPIED TO CLIPBOARD</span>
@@ -50,37 +50,6 @@ const Portfolio = (props: Props) => {
           </div>
         </div>
         <div className={styles.portfolioGrid}>
-          <Link href={"https://goodmylk.co/"} rel="" target="_blank">
-            {isMobile ? (
-              <>
-                <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerMobile}>
-                    <Image
-                      height={10}
-                      width={75}
-                      src={"/static/images/mylk.png"}
-                    />
-                  </div>
-                </div>
-                <div className={styles.textContainerMobile}>
-                  <p>Making mylk the new milk.</p>
-                </div>
-              </>
-            ) : (
-              <div className={styles.portfolioItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    height={10}
-                    width={75}
-                    src={"/static/images/mylk.png"}
-                  />
-                </div>
-                <div className={styles.textContainer}>
-                  <p>Making mylk the new milk.</p>
-                </div>
-              </div>
-            )}
-          </Link>
           <Link href={"https://www.alga.bio/"} rel="" target="_blank">
             {isMobile ? (
               <>
@@ -94,7 +63,7 @@ const Portfolio = (props: Props) => {
                   </div>
                 </div>
                 <div className={styles.textContainerMobile}>
-                  <p>Eliminating enteric methane emissions at-scale.</p>
+                  <p>Eliminating enteric methane emissions at-scale</p>
                 </div>
               </>
             ) : (
@@ -107,38 +76,7 @@ const Portfolio = (props: Props) => {
                   />
                 </div>
                 <div className={styles.textContainer}>
-                  <p>Eliminating enteric methane emissions at-scale.</p>
-                </div>
-              </div>
-            )}
-          </Link>
-          <Link href={"https://www.mojavehvac.com/"} rel="" target="_blank">
-            {isMobile ? (
-              <>
-                <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerMobile}>
-                    <Image
-                      height={10}
-                      width={75}
-                      src={"/static/images/mojave.png"}
-                    />
-                  </div>
-                </div>
-                <div className={styles.textContainerMobile}>
-                  <p>Changing the physics of air conditioning.</p>
-                </div>
-              </>
-            ) : (
-              <div className={styles.portfolioItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    height={10}
-                    width={75}
-                    src={"/static/images/mojave.png"}
-                  />
-                </div>
-                <div className={styles.textContainer}>
-                  <p>Changing the physics of air conditioning.</p>
+                  <p>Eliminating enteric methane emissions at-scale</p>
                 </div>
               </div>
             )}
@@ -170,6 +108,68 @@ const Portfolio = (props: Props) => {
                 </div>
                 <div className={styles.textContainer}>
                   <p>a single payment platform for EV drivers and fleets</p>
+                </div>
+              </div>
+            )}
+          </Link>
+          <Link href={"https://goodmylk.co/"} rel="" target="_blank">
+            {isMobile ? (
+              <>
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainerMobile}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/mylk.png"}
+                    />
+                  </div>
+                </div>
+                <div className={styles.textContainerMobile}>
+                  <p>Making mylk the new milk</p>
+                </div>
+              </>
+            ) : (
+              <div className={styles.portfolioItem}>
+                <div className={styles.imageContainer}>
+                  <Image
+                    height={10}
+                    width={75}
+                    src={"/static/images/mylk.png"}
+                  />
+                </div>
+                <div className={styles.textContainer}>
+                  <p>Making mylk the new milk</p>
+                </div>
+              </div>
+            )}
+          </Link>
+          <Link href={"https://www.mojavehvac.com/"} rel="" target="_blank">
+            {isMobile ? (
+              <>
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainerMobile}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/mojave.png"}
+                    />
+                  </div>
+                </div>
+                <div className={styles.textContainerMobile}>
+                  <p>Changing the physics of air conditioning</p>
+                </div>
+              </>
+            ) : (
+              <div className={styles.portfolioItem}>
+                <div className={styles.imageContainer}>
+                  <Image
+                    height={10}
+                    width={75}
+                    src={"/static/images/mojave.png"}
+                  />
+                </div>
+                <div className={styles.textContainer}>
+                  <p>Changing the physics of air conditioning</p>
                 </div>
               </div>
             )}

@@ -89,6 +89,7 @@
   font-family: "Inconsolata", sans-serif;
   line-height: 1.25rem;
   cursor: pointer;
+  text-transform: lowercase;
 }
 .portfolioTop {
   display: flex;
@@ -114,6 +115,7 @@
   letter-spacing: 0.06rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  text-transform: lowercase;
 }
 .imageContainerMobile:hover {
   background-color: transparent;
