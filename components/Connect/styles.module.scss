@@ -82,16 +82,16 @@
     font-size: 1.25rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .arrowContainer {
     position: absolute;
     top: 0rem;
     left: 0;
     right: 0;
+  }
+  .center {
+    position: relative;
+    top: calc(50vh);
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
