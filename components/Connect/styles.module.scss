@@ -82,6 +82,10 @@
     font-size: 1.25rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .arrowContainer {
     position: absolute;
