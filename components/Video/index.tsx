@@ -96,6 +96,13 @@ const Video: React.FC<Props> = (props: Props) => {
           type="video/quicktime"
           width="200%"
           height="200%"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+          }}
         />
         <source src="/static/video/EarthTransparent.webm" type="video/webm" />
       </video>
