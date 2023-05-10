@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import Return from "./Return";
+import { Swipeable } from "react-touch";
 
 type Props = {};
 
@@ -25,28 +26,8 @@ const About = (props: Props) => {
   };
 
   return (
-    <>
-      <div
-        className={styles.navContainer}
-        onTouchStart={(event) => {
-          if (event.touches[0].target) {
-            const touchStartX = event.touches[0].clientX;
-            return touchStartX;
-          }
-        }}
-        onTouchEnd={(event) => {
-          console.log(event);
-          if (event.changedTouches[0].target && event.targetTouches[0].target) {
-            const touchEndX = event.changedTouches[0].clientX;
-            const touchStartX = event.targetTouches[0].clientX;
-            const touchDiff = touchStartX - touchEndX;
-
-            if (touchDiff > 50) {
-              handleSwipeRight();
-            }
-          }
-        }}
-      >
+    <Swipeable onSwipedRight={handleSwipeRight}>
+      <div className={styles.navContainer}>
         <div className={styles.arrowContainer}>
           <Return size={50} />
         </div>
@@ -75,7 +56,7 @@ const About = (props: Props) => {
           </div>
         </div>
       </div>
-    </>
+    </Swipeable>
   );
 };
 

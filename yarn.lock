@@ -496,6 +496,20 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-swipeable@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@types/react-swipeable/-/react-swipeable-5.2.0.tgz#69d6088819f0c03b13eb3fd98bfe995ef311c105"
+  integrity sha512-aQMubLpV45W8fTQufnm5j8yxYVEp/d3JJkqpPr9xcRPQ6Q6MSJUdNpsaR2uogILSIFzrAisC8AqdR1JlvjuZMA==
+  dependencies:
+    react-swipeable "*"
+
+"@types/react-touch@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@types/react-touch/-/react-touch-1.8.4.tgz#5b1be99d0f224a390161037f17a9a8dd8435f6c3"
+  integrity sha512-DyXLrBPjpbH9Nu6Wlo8JJ8myxfrYMHb25vXGO6j3rKUQbWqLm9hSzp5hV/6fA5wkUs1Ho7nsIm/L4f8yzwHUjw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "18.0.37"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.37.tgz#7a784e2a8b8f83abb04dc6b9ed9c9b4c0aee9be7"
@@ -1927,6 +1941,11 @@ lodash@4.17.21, lodash@^4.17.11:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
+lodash@4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.6.1.tgz#df00c1164ad236b183cfc3887a5e8d38cc63cbbc"
+  integrity sha512-85DFrB4TYPwVZbZw/HCGnmRUdDQOxGJuDmSfZ9OQEESdFJ1NxlYLoQObfHJGr+UsWwmVQhwG2iPmUCi6+eKzUg==
+
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -2203,6 +2222,11 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
+performance-now@~0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
+  integrity sha512-YHk5ez1hmMR5LOkb9iJkLKqoBlL7WD5M8ljC75ZfzXriuBIVNuecaXuU7e+hOwyqf24Wxhh7Vxgt7Hnw9288Tg==
+
 picocolors@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
@@ -2290,7 +2314,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.5.7, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2313,6 +2337,13 @@ quick-lru@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
+
+raf@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/raf/-/raf-3.2.0.tgz#2aba9a09bb70f8c2e9094dc60ace7c374fadec7e"
+  integrity sha512-7xczdqIElmtpytYX1aMCY6n/YB0sJaYnMKFGwDIn3bHPYPtm7F0jmKXtsTue2qjHrSMYZRBhHv4QC/hAJRatlQ==
+  dependencies:
+    performance-now "~0.2.0"
 
 react-composer@^5.0.3:
   version "5.0.3"
@@ -2369,6 +2400,20 @@ react-reconciler@^0.27.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.21.0"
+
+react-swipeable@*, react-swipeable@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-7.0.0.tgz#7a12570ee435d35ac700511de338384aa78d12cd"
+  integrity sha512-NI7KGfQ6gwNFN0Hor3vytYW3iRfMMaivGEuxcADOOfBCx/kqwXE8IfHFxEcxSUkxCYf38COLKYd9EMYZghqaUA==
+
+react-touch@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/react-touch/-/react-touch-0.4.4.tgz#87730ace63759685467ebd827b05bb1ac9f376e6"
+  integrity sha512-1LrddNwIehrfGgufnkliIaNIXCIQOv0IbN4Bg7VMlPxc86Y896fE05L+U/5mmNN3UGUjIe09KbwEo6K1R0ywKg==
+  dependencies:
+    lodash "4.6.1"
+    prop-types "^15.5.7"
+    raf "3.2.0"
 
 react-transition-group@^4.4.5:
   version "4.4.5"
