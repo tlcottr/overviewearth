@@ -1,13 +1,52 @@
-import React from "react";
+import React, { useContext } from "react";
+import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import Return from "./Return";
 
 type Props = {};
 
 const About = (props: Props) => {
+  const {
+    showAbout,
+    setShowAbout,
+    showPortfolio,
+    setShowPortfolio,
+    showTeam,
+    setShowTeam,
+    showContact,
+    setShowContact,
+  } = useContext(NavContext);
+
+  const handleSwipeRight = () => {
+    setShowAbout(!showAbout);
+    setShowPortfolio(false);
+    setShowTeam(false);
+    setShowContact(false);
+  };
+
   return (
     <>
-      <div className={styles.navContainer}>
+      <div
+        className={styles.navContainer}
+        onTouchStart={(event) => {
+          if (event.touches[0].target) {
+            const touchStartX = event.touches[0].clientX;
+            return touchStartX;
+          }
+        }}
+        onTouchEnd={(event) => {
+          console.log(event);
+          if (event.changedTouches[0].target && event.targetTouches[0].target) {
+            const touchEndX = event.changedTouches[0].clientX;
+            const touchStartX = event.targetTouches[0].clientX;
+            const touchDiff = touchStartX - touchEndX;
+
+            if (touchDiff > 50) {
+              handleSwipeRight();
+            }
+          }
+        }}
+      >
         <div className={styles.arrowContainer}>
           <Return size={50} />
         </div>
