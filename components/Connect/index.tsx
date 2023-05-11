@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
+import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import { LinkedInIcon, InstagramIcon, TwitterIcon } from "../Team/Social";
 import Return from "./Return";
 import Link from "next/link";
+import { useDrag } from "@use-gesture/react";
 
 type Props = {};
 
 const Contact = (props: Props) => {
+  const {
+    showAbout,
+    setShowAbout,
+    showPortfolio,
+    setShowPortfolio,
+    showTeam,
+    setShowTeam,
+    showContact,
+    setShowContact,
+  } = useContext(NavContext);
+
+  const handleSwipeDown = () => {
+    setShowAbout(false);
+    setShowPortfolio(false);
+    setShowTeam(false);
+    setShowContact(false);
+  };
+
+  const bind = useDrag(({ swipe: [swipeY] }) => {
+    console.log("swipeY:", swipeY);
+    if (swipeY === 1) {
+      handleSwipeDown();
+    }
+  });
   return (
-    <div className={styles.container}>
+    <div className={styles.container} {...bind()}>
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>

@@ -1,14 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Return from "./Return";
 import Link from "next/link";
+import { useDrag } from "@use-gesture/react";
 
 type Props = {};
 
 const Portfolio = (props: Props) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const {
+    showAbout,
+    setShowAbout,
+    showPortfolio,
+    setShowPortfolio,
+    showTeam,
+    setShowTeam,
+    showContact,
+    setShowContact,
+  } = useContext(NavContext);
+
+  const handleSwipeLeft = () => {
+    setShowAbout(false);
+    setShowPortfolio(!showPortfolio);
+    setShowTeam(false);
+    setShowContact(false);
+  };
+
+  const bind = useDrag(({ swipe: [swipeX] }) => {
+    console.log("swipeX:", swipeX);
+    if (swipeX === 1) {
+      handleSwipeLeft();
+    }
+  });
 
   const handleCopy = () => {
     navigator.clipboard.writeText("contact@overview.earth");
@@ -29,7 +55,7 @@ const Portfolio = (props: Props) => {
     };
   }, []);
   return (
-    <div className={styles.navContainer}>
+    <div className={styles.navContainer} {...bind()}>
       <div className={styles.container}>
         <div className={styles.portfolioTop}>
           <span className={styles.border}>

@@ -1,16 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
+import NavContext from "../NavContext";
 import { LinkedInIcon } from "./Social";
 import { TwitterIcon } from "./Social";
 import { InstagramIcon } from "./Social";
 import styles from "./styles.module.scss";
 import Return from "./Return";
 import Link from "next/link";
+import { useDrag } from "@use-gesture/react";
 
 type Props = {};
 
 const Team = (props: Props) => {
+  const {
+    showAbout,
+    setShowAbout,
+    showPortfolio,
+    setShowPortfolio,
+    showTeam,
+    setShowTeam,
+    showContact,
+    setShowContact,
+  } = useContext(NavContext);
+
+  const handleSwipeUp = () => {
+    setShowAbout(false);
+    setShowPortfolio(false);
+    setShowTeam(false);
+    setShowContact(false);
+  };
+
+  const bind = useDrag(({ swipe: [swipeY] }) => {
+    console.log("swipeY:", swipeY);
+    if (swipeY === 1) {
+      handleSwipeUp();
+    }
+  });
   return (
-    <div className={styles.container}>
+    <div className={styles.container} {...bind()}>
       <div className="top">
         <span className={styles.border}>
           <h1 className={styles.title}>Team</h1>
