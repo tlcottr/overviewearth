@@ -25,13 +25,13 @@ const Team = (props: Props) => {
   const handleSwipeUp = () => {
     setShowAbout(false);
     setShowPortfolio(false);
-    setShowTeam(false);
+    setShowTeam(!showTeam);
     setShowContact(false);
   };
 
   const bind = useDrag(({ swipe: [swipeY] }) => {
     console.log("swipeY:", swipeY);
-    if (swipeY === 1) {
+    if (swipeY === 0.5) {
       handleSwipeUp();
     }
   });

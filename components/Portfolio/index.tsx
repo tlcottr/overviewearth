@@ -31,7 +31,7 @@ const Portfolio = (props: Props) => {
 
   const bind = useDrag(({ swipe: [swipeX] }) => {
     console.log("swipeX:", swipeX);
-    if (swipeX === 1) {
+    if (swipeX === -0.5) {
       handleSwipeLeft();
     }
   });

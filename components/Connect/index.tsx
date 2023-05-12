@@ -24,12 +24,12 @@ const Contact = (props: Props) => {
     setShowAbout(false);
     setShowPortfolio(false);
     setShowTeam(false);
-    setShowContact(false);
+    setShowContact(!showContact);
   };
 
   const bind = useDrag(({ swipe: [swipeY] }) => {
     console.log("swipeY:", swipeY);
-    if (swipeY === 1) {
+    if (swipeY === -0.5) {
       handleSwipeDown();
     }
   });
