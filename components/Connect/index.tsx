@@ -34,48 +34,50 @@ const Contact = (props: Props) => {
     }
   });
   return (
-    <div className={styles.container} {...bind()}>
+    <>
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
-      <div className={styles.top}>
-        <span className={styles.border}></span>
-        <div className={styles.center}>
-          <div>
-            contact<span className={styles.emailSymbol}>@</span>overview.earth
-          </div>
-          <div className={styles.socialIcons}>
-            <Link
-              href={"https://www.instagram.com/overview.capital/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className={styles.icon}>
-                <InstagramIcon />
-              </span>
-            </Link>
-            <Link
-              href={"https://www.linkedin.com/company/overviewcapital/about/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className={styles.icon}>
-                <LinkedInIcon />
-              </span>
-            </Link>
-            <Link
-              href={"https://twitter.com/overviewcap"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className={styles.icon}>
-                <TwitterIcon />
-              </span>
-            </Link>
+      <div className={styles.container} {...bind()}>
+        <div className={styles.top}>
+          <span className={styles.border}></span>
+          <div className={styles.center}>
+            <div>
+              contact<span className={styles.emailSymbol}>@</span>overview.earth
+            </div>
+            <div className={styles.socialIcons}>
+              <Link
+                href={"https://www.instagram.com/overview.capital/"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className={styles.icon}>
+                  <InstagramIcon />
+                </span>
+              </Link>
+              <Link
+                href={"https://www.linkedin.com/company/overviewcapital/about/"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className={styles.icon}>
+                  <LinkedInIcon />
+                </span>
+              </Link>
+              <Link
+                href={"https://twitter.com/overviewcap"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className={styles.icon}>
+                  <TwitterIcon />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
