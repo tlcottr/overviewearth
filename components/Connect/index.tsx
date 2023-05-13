@@ -29,7 +29,7 @@ const Contact = (props: Props) => {
 
   const bind = useDrag(({ swipe: [swipeY] }) => {
     console.log("swipeY:", swipeY);
-    if (swipeY === -0.5) {
+    if (swipeY >= -0.5) {
       handleSwipeDown();
     }
   });
