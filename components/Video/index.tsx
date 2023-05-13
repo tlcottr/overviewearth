@@ -98,7 +98,6 @@ const Video: React.FC<Props> = (props: Props) => {
             position: "fixed",
             top: 0,
             left: 0,
-            backdropFilter: "blur(100px)",
           }}
         />
         <source
