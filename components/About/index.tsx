@@ -27,7 +27,7 @@ const About = (props: Props) => {
 
   const bind = useDrag(({ swipe: [swipeX] }) => {
     console.log("swipeX:", swipeX);
-    if (swipeX >= 0.5) {
+    if (swipeX >= 0.001) {
       handleSwipeRight();
     }
   });
