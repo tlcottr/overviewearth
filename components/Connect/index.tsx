@@ -20,13 +20,6 @@ const Contact = (props: Props) => {
     setShowContact,
   } = useContext(NavContext);
 
-  const handleSwipeDown = () => {
-    setShowAbout(false);
-    setShowPortfolio(false);
-    setShowTeam(false);
-    setShowContact(!showContact);
-  };
-
   const bind = useDrag(({ swipe: [swipeY] }) => {
     console.log("swipeY:", swipeY);
     if (swipeY >= -0.5) {
