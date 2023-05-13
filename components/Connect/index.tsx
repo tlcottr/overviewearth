@@ -29,16 +29,16 @@ const Contact = (props: Props) => {
 
   const bind = useDrag(({ swipe: [swipeY] }) => {
     console.log("swipeY:", swipeY);
-    if (swipeY >= 0) {
+    if (swipeY === -0.5) {
       handleSwipeDown();
     }
   });
   return (
-    <div className={styles.container} {...bind()}>
+    <div className={styles.container}>
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
-      <div className={styles.top}>
+      <div className={styles.top} {...bind()}>
         <span className={styles.border}></span>
         <div className={styles.center}>
           <div>
