@@ -60,8 +60,8 @@ const Popup = ({ onClose }: Props) => {
     <div className={styles.popup}>
       <div className={styles.popupHeadline}>
         <h2 className={styles.popupTitle}>
-          Our pledge is to faciliate a renewable and resilient future. Here are
-          some of the way our site minimizes its footprint.
+          Overview.earth is a low impact site. Here are some of the ways our
+          site minimizes its footprint:
         </h2>
       </div>
       <div className={styles.popupContent}>
