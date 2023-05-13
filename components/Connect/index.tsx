@@ -34,11 +34,11 @@ const Contact = (props: Props) => {
     }
   });
   return (
-    <div className={styles.container}>
+    <div className={styles.container} {...bind()}>
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
-      <div className={styles.top} {...bind()}>
+      <div className={styles.top}>
         <span className={styles.border}></span>
         <div className={styles.center}>
           <div>
