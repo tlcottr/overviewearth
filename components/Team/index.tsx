@@ -36,8 +36,8 @@ const Team = (props: Props) => {
     }
   });
   return (
-    <div className={styles.container} {...bind()}>
-      <div className="top">
+    <div className={styles.container}>
+      <div className="top" {...bind()}>
         <span className={styles.border}>
           <h1 className={styles.title}>Team</h1>
         </span>

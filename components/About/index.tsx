@@ -33,11 +33,11 @@ const About = (props: Props) => {
   });
 
   return (
-    <div className={styles.navContainer} {...bind()}>
+    <div className={styles.navContainer}>
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
-      <div className={styles.container}>
+      <div className={styles.container} {...bind()}>
         <span className={styles.border}>
           <h1 className={styles.title}>About</h1>
         </span>
