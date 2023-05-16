@@ -15,6 +15,9 @@ body {
   top: 0;
   bottom: 0;
 }
+video:focus {
+  outline: none;
+}
 
 @font-face {
   font-family: "Inconsolata";
