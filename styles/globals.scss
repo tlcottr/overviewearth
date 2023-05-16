@@ -18,6 +18,9 @@ body {
 video:focus {
   outline: none;
 }
+video {
+  clip-path: inset(1px 1px);
+}
 
 @font-face {
   font-family: "Inconsolata";
