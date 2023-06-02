@@ -75,7 +75,7 @@ const Portfolio = (props: Props) => {
             </p>
           </div>
         </div>
-        <div className={styles.portfolioGrid}>
+        <div className={styles.portfolioGrid} {...bind()}>
           <Link href={"https://www.alga.bio/"} rel="" target="_blank">
             {isMobile ? (
               <>
