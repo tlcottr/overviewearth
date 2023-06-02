@@ -59,12 +59,12 @@
   justify-content: center;
   height: 30vw;
   flex-direction: column;
+  position: relative;
+  z-index: 100;
 }
 .email {
   opacity: 1;
   cursor: pointer;
-  position: relative;
-  z-index: 100;
 }
 .email:hover {
   opacity: 50%;
@@ -95,7 +95,7 @@
 .swipe {
   height: 100vh;
   width: 100vw;
-  background-color: red;
+  background-color: transparent;
   position: absolute;
   top: 0;
   left: 0;
