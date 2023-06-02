@@ -7,6 +7,7 @@ import styles from "./styles.module.scss";
 import Return from "./Return";
 import Link from "next/link";
 import { useDrag } from "@use-gesture/react";
+import { isMobile } from "react-device-detect";
 
 type Props = {};
 
@@ -30,8 +31,7 @@ const Team = (props: Props) => {
   };
 
   const bind = useDrag(({ swipe: [swipeY] }) => {
-    console.log("swipeY:", swipeY);
-    if (swipeY <= 0) {
+    if (swipeY <= 0.1 && isMobile) {
       handleSwipeUp();
     }
   });

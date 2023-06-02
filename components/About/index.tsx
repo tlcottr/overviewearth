@@ -3,6 +3,7 @@ import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import Return from "./Return";
 import { useDrag } from "@use-gesture/react";
+import { isMobile } from "react-device-detect";
 
 type Props = {};
 
@@ -26,8 +27,7 @@ const About = (props: Props) => {
   };
 
   const bind = useDrag(({ swipe: [swipeX] }) => {
-    console.log("swipeX:", swipeX);
-    if (swipeX >= 0) {
+    if (swipeX >= 0.1 && isMobile) {
       handleSwipeRight();
     }
   });

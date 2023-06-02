@@ -5,6 +5,7 @@ import { LinkedInIcon, InstagramIcon, TwitterIcon } from "../Team/Social";
 import Return from "./Return";
 import Link from "next/link";
 import { useDrag } from "@use-gesture/react";
+import { isMobile } from "react-device-detect";
 
 type Props = {};
 
@@ -35,8 +36,7 @@ const Contact = (props: Props) => {
   };
 
   const bind = useDrag(({ swipe: [swipeY] }) => {
-    console.log("swipeY:", swipeY);
-    if (swipeY >= 0) {
+    if (swipeY >= 0.1 && isMobile) {
       handleSwipeDown();
     }
   });
@@ -49,7 +49,7 @@ const Contact = (props: Props) => {
         <div className={styles.top}>
           <span className={styles.border}></span>
           <div className={styles.center}>
-            <a onClick={handleCopy} className={styles.email}>
+            <div onClick={handleCopy} className={styles.email}>
               {isCopied ? (
                 <span className={styles.copied}>COPIED TO CLIPBOARD</span>
               ) : (
@@ -58,7 +58,7 @@ const Contact = (props: Props) => {
                   overview.earth
                 </span>
               )}
-            </a>
+            </div>
             <div className={styles.socialIcons}>
               <Link
                 href={"https://www.instagram.com/overview.capital/"}

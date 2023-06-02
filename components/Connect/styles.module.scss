@@ -63,6 +63,8 @@
 .email {
   opacity: 1;
   cursor: pointer;
+  position: relative;
+  z-index: 100;
 }
 .email:hover {
   opacity: 50%;

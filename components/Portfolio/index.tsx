@@ -5,6 +5,7 @@ import Image from "next/image";
 import Return from "./Return";
 import Link from "next/link";
 import { useDrag } from "@use-gesture/react";
+import { isMobile } from "react-device-detect";
 
 type Props = {};
 
@@ -30,8 +31,7 @@ const Portfolio = (props: Props) => {
   };
 
   const bind = useDrag(({ swipe: [swipeX] }) => {
-    console.log("swipeX:", swipeX);
-    if (swipeX <= 0) {
+    if (swipeX <= 0.1 && isMobile) {
       handleSwipeLeft();
     }
   });
