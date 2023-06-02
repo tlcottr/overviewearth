@@ -45,7 +45,7 @@ const Contact = (props: Props) => {
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
-      <div className={styles.container} {...bind()}>
+      <div className={styles.container}>
         <div className={styles.top}>
           <span className={styles.border}></span>
           <div className={styles.center}>
@@ -90,6 +90,7 @@ const Contact = (props: Props) => {
             </div>
           </div>
         </div>
+        <div {...bind()} className={styles.swipe}></div>
       </div>
     </>
   );
