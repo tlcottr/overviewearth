@@ -64,6 +64,9 @@
   opacity: 1;
   cursor: pointer;
 }
+.email:hover {
+  opacity: 50%;
+}
 .emailCopied {
   display: flex;
   flex-direction: column;
@@ -118,8 +121,5 @@
 @media (min-width: 1024px) {
   .emailSymbol {
     font-size: 1.75rem;
-  }
-  .email:hover {
-    opacity: 50%;
   }
 }

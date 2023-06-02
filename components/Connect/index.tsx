@@ -49,7 +49,7 @@ const Contact = (props: Props) => {
         <div className={styles.top}>
           <span className={styles.border}></span>
           <div className={styles.center}>
-            <div onClick={handleCopy} className={styles.email}>
+            <p onClick={handleCopy} className={styles.email}>
               {isCopied ? (
                 <span className={styles.copied}>COPIED TO CLIPBOARD</span>
               ) : (
@@ -58,7 +58,7 @@ const Contact = (props: Props) => {
                   overview.earth
                 </span>
               )}
-            </div>
+            </p>
             <div className={styles.socialIcons}>
               <Link
                 href={"https://www.instagram.com/overview.capital/"}
