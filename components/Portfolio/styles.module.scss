@@ -184,6 +184,9 @@
   .email {
     font-size: 0.75rem;
   }
+  .email:focus {
+    opacity: 50%;
+  }
   .copied {
     font-size: 0.6rem;
   }
