@@ -36,7 +36,7 @@ const Team = (props: Props) => {
     }
   });
   return (
-    <div className={styles.container}>
+    <div className={styles.container} {...bind()}>
       <div className="top">
         <span className={styles.border}>
           <h1 className={styles.title}>Team</h1>
@@ -113,7 +113,7 @@ const Team = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className={styles.arrowContainer}>
+      <div className={styles.arrowContainer} {...bind()}>
         <Return size={50} />
       </div>
       <div {...bind()} className={styles.swipe}></div>
