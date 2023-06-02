@@ -56,7 +56,7 @@ const Portfolio = (props: Props) => {
   }, []);
   return (
     <div className={styles.navContainer}>
-      <div className={styles.container} {...bind()}>
+      <div className={styles.container}>
         <div className={styles.portfolioTop}>
           <span className={styles.border}>
             <h1 className={styles.title}>Portfolio</h1>
@@ -236,6 +236,7 @@ const Portfolio = (props: Props) => {
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
+      <div {...bind()} className={styles.swipe}></div>
     </div>
   );
 };

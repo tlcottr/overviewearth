@@ -37,7 +37,7 @@ const About = (props: Props) => {
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
-      <div className={styles.container} {...bind()}>
+      <div className={styles.container}>
         <span className={styles.border}>
           <h1 className={styles.title}>About</h1>
         </span>
@@ -60,6 +60,7 @@ const About = (props: Props) => {
           </div>
         </div>
       </div>
+      <div {...bind()} className={styles.swipe}></div>
     </div>
   );
 };
