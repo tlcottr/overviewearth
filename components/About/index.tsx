@@ -59,8 +59,8 @@ const About = (props: Props) => {
             our future more resilient and equitable for generations to come.
           </div>
         </div>
+        <div {...bind()} className={styles.swipe}></div>
       </div>
-      <div {...bind()} className={styles.swipe}></div>
     </div>
   );
 };

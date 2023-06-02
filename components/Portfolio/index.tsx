@@ -232,11 +232,11 @@ const Portfolio = (props: Props) => {
             )}
           </Link>
         </div>
+        <div {...bind()} className={styles.swipe}></div>
       </div>
       <div className={styles.arrowContainer}>
         <Return size={50} />
       </div>
-      <div {...bind()} className={styles.swipe}></div>
     </div>
   );
 };
