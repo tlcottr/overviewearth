@@ -67,6 +67,14 @@
 .role {
   font-size: 1.5rem;
 }
+.swipe {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 @media screen and (max-width: 1080px) {
   .container {
