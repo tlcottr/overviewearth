@@ -36,7 +36,7 @@ const Contact = (props: Props) => {
   };
 
   const bind = useDrag(({ swipe: [swipeY] }) => {
-    if (swipeY <= -0.1 && isMobile) {
+    if (swipeY >= 0 && isMobile) {
       handleSwipeDown();
     }
   });
