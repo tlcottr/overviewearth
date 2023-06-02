@@ -59,13 +59,29 @@
   justify-content: center;
   height: 30vw;
   flex-direction: column;
-  cursor: pointer;
 }
 .email {
   opacity: 1;
+  
 }
 .email:hover {
   opacity: 50%;
+  cursor: pointer;
+}
+.emailCopied {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.copied {
+  background: var(--color);
+  color: var(--bg-color-alt);
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-family: "Inconsolata", serif;
+  font-size: 1rem;
+  margin-left: 0.5rem;
 }
 .socialIcons {
   display: flex;

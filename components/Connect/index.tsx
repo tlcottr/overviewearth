@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import { LinkedInIcon, InstagramIcon, TwitterIcon } from "../Team/Social";
@@ -19,6 +19,13 @@ const Contact = (props: Props) => {
     showContact,
     setShowContact,
   } = useContext(NavContext);
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("contact@overview.earth");
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000); // reset after 2 seconds
+  };
 
   const handleSwipeDown = () => {
     setShowAbout(false);
@@ -42,8 +49,15 @@ const Contact = (props: Props) => {
         <div className={styles.top}>
           <span className={styles.border}></span>
           <div className={styles.center}>
-            <div>
-              contact<span className={styles.emailSymbol}>@</span>overview.earth
+            <div onClick={handleCopy} className={styles.email}>
+              {isCopied ? (
+                <span className={styles.copied}>COPIED TO CLIPBOARD</span>
+              ) : (
+                <span>
+                  contact<span className={styles.emailSymbol}>@</span>
+                  overview.earth
+                </span>
+              )}
             </div>
             <div className={styles.socialIcons}>
               <Link

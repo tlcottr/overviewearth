@@ -46,7 +46,7 @@
   display: flex;
   height: 100%;
   width: 100%;
-  min-height: 100px;
+  min-height: 108px;
   min-width: 200px;
   cursor: pointer;
   position: relative;
@@ -149,7 +149,7 @@
     grid-gap: 0.5rem 1rem;
   }
   .portfolioItem {
-    min-width: 100px;
+    min-width: 108px;
     min-height: 70px;
     padding: 1rem;
     height: auto;
@@ -251,5 +251,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .portfolioItem {
+    min-height: 108px;
+    min-width: 200px;
+  }
+  .portfolioItem:hover {
+    min-height: 108px;
+    min-width: 200px;
   }
 }

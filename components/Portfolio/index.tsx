@@ -200,6 +200,37 @@ const Portfolio = (props: Props) => {
               </div>
             )}
           </Link>
+          <Link href={"https://www.reynko.com/"} rel="" target="_blank">
+            {isMobile ? (
+              <>
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainerMobile}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/reynko.png"}
+                    />
+                  </div>
+                </div>
+                <div className={styles.textContainerMobile}>
+                  <p>Solving the turbulence problem</p>
+                </div>
+              </>
+            ) : (
+              <div className={styles.portfolioItem}>
+                <div className={styles.imageContainer}>
+                  <Image
+                    height={10}
+                    width={75}
+                    src={"/static/images/reynko.png"}
+                  />
+                </div>
+                <div className={styles.textContainer}>
+                  <p>Solving the turbulence problem</p>
+                </div>
+              </div>
+            )}
+          </Link>
         </div>
       </div>
       <div className={styles.arrowContainer}>

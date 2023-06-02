@@ -6,6 +6,12 @@ html {
   background-color: #1a1a1a;
   overflow: hidden;
 }
+@media (min-width: 1024px) {
+  html {
+    background-color: black;
+  }
+}
+
 body {
   min-height: 100vh;
   position: fixed;
