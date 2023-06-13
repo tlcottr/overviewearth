@@ -90,7 +90,7 @@ const Video: React.FC<Props> = (props: Props) => {
         }}
       >
         <source
-          src="/static/video/earthtransparent_new.webm"
+          src="/static/video/earth_hd.mp4"
           type="video/webm"
         />
         <source
