@@ -90,10 +90,10 @@ const Video: React.FC<Props> = (props: Props) => {
         }}
       >
         <source
-          src="/static/video/earth_hd.mp4"
-          type="video/webm"
+          src="/static/video/earthtransparent_new_H.265.mp4"
+          type="video/mp4"
         />
-        <source
+        {/*<source
           src="/static/video/EarthMobile.mp4"
           type="video/mp4"
           width="200%"
@@ -103,7 +103,7 @@ const Video: React.FC<Props> = (props: Props) => {
             top: 0,
             left: 0,
           }}
-        />
+        />*/}
       </video>
     </div>
   );
