@@ -66,13 +66,13 @@ const Video: React.FC<Props> = (props: Props) => {
           ...(showAbout && {
             transform: "translate(-50%, -50%) translateX(-20%)",
             ...(isMobile && {
-              transform: "translate(-50%, -50%) translateX(-25%)",
+              transform: "translate(-50%, -50%) translateX(-40%)",
             }),
           }),
           ...(showPortfolio && {
             transform: "translate(-50%, -50%) translateX(20%)",
             ...(isMobile && {
-              transform: "translate(-50%, -50%) translateX(25%)",
+              transform: "translate(-50%, -50%) translateX(40%)",
             }),
           }),
           ...(showTeam && {
@@ -84,7 +84,7 @@ const Video: React.FC<Props> = (props: Props) => {
           ...(showContact && {
             transform: "translate(-50%, -50%) translateY(-50%)",
             ...(isMobile && {
-              transform: "translate(-50%, -50%) translateY(-25%)",
+              transform: "translate(-50%, -50%) translateY(-40%)",
             }),
           }),
         }}
