@@ -15,8 +15,8 @@ const Video: React.FC<Props> = (props: Props) => {
   useEffect(() => {
     setTimeout(() => setEarthSize("100%"), 3000);
     setTimeout(() => setEarthSize("160%"), 10000);
-    setTimeout(() => setMobileEarthSize("50%"), 3000);
-    setTimeout(() => setMobileEarthSize("100%"), 8000);
+    setTimeout(() => setMobileEarthSize("60%"), 3000);
+    setTimeout(() => setMobileEarthSize("150%"), 8000);
     setTimeout(() => setIsLoaded(true), 10000);
   }, []);
 
