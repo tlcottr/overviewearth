@@ -78,7 +78,7 @@ const Video: React.FC<Props> = (props: Props) => {
           ...(showTeam && {
             transform: "translate(-50%, -50%) translateY(50%)",
             ...(isMobile && {
-              transform: "translate(-50%, -50%) translateY(25%)",
+              transform: "translate(-50%, -50%) translateY(50%)",
             }),
           }),
           ...(showContact && {
