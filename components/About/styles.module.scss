@@ -69,6 +69,11 @@
   .navContainer {
     height: 100%;
   }
+  .aboutHolder {
+    height: 70vh;
+    overflow: scroll;
+    z-index: 1000;
+  }
 }
 
 /* For screens between 768px and 1023px */

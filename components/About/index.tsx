@@ -41,7 +41,7 @@ const About = (props: Props) => {
         <span className={styles.border}>
           <h1 className={styles.title}>About</h1>
         </span>
-        <div>
+        <div className={styles.aboutHolder}>
           <div>
             The “overview effect,” coined by author Frank White, is a profound
             experience that astronauts have when they see the Earth from space,

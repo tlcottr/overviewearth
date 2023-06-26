@@ -119,6 +119,21 @@
   .role {
     font-size: 1.5rem;
   }
+  @media screen and (max-height: 500px) {
+    .arrowContainer {
+      bottom: 0rem;
+      z-index: 100000;
+      position: absolute;
+    }
+    .teamGrid {
+      grid-gap: 1rem;
+    }
+    .container {
+      padding-bottom: 0rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
   @media (min-height: 600px) {
     .arrowContainer {
       bottom: 8rem;

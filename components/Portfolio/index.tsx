@@ -75,162 +75,164 @@ const Portfolio = (props: Props) => {
             </p>
           </div>
         </div>
-        <div className={styles.portfolioGrid} {...bind()}>
-          <Link href={"https://www.alga.bio/"} rel="" target="_blank">
-            {isMobile ? (
-              <>
+        <div className={styles.portfolioHolder}>
+          <div className={styles.portfolioGrid} {...bind()}>
+            <Link href={"https://www.alga.bio/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/alga.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Eliminating enteric methane emissions at-scale</p>
+                  </div>
+                </>
+              ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerMobile}>
+                  <div className={styles.imageContainer}>
                     <Image
                       height={10}
                       width={75}
                       src={"/static/images/alga.png"}
                     />
                   </div>
+                  <div className={styles.textContainer}>
+                    <p>Eliminating enteric methane emissions at-scale</p>
+                  </div>
                 </div>
-                <div className={styles.textContainerMobile}>
-                  <p>Eliminating enteric methane emissions at-scale</p>
-                </div>
-              </>
-            ) : (
-              <div className={styles.portfolioItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    height={10}
-                    width={75}
-                    src={"/static/images/alga.png"}
-                  />
-                </div>
-                <div className={styles.textContainer}>
-                  <p>Eliminating enteric methane emissions at-scale</p>
-                </div>
-              </div>
-            )}
-          </Link>
-          <Link href={"https://thebluedot.co"} rel="" target="_blank">
-            {isMobile ? (
-              <>
+              )}
+            </Link>
+            <Link href={"https://thebluedot.co"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/bluedot.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>a single payment platform for EV drivers and fleets</p>
+                  </div>
+                </>
+              ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerMobile}>
+                  <div className={styles.imageContainer}>
                     <Image
                       height={10}
                       width={75}
                       src={"/static/images/bluedot.png"}
                     />
                   </div>
+                  <div className={styles.textContainer}>
+                    <p>a single payment platform for EV drivers and fleets</p>
+                  </div>
                 </div>
-                <div className={styles.textContainerMobile}>
-                  <p>a single payment platform for EV drivers and fleets</p>
-                </div>
-              </>
-            ) : (
-              <div className={styles.portfolioItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    height={10}
-                    width={75}
-                    src={"/static/images/bluedot.png"}
-                  />
-                </div>
-                <div className={styles.textContainer}>
-                  <p>a single payment platform for EV drivers and fleets</p>
-                </div>
-              </div>
-            )}
-          </Link>
-          <Link href={"https://goodmylk.co/"} rel="" target="_blank">
-            {isMobile ? (
-              <>
+              )}
+            </Link>
+            <Link href={"https://goodmylk.co/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/mylk.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Making mylk the new milk</p>
+                  </div>
+                </>
+              ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerMobile}>
+                  <div className={styles.imageContainer}>
                     <Image
                       height={10}
                       width={75}
                       src={"/static/images/mylk.png"}
                     />
                   </div>
+                  <div className={styles.textContainer}>
+                    <p>Making mylk the new milk</p>
+                  </div>
                 </div>
-                <div className={styles.textContainerMobile}>
-                  <p>Making mylk the new milk</p>
-                </div>
-              </>
-            ) : (
-              <div className={styles.portfolioItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    height={10}
-                    width={75}
-                    src={"/static/images/mylk.png"}
-                  />
-                </div>
-                <div className={styles.textContainer}>
-                  <p>Making mylk the new milk</p>
-                </div>
-              </div>
-            )}
-          </Link>
-          <Link href={"https://www.mojavehvac.com/"} rel="" target="_blank">
-            {isMobile ? (
-              <>
+              )}
+            </Link>
+            <Link href={"https://www.mojavehvac.com/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/mojave.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Changing the physics of air conditioning</p>
+                  </div>
+                </>
+              ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerMobile}>
+                  <div className={styles.imageContainer}>
                     <Image
                       height={10}
                       width={75}
                       src={"/static/images/mojave.png"}
                     />
                   </div>
+                  <div className={styles.textContainer}>
+                    <p>Changing the physics of air conditioning</p>
+                  </div>
                 </div>
-                <div className={styles.textContainerMobile}>
-                  <p>Changing the physics of air conditioning</p>
-                </div>
-              </>
-            ) : (
-              <div className={styles.portfolioItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    height={10}
-                    width={75}
-                    src={"/static/images/mojave.png"}
-                  />
-                </div>
-                <div className={styles.textContainer}>
-                  <p>Changing the physics of air conditioning</p>
-                </div>
-              </div>
-            )}
-          </Link>
-          <Link href={"https://www.reynko.com/"} rel="" target="_blank">
-            {isMobile ? (
-              <>
+              )}
+            </Link>
+            <Link href={"https://www.reynko.com/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/reynko.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Solving the turbulence problem</p>
+                  </div>
+                </>
+              ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerMobile}>
+                  <div className={styles.imageContainer}>
                     <Image
                       height={10}
                       width={75}
                       src={"/static/images/reynko.png"}
                     />
                   </div>
+                  <div className={styles.textContainer}>
+                    <p>Solving the turbulence problem</p>
+                  </div>
                 </div>
-                <div className={styles.textContainerMobile}>
-                  <p>Solving the turbulence problem</p>
-                </div>
-              </>
-            ) : (
-              <div className={styles.portfolioItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    height={10}
-                    width={75}
-                    src={"/static/images/reynko.png"}
-                  />
-                </div>
-                <div className={styles.textContainer}>
-                  <p>Solving the turbulence problem</p>
-                </div>
-              </div>
-            )}
-          </Link>
+              )}
+            </Link>
+          </div>
         </div>
         <div {...bind()} className={styles.swipe}></div>
       </div>
