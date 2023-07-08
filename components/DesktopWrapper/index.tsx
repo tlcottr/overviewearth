@@ -133,8 +133,8 @@ const DesktopWrapper: React.FC = () => {
                 transition: "opacity 2s linear .7s",
               }}
             >
-              We are Overview, a venture capital firm investing in climate
-              change solutions.
+              At Overview, we invest in climate change solutions at the earliest
+              stages.
             </h1>
           </div>
         )}

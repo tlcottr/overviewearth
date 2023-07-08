@@ -54,9 +54,10 @@ const About = (props: Props) => {
           <div>
             At Overview, we are driven by this concept, investing in companies
             that are creating solutions to address climate change. Our mission
-            is to support and partner with entrepreneurs who can unlock
-            innovations that have the potential to transform industries and make
-            our future more resilient and equitable for generations to come.
+            is to support and partner with entrepreneurs at the earliest stages
+            who can unlock innovations that have the potential to transform
+            industries, making our future more resilient and equitable for
+            generations to come.
           </div>
         </div>
         <div {...bind()} className={styles.swipe}></div>
