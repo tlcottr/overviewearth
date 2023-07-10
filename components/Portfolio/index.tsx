@@ -152,7 +152,7 @@ const Portfolio = (props: Props) => {
                     </div>
                   </div>
                   <div className={styles.textContainerMobile}>
-                    <p>Low impact, better for you mylk.</p>
+                    <p>Low impact, better for you mylk</p>
                   </div>
                 </>
               ) : (
@@ -165,7 +165,7 @@ const Portfolio = (props: Props) => {
                     />
                   </div>
                   <div className={styles.textContainer}>
-                    <p>Low impact, better for you mylk.</p>
+                    <p>Low impact, better for you mylk</p>
                   </div>
                 </div>
               )}
