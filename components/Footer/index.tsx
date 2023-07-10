@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import styles from "./styles.module.scss";
+import { isMobile } from "react-device-detect";
 import Exit from "./Exit";
 
 type Props = {
@@ -60,8 +60,8 @@ const Popup = ({ onClose }: Props) => {
     <div className={styles.popup}>
       <div className={styles.popupHeadline}>
         <h2 className={styles.popupTitle}>
-          Our pledge is to faciliate a renewable and resilient future. Here are
-          some of the way our site minimizes its footprint.
+          Overview.earth is a low impact site. Here are some of the ways our
+          site minimizes its footprint:
         </h2>
       </div>
       <div className={styles.popupContent}>
@@ -115,6 +115,7 @@ const Popup = ({ onClose }: Props) => {
 const Footer = (props: Props) => {
   const [isCopied, setIsCopied] = useState(false);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [isFadeIn, setIsFadeIn] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("contact@overview.earth");
@@ -130,10 +131,20 @@ const Footer = (props: Props) => {
     setIsPopupVisible(false);
   };
 
+  useEffect(() => {
+    const timeoutId = setTimeout(
+      () => {
+        setIsFadeIn(true);
+      },
+      isMobile ? 9000 : 11000
+    );
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} ${isFadeIn ? styles.fadeIn : ""}`}>
       <p onClick={handlePopup} className={styles.popupAnchor}>
-        overview.earth is a low-impact site.
+        overview.earth is a low-impact site
       </p>
 
       <p onClick={handleCopy} className={styles.email}>

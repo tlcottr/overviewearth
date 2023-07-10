@@ -26,6 +26,8 @@
   overflow: hidden;
 }
 .arrowContainer {
+  position: relative;
+  z-index: 1000;
 }
 .title {
   text-decoration: underline;
@@ -37,6 +39,8 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
   margin-top: 0rem;
+  position: relative;
+  z-index: 1000;
 }
 .portfolioItem {
   border: 1px solid var(--color);
@@ -46,7 +50,7 @@
   display: flex;
   height: 100%;
   width: 100%;
-  min-height: 100px;
+  min-height: 108px;
   min-width: 200px;
   cursor: pointer;
   position: relative;
@@ -89,6 +93,7 @@
   font-family: "Inconsolata", sans-serif;
   line-height: 1.25rem;
   cursor: pointer;
+  text-transform: lowercase;
 }
 .portfolioTop {
   display: flex;
@@ -96,6 +101,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
+  z-index: 1000;
 }
 .reachOut {
   font-size: 1rem;
@@ -104,6 +111,8 @@
   text-align: right;
   color: var(--text-dark);
   letter-spacing: 1%;
+  position: relative;
+  z-index: 10000;
 }
 .textContainerMobile {
   font-size: 0.75rem;
@@ -114,6 +123,7 @@
   letter-spacing: 0.06rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  text-transform: lowercase;
 }
 .imageContainerMobile:hover {
   background-color: transparent;
@@ -132,6 +142,15 @@
   border-radius: 3px;
   font-size: 0.9rem;
 }
+.swipe {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 @media screen and (max-width: 767px) {
   .container {
     font-size: 1.25rem;
@@ -147,7 +166,7 @@
     grid-gap: 0.5rem 1rem;
   }
   .portfolioItem {
-    min-width: 100px;
+    min-width: 108px;
     min-height: 70px;
     padding: 1rem;
     height: auto;
@@ -182,6 +201,9 @@
   .email {
     font-size: 0.75rem;
   }
+  .email:focus {
+    opacity: 50%;
+  }
   .copied {
     font-size: 0.6rem;
   }
@@ -190,7 +212,7 @@
   }
   .textContainerMobile {
     text-align: left;
-    font-size: 0.6;
+    font-size: 0.6rem;
     line-height: 0.75rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -201,6 +223,10 @@
   }
   .navContainer {
     height: 100%;
+  }
+  .portfolioHolder {
+    height: 60vh;
+    overflow: scroll;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -249,5 +275,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .portfolioItem {
+    min-height: 108px;
+    min-width: 200px;
+  }
+  .portfolioItem:hover {
+    min-height: 108px;
+    min-width: 200px;
   }
 }

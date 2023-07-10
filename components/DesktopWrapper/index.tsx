@@ -25,8 +25,8 @@ const DesktopWrapper: React.FC = () => {
       setShowMain(true);
       setTimeout(() => {
         setShowMainFade(true);
-      }); // Wait 1 second for preMainContainer to finish fading out
-    }, 8000);
+      }, 1000); // Wait 1 second for preMainContainer to finish fading out
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -35,8 +35,8 @@ const DesktopWrapper: React.FC = () => {
       setShowText(true);
       setTimeout(() => {
         setShowText(false);
-      }, 4000);
-    }, 3200);
+      }, 9000);
+    }, 5100);
     return () => clearTimeout(textTimer);
   }, []);
 
@@ -48,7 +48,8 @@ const DesktopWrapper: React.FC = () => {
             className={styles.mainContainer}
             style={{
               opacity: showMainFade ? 1 : 0,
-              transition: showMainFade ? "opacity 2s linear" : "none",
+              transition:
+                showMainFade && showMain ? "opacity 2s linear" : "none",
             }}
           >
             <div
@@ -123,20 +124,17 @@ const DesktopWrapper: React.FC = () => {
             style={{
               opacity: 1,
               zIndex: 2,
-              transition: "opacity 1s linear",
-              animationDelay: "3000",
             }}
           >
             <h1
               className={styles.preMainText}
               style={{
                 opacity: showText ? 1 : 0,
-                transition: "opacity 1s linear",
-                animationDelay: "3000",
+                transition: "opacity 2s linear .7s",
               }}
             >
-              We are Overview, a venture capital firm investing in climate
-              change solutions.
+              At Overview, we invest in climate change solutions at the earliest
+              stages.
             </h1>
           </div>
         )}

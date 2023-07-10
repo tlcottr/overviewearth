@@ -23,6 +23,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
+  z-index: 100000;
 }
 .title {
   margin-bottom: 1rem;
@@ -36,6 +38,8 @@
   grid-gap: 1rem;
   margin-top: 2rem;
   line-height: 2.5rem;
+  position: relative;
+  z-index: 100;
 }
 .socialIcons {
   display: flex;
@@ -67,6 +71,15 @@
 .role {
   font-size: 1.5rem;
 }
+.swipe {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
 @media screen and (max-width: 1080px) {
   .container {
@@ -81,6 +94,8 @@
     padding-top: 0rem;
     font-size: 1.5rem;
     min-height: auto;
+    width: 100vw;
+    height: 100vh;
   }
   .teamGrid {
     grid-template-columns: 1fr;
@@ -99,63 +114,101 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 100000;
   }
   .role {
     font-size: 1.5rem;
   }
+  @media screen and (max-height: 500px) {
+    .arrowContainer {
+      bottom: 0rem;
+      z-index: 100000;
+      position: absolute;
+    }
+    .teamGrid {
+      grid-gap: 1rem;
+    }
+    .container {
+      padding-bottom: 0rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
   @media (min-height: 600px) {
     .arrowContainer {
       bottom: 8rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 610px) {
     .arrowContainer {
       bottom: 6rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 620px) {
     .arrowContainer {
       bottom: 6rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 640px) {
     .arrowContainer {
       bottom: 9rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 650px) {
     .arrowContainer {
       bottom: 6rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 660px) {
     .arrowContainer {
       bottom: 7.5rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 670px) {
     .arrowContainer {
       bottom: 10.5rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 700px) {
     .arrowContainer {
       bottom: 11.5rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 730px) {
     .arrowContainer {
       bottom: 10rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 740px) {
     .arrowContainer {
       bottom: 10rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
   @media (min-height: 750px) {
     .arrowContainer {
       bottom: 13rem;
+      z-index: 100000;
+      position: absolute;
     }
   }
 }

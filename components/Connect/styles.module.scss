@@ -5,7 +5,6 @@
   align-items: left;
   margin-top: auto;
   margin-bottom: auto;
-  min-height: 100vh;
   font-family: "Garamond-Light", serif;
   letter-spacing: 1%;
   font-size: 2.5rem;
@@ -49,10 +48,10 @@
   align-items: center;
   border-radius: 10px;
   opacity: 1;
+  cursor: pointer;
 }
 .icon:hover {
   opacity: 50%;
-  cursor: pointer;
 }
 .center {
   display: flex;
@@ -60,13 +59,30 @@
   justify-content: center;
   height: 30vw;
   flex-direction: column;
-  cursor: pointer;
+  position: relative;
+  z-index: 100;
 }
 .email {
   opacity: 1;
+  cursor: pointer;
 }
 .email:hover {
   opacity: 50%;
+}
+.emailCopied {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.copied {
+  background: var(--color);
+  color: var(--bg-color-alt);
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-family: "Inconsolata", serif;
+  font-size: 1rem;
+  margin-left: 0.5rem;
 }
 .socialIcons {
   display: flex;
@@ -75,6 +91,14 @@
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+}
+.swipe {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /* Media Query for screens smaller than 768px */
 @media (max-width: 767px) {
@@ -86,8 +110,26 @@
   }
   .arrowContainer {
     position: absolute;
-    top: 0rem;
+    top: 0.5rem;
     left: 0;
     right: 0;
+    z-index: 10000000;
+  }
+  .center {
+    position: relative;
+    top: calc(30vh);
+  }
+  .email:focus {
+    opacity: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .emailSymbol {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .emailSymbol {
+    font-size: 1.75rem;
   }
 }

@@ -1,4 +1,21 @@
-.logo {
-  width: 25%;
-  height: auto;
+@media screen and (max-width: 767px) {
+  .regArrow {
+    display: block;
+  }
+  .smallArrow {
+    display: none;
+  }
+  @media screen and (max-height: 500px) {
+    .regArrow {
+      display: none;
+    }
+    .smallArrow {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media screen and (min-width: 1024px) {
 }

@@ -7,6 +7,8 @@
 }
 
 .arrowContainer {
+  position: relative;
+  z-index: 100000;
 }
 
 .container {
@@ -35,6 +37,14 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
 }
+.swipe {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 /* Media Queries */
 
@@ -58,6 +68,11 @@
   }
   .navContainer {
     height: 100%;
+  }
+  .aboutHolder {
+    height: 70vh;
+    overflow: scroll;
+    z-index: 1000;
   }
 }
 
