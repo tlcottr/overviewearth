@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="title" content="Overview" />
         <meta
           name="description"
-          content="Overview is a venture capital form investing in climate change solutions
+          content="At Overview, we invest in climate change solutions at the earliest stages.
 "
         />
         <meta property="og:type" content="website" />
@@ -20,7 +20,7 @@ export default function Home() {
         <meta property="og:title" content="Overview" />
         <meta
           property="og:description"
-          content="Overview is a venture capital form investing in climate change solutions
+          content="At Overview, we invest in climate change solutions at the earliest stages.
 "
         />
         <meta property="og:image:width" content="1200" />
@@ -37,7 +37,7 @@ export default function Home() {
         <meta property="twitter:title" content="Overview" />
         <meta
           property="twitter:description"
-          content="Overview is a venture capital form investing in climate change solutions
+          content="At Overview, we invest in climate change solutions at the earliest stages.
 "
         />
         <meta
