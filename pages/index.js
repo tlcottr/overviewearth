@@ -3,7 +3,7 @@ import { isMobile } from "react-device-detect";
 import DesktopWrapper from "../components/DesktopWrapper";
 import MobileWrapper from "../components/MobileWrapper";
 
-export default function Home() {
+export default function Home({ page }) {
   return (
     <>
       <Head>
