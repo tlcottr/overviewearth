@@ -139,6 +139,41 @@ const Portfolio = (props: Props) => {
                 </div>
               )}
             </Link>
+            <Link href={"https://www.emvolon.com/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/emvolon.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>
+                      Converting Wasted Resources Into Valuable Liquid Chemicals
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/emvolon.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>
+                      Converting Wasted Resources Into Valuable Liquid Chemicals
+                    </p>
+                  </div>
+                </div>
+              )}
+            </Link>
             <Link href={"https://goodmylk.co/"} rel="" target="_blank">
               {isMobile ? (
                 <>
@@ -166,6 +201,111 @@ const Portfolio = (props: Props) => {
                   </div>
                   <div className={styles.textContainer}>
                     <p>Low impact, better for you mylk</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <Link
+              href={"https://highwoodemissions.com/"}
+              rel=""
+              target="_blank"
+            >
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/highwood.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Emissions Software For The Oil And Gas Industry</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/highwood.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>Emissions Software For The Oil And Gas Industry</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <Link
+              href={"https://www.miraterrasoil.com/"}
+              rel=""
+              target="_blank"
+            >
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/miraterra.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Making Soil Intelligence More Accurate And Less Expensive</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/miraterra.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>Making Soil Intelligence More Accurate And Less Expensive</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/company/mitti-labs/about/"}
+              rel=""
+              target="_blank"
+            >
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/mittilabs.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Decarbonizing Smallholder Farming</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/mittilabs.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>Decarbonizing Smallholder Farming</p>
                   </div>
                 </div>
               )}
@@ -228,6 +368,37 @@ const Portfolio = (props: Props) => {
                   </div>
                   <div className={styles.textContainer}>
                     <p>Solving the turbulence problem</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <Link href={"https://gosteward.com/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/steward.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Regenerative Framing Credit Financing</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/steward.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>Regenerative Framing Credit Financing</p>
                   </div>
                 </div>
               )}

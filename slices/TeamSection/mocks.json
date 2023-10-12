@@ -1,0 +1,75 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"name": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Esse anim consequat nulla nisi deserunt laboris voluptate occaecat officia commodo anim occaecat. Eiusmod cupidatat dolor do velit cillum dolore."
+						}
+					}
+				]
+			},
+			"role": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Commodo dolor pariatur ullamco eu officia proident nulla ad incididunt qui cillum pariatur. Est ad Lorem eu ipsum aliqua aute sit id dolor commodo commodo."
+						}
+					}
+				]
+			},
+			"nameTwo": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Occaecat occaecat eiusmod cupidatat culpa ipsum pariatur irure aliqua id proident ut. Reprehenderit do sit dolor fugiat quis ad deserunt eu voluptate in dolore. Laboris dolore mollit dolore pariatur cillum est cillum ex veniam."
+						}
+					}
+				]
+			},
+			"roleTwo": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consequat culpa nostrud quis magna anim proident reprehenderit laborum ex."
+						}
+					}
+				]
+			},
+			"nameThree": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ea labore amet aliqua nostrud irure."
+						}
+					}
+				]
+			},
+			"roleThree": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur adipisicing fugiat consectetur occaecat adipisicing."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,37 @@
+{
+  "id": "about_section",
+  "type": "SharedSlice",
+  "name": "AboutSection",
+  "description": "AboutSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "aboutBodyParagraphOne": {
+          "type": "StructuredText",
+          "config": {
+            "label": "aboutBodyParagraphOne",
+            "placeholder": "Copy content for the first paragraph of the About section",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "aboutBodyParagraphTwo": {
+          "type": "StructuredText",
+          "config": {
+            "label": "aboutBodyParagraphTwo",
+            "placeholder": "Copy content for the second paragraph of the About section",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

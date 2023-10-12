@@ -1,0 +1,35 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"aboutBodyParagraphOne": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "The “overview effect,” coined by author Frank White, is a profound experience that astronauts have when they see the Earth from space, feeling a sense of awe and interconnectedness with our planet. It inspires a deeper appreciation for the Earth and a desire to protect it. To put it simply, it’s the realization that this is all we’ve got.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"aboutBodyParagraphTwo": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "At Overview, we are driven by this concept, investing in companies that are creating solutions to address climate change. Our mission is to support and partner with entrepreneurs at the earliest stages who can unlock innovations that have the potential to transform industries, making our future more resilient and equitable for generations to come.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
