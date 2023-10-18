@@ -143,7 +143,7 @@ const Portfolio = (props: Props) => {
               {isMobile ? (
                 <>
                   <div className={styles.portfolioItem}>
-                    <div className={styles.imageContainerMobile}>
+                    <div className={styles.imageContainerMobileLong}>
                       <Image
                         height={10}
                         width={75}
@@ -213,7 +213,7 @@ const Portfolio = (props: Props) => {
               {isMobile ? (
                 <>
                   <div className={styles.portfolioItem}>
-                    <div className={styles.imageContainerMobile}>
+                    <div className={styles.imageContainerMobileLong}>
                       <Image
                         height={10}
                         width={75}
@@ -248,7 +248,7 @@ const Portfolio = (props: Props) => {
               {isMobile ? (
                 <>
                   <div className={styles.portfolioItem}>
-                    <div className={styles.imageContainerMobile}>
+                    <div className={styles.imageContainerMobileLong}>
                       <Image
                         height={10}
                         width={75}
@@ -283,7 +283,7 @@ const Portfolio = (props: Props) => {
               {isMobile ? (
                 <>
                   <div className={styles.portfolioItem}>
-                    <div className={styles.imageContainerMobile}>
+                    <div className={styles.imageContainerMobileLong}>
                       <Image
                         height={10}
                         width={75}
@@ -376,7 +376,7 @@ const Portfolio = (props: Props) => {
               {isMobile ? (
                 <>
                   <div className={styles.portfolioItem}>
-                    <div className={styles.imageContainerMobile}>
+                    <div className={styles.imageContainerMobileLong}>
                       <Image
                         height={10}
                         width={75}
