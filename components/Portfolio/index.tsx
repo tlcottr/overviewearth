@@ -159,7 +159,7 @@ const Portfolio = (props: Props) => {
                 </>
               ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainer}>
+                  <div className={styles.imageContainerLong}>
                     <Image
                       height={10}
                       width={75}
@@ -192,7 +192,7 @@ const Portfolio = (props: Props) => {
                 </>
               ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainer}>
+                  <div className={styles.imageContainerTall}>
                     <Image
                       height={10}
                       width={75}
@@ -227,7 +227,7 @@ const Portfolio = (props: Props) => {
                 </>
               ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainer}>
+                  <div className={styles.imageContainerLong}>
                     <Image
                       height={10}
                       width={75}
@@ -262,7 +262,7 @@ const Portfolio = (props: Props) => {
                 </>
               ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainer}>
+                  <div className={styles.imageContainerLong}>
                     <Image
                       height={10}
                       width={75}
@@ -297,7 +297,7 @@ const Portfolio = (props: Props) => {
                 </>
               ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainer}>
+                  <div className={styles.imageContainerLong}>
                     <Image
                       height={10}
                       width={75}
@@ -390,7 +390,7 @@ const Portfolio = (props: Props) => {
                 </>
               ) : (
                 <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainer}>
+                  <div className={styles.imageContainerLong}>
                     <Image
                       height={10}
                       width={75}

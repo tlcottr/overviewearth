@@ -45,7 +45,6 @@
 .portfolioItem {
   border: 1px solid var(--color);
   border-radius: 10px;
-  padding: 3rem;
   object-fit: fill;
   display: flex;
   height: 100%;
@@ -64,6 +63,12 @@
 .portfolioItem:hover .imageContainer {
   display: none; /* hide the image container on hover */
 }
+.portfolioItem:hover .imageContainerLong {
+  display: none; /* hide the image container on hover */
+}
+.portfolioItem:hover .imageContainerTall {
+  display: none; /* hide the image container on hover */
+}
 
 .portfolioItem:hover .textContainer {
   display: block; /* show the text container on hover */
@@ -78,11 +83,22 @@
 
 .imageContainer {
   /* set width and height of the container to match the image size */
+  width: 80px;
+  height: 10px;
+  display: flex; /* add flexbox to center child elements */
+  justify-content: center;
+  align-items: center;
+}
+.imageContainerTall {
+  /* set width and height of the container to match the image size */
   width: 60px;
   height: 10px;
   display: flex; /* add flexbox to center child elements */
   justify-content: center;
   align-items: center;
+}
+.imageContainerLong img {
+  min-width: 105px;
 }
 
 .textContainer {
