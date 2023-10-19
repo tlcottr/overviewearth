@@ -8,7 +8,7 @@ import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import Video from "../Video";
 
-const DesktopWrapper: React.FC = () => {
+const DesktopWrapper: React.FC = ({ teamData, aboutData }) => {
   const navContext = useContext(NavContext) as {
     showAbout: boolean;
     showContact: boolean;
@@ -39,7 +39,6 @@ const DesktopWrapper: React.FC = () => {
     }, 5100);
     return () => clearTimeout(textTimer);
   }, []);
-
   return (
     <>
       <div className={styles.container}>
@@ -61,7 +60,7 @@ const DesktopWrapper: React.FC = () => {
                 opacity: navContext.showTeam ? 1 : 0,
               }}
             >
-              <Team />
+              <Team teamData={teamData} />
             </div>
             <div className={styles.horizontalContainer}>
               <div
@@ -103,7 +102,7 @@ const DesktopWrapper: React.FC = () => {
                   opacity: navContext.showAbout ? 1 : 0,
                 }}
               >
-                <About />
+                <About aboutData={aboutData} />
               </div>
             </div>
             <div

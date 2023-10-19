@@ -1,0 +1,73 @@
+{
+  "id": "team_section",
+  "type": "SharedSlice",
+  "name": "TeamSection",
+  "description": "TeamSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "StructuredText",
+          "config": {
+            "label": "name",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "role": {
+          "type": "StructuredText",
+          "config": {
+            "label": "role",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "nameTwo": {
+          "type": "StructuredText",
+          "config": {
+            "label": "nameTwo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "roleTwo": {
+          "type": "StructuredText",
+          "config": {
+            "label": "roleTwo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "nameThree": {
+          "type": "StructuredText",
+          "config": {
+            "label": "nameThree",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "roleThree": {
+          "type": "StructuredText",
+          "config": {
+            "label": "roleThree",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

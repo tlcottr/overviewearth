@@ -1,124 +1,35 @@
-import React, { useContext } from "react";
-import NavContext from "../NavContext";
-import { LinkedInIcon } from "./Social";
-import { TwitterIcon } from "./Social";
-import { InstagramIcon } from "./Social";
-import styles from "./styles.module.scss";
-import Return from "./Return";
-import Link from "next/link";
-import { useDrag } from "@use-gesture/react";
-import { isMobile } from "react-device-detect";
+import React, { useState, useEffect } from "react";
+import { createClient } from "../../prismicio";
+import { SliceZone } from "@prismicio/react";
+import { components } from "../../slices";
 
 type Props = {};
 
-const Team = (props: Props) => {
-  const {
-    showAbout,
-    setShowAbout,
-    showPortfolio,
-    setShowPortfolio,
-    showTeam,
-    setShowTeam,
-    showContact,
-    setShowContact,
-  } = useContext(NavContext);
+const Team = ({ initialData }) => {
+  const [page, setPage] = useState(initialData);
 
-  const handleSwipeUp = () => {
-    setShowAbout(false);
-    setShowPortfolio(false);
-    setShowTeam(!showTeam);
-    setShowContact(false);
-  };
-
-  const bind = useDrag(({ swipe: [swipeY] }) => {
-    if (swipeY <= 0 && isMobile) {
-      handleSwipeUp();
+  useEffect(() => {
+    async function fetchData() {
+      const client = createClient({
+        /* your client config */
+      });
+      const fetchedPage = await client.getByUID("page", "team", {
+        lang: "en-us",
+      });
+      setPage(fetchedPage);
     }
-  });
+
+    if (!initialData) {
+      fetchData();
+    }
+  }, [initialData]);
+
   return (
-    <div className={styles.container} {...bind()}>
-      <div className="top">
-        <span className={styles.border}>
-          <h1 className={styles.title}>Team</h1>
-        </span>
-        <div className={styles.teamGrid}>
-          <div>
-            <div>
-              <div>Julia Arnhold</div>
-              <div className={styles.role}>Managing Partner</div>
-              <div className={styles.socialIcons}>
-                <Link
-                  href={"https://www.linkedin.com/in/juliaarnhold/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles.icon}>
-                    <LinkedInIcon />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div>Kelsey Rudin</div>
-              <div className={styles.role}>Managing Partner</div>
-              <div className={styles.socialIcons}>
-                <Link
-                  href={"https://www.linkedin.com/in/kelsey-rudin-41623743/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles.icon}>
-                    <LinkedInIcon />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>Lauren Singer</div>
-            <div className={styles.role}>Managing Partner</div>
-            <div className={styles.socialIcons}>
-              <Link
-                href={"https://www.linkedin.com/in/lauren-singer-21336152/"}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className={styles.icon}>
-                  <LinkedInIcon />
-                </span>
-              </Link>
-              <Link
-                href={
-                  "https://twitter.com/Trashis4Tossers?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className={styles.icon}>
-                  <TwitterIcon />
-                </span>
-              </Link>
-              <Link
-                href={"https://www.instagram.com/trashisfortossers/?hl=en"}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className={styles.icon}>
-                  <InstagramIcon />
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.arrowContainer}>
-        <Return size={50} />
-      </div>
-      <div {...bind()} className={styles.swipe}></div>
-    </div>
+    <>
+      <SliceZone slices={page?.data?.slices} components={components} />
+    </>
   );
 };
 
 export default Team;
+
