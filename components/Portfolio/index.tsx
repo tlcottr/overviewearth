@@ -385,7 +385,7 @@ const Portfolio = (props: Props) => {
                     </div>
                   </div>
                   <div className={styles.textContainerMobile}>
-                    <p>Regenerative Framing Credit Financing</p>
+                    <p>Regenerative Farming Credit Financing</p>
                   </div>
                 </>
               ) : (
@@ -398,7 +398,7 @@ const Portfolio = (props: Props) => {
                     />
                   </div>
                   <div className={styles.textContainer}>
-                    <p>Regenerative Framing Credit Financing</p>
+                    <p>Regenerative Farming Credit Financing</p>
                   </div>
                 </div>
               )}
