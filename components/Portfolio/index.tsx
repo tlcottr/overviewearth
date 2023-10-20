@@ -139,41 +139,6 @@ const Portfolio = (props: Props) => {
                 </div>
               )}
             </Link>
-            <Link href={"https://www.emvolon.com/"} rel="" target="_blank">
-              {isMobile ? (
-                <>
-                  <div className={styles.portfolioItem}>
-                    <div className={styles.imageContainerMobileLong}>
-                      <Image
-                        height={10}
-                        width={75}
-                        src={"/static/images/emvolon.png"}
-                      />
-                    </div>
-                  </div>
-                  <div className={styles.textContainerMobile}>
-                    <p>
-                      Converting Wasted Resources Into Valuable Liquid Chemicals
-                    </p>
-                  </div>
-                </>
-              ) : (
-                <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainerLong}>
-                    <Image
-                      height={10}
-                      width={75}
-                      src={"/static/images/emvolon.png"}
-                    />
-                  </div>
-                  <div className={styles.textContainer}>
-                    <p>
-                      Converting Wasted Resources Into Valuable Liquid Chemicals
-                    </p>
-                  </div>
-                </div>
-              )}
-            </Link>
             <Link href={"https://goodmylk.co/"} rel="" target="_blank">
               {isMobile ? (
                 <>
