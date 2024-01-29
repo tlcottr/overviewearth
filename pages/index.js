@@ -12,7 +12,7 @@ export default function Home({ page }) {
         <meta name="title" content="Overview" />
         <meta
           name="description"
-          content="At Overview, we invest in climate change solutions at the earliest stages.
+          content="Overview invests in businesses mitigating methane and other super pollutants at the earliest stages.
 "
         />
         <meta property="og:type" content="website" />
@@ -20,7 +20,7 @@ export default function Home({ page }) {
         <meta property="og:title" content="Overview" />
         <meta
           property="og:description"
-          content="At Overview, we invest in climate change solutions at the earliest stages.
+          content="Overview invests in businesses mitigating methane and other super pollutants at the earliest stages.
 "
         />
         <meta property="og:image:width" content="1200" />
@@ -37,7 +37,7 @@ export default function Home({ page }) {
         <meta property="twitter:title" content="Overview" />
         <meta
           property="twitter:description"
-          content="At Overview, we invest in climate change solutions at the earliest stages.
+          content="Overview invests in businesses mitigating methane and other super pollutants at the earliest stages.
 "
         />
         <meta
