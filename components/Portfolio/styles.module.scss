@@ -17,6 +17,7 @@
   line-height: 3rem;
   text-align: left;
   width: 100%;
+
 }
 .navContainer {
   display: flex;
@@ -326,5 +327,9 @@
   .portfolioItem:hover {
     min-height: 108px;
     min-width: 200px;
+  }
+  .portfolioHolder {
+    height: 65vh;
+    overflow: scroll;
   }
 }
