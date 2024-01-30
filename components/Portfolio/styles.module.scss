@@ -328,10 +328,8 @@
     min-height: 108px;
     min-width: 200px;
   }
-}
-@media screen and (max-width: 1023px), screen and (max-height: 700px) {
   .portfolioHolder {
-    height: 40dvh;
+    height: 65vh;
     overflow: scroll;
   }
 }
