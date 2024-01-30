@@ -77,6 +77,37 @@ const Portfolio = (props: Props) => {
         </div>
         <div className={styles.portfolioHolder}>
           <div className={styles.portfolioGrid} {...bind()}>
+            <Link href={"https://www.alga.bio/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/alga2.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>Eliminating enteric methane emissions at-scale</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/alga2.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>Eliminating enteric methane emissions at-scale</p>
+                  </div>
+                </div>
+              )}
+            </Link>
             <Link
               href={"https://www.anthropogenic.com/"}
               rel=""
@@ -108,37 +139,6 @@ const Portfolio = (props: Props) => {
                   </div>
                   <div className={styles.textContainer}>
                     <p>real-time impact monitoring</p>
-                  </div>
-                </div>
-              )}
-            </Link>
-            <Link href={"https://www.alga.bio/"} rel="" target="_blank">
-              {isMobile ? (
-                <>
-                  <div className={styles.portfolioItem}>
-                    <div className={styles.imageContainerMobile}>
-                      <Image
-                        height={10}
-                        width={75}
-                        src={"/static/images/alga2.png"}
-                      />
-                    </div>
-                  </div>
-                  <div className={styles.textContainerMobile}>
-                    <p>Eliminating enteric methane emissions at-scale</p>
-                  </div>
-                </>
-              ) : (
-                <div className={styles.portfolioItem}>
-                  <div className={styles.imageContainer}>
-                    <Image
-                      height={10}
-                      width={75}
-                      src={"/static/images/alga2.png"}
-                    />
-                  </div>
-                  <div className={styles.textContainer}>
-                    <p>Eliminating enteric methane emissions at-scale</p>
                   </div>
                 </div>
               )}
@@ -345,11 +345,7 @@ const Portfolio = (props: Props) => {
                 </div>
               )}
             </Link>
-            <Link
-              href={"https://www.mittilabs.earth"}
-              rel=""
-              target="_blank"
-            >
+            <Link href={"https://www.mittilabs.earth"} rel="" target="_blank">
               {isMobile ? (
                 <>
                   <div className={styles.portfolioItem}>

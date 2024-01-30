@@ -132,8 +132,8 @@ const DesktopWrapper: React.FC = ({ teamData, aboutData }) => {
                 transition: "opacity 2s linear .7s",
               }}
             >
-              At Overview, we invest in climate change solutions at the earliest
-              stages.
+              Overview invests in businesses mitigating methane and other super
+              pollutants at the earliest stages.
             </h1>
           </div>
         )}
