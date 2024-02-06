@@ -23,18 +23,18 @@ const Portfolio = (props: Props) => {
     setShowContact,
   } = useContext(NavContext);
 
-  const handleSwipeLeft = () => {
-    setShowAbout(false);
-    setShowPortfolio(!showPortfolio);
-    setShowTeam(false);
-    setShowContact(false);
-  };
+  // const handleSwipeLeft = () => {
+  //   setShowAbout(false);
+  //   setShowPortfolio(!showPortfolio);
+  //   setShowTeam(false);
+  //   setShowContact(false);
+  // };
 
-  const bind = useDrag(({ swipe: [swipeX] }) => {
-    if (swipeX <= 0.1 && isMobile) {
-      handleSwipeLeft();
-    }
-  });
+  // const bind = useDrag(({ swipe: [swipeX] }) => {
+  //   if (swipeX <= 0.1 && isMobile) {
+  //     handleSwipeLeft();
+  //   }
+  // });
 
   const handleCopy = () => {
     navigator.clipboard.writeText("contact@overview.earth");
@@ -56,7 +56,7 @@ const Portfolio = (props: Props) => {
   }, []);
   return (
     <div className={styles.navContainer}>
-      <div className={styles.container} {...bind()}>
+      <div className={styles.container} /*{...bind()}*/>
         <div className={styles.portfolioTop}>
           <span className={styles.border}>
             <h1 className={styles.title}>Portfolio</h1>
@@ -76,7 +76,7 @@ const Portfolio = (props: Props) => {
           </div>
         </div>
         <div className={styles.portfolioHolder}>
-          <div className={styles.portfolioGrid} {...bind()}>
+          <div className={styles.portfolioGrid} /*{...bind()}*/>
             <Link href={"https://www.alga.bio/"} rel="" target="_blank">
               {isMobile ? (
                 <>
@@ -533,7 +533,7 @@ const Portfolio = (props: Props) => {
             </Link>
           </div>
         </div>
-        <div {...bind()} className={styles.swipe}></div>
+        <div /*{...bind()}*/ className={styles.swipe}></div>
       </div>
       <div className={styles.arrowContainer}>
         <Return size={50} />
