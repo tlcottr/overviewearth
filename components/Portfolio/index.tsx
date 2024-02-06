@@ -85,7 +85,7 @@ const Portfolio = (props: Props) => {
                       <Image
                         height={10}
                         width={75}
-                        src={"/static/images/alga.png"}
+                        src={"/static/images/alga2.png"}
                       />
                     </div>
                   </div>
@@ -99,11 +99,46 @@ const Portfolio = (props: Props) => {
                     <Image
                       height={10}
                       width={75}
-                      src={"/static/images/alga.png"}
+                      src={"/static/images/alga2.png"}
                     />
                   </div>
                   <div className={styles.textContainer}>
                     <p>Eliminating enteric methane emissions at-scale</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <Link
+              href={"https://www.anthropogenic.com/"}
+              rel=""
+              target="_blank"
+            >
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobileLong}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/anthropogenic.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>real-time impact monitoring</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainerLonger}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/anthropogenic.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>real-time impact monitoring</p>
                   </div>
                 </div>
               )}
@@ -135,6 +170,72 @@ const Portfolio = (props: Props) => {
                   </div>
                   <div className={styles.textContainer}>
                     <p>a single payment platform for EV drivers and fleets</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <Link href={"https://www.elio.earth/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/elio.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>AI co-pilot for sustainable drug manufacturing</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      height={10}
+                      width={65}
+                      src={"/static/images/elio.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>AI co-pilot for sustainable drug manufacturing</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <Link href={"https://www.emvolon.com/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobileLong}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/emvolon.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>
+                      Converting Wasted Resources Into Valuable Liquid Chemicals
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainerLong}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/emvolon.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>
+                      Converting Wasted Resources Into Valuable Liquid Chemicals
+                    </p>
                   </div>
                 </div>
               )}
@@ -222,7 +323,9 @@ const Portfolio = (props: Props) => {
                     </div>
                   </div>
                   <div className={styles.textContainerMobile}>
-                    <p>Making Soil Intelligence More Accurate And Less Expensive</p>
+                    <p>
+                      Making Soil Intelligence More Accurate And Less Expensive
+                    </p>
                   </div>
                 </>
               ) : (
@@ -235,16 +338,14 @@ const Portfolio = (props: Props) => {
                     />
                   </div>
                   <div className={styles.textContainer}>
-                    <p>Making Soil Intelligence More Accurate And Less Expensive</p>
+                    <p>
+                      Making Soil Intelligence More Accurate And Less Expensive
+                    </p>
                   </div>
                 </div>
               )}
             </Link>
-            <Link
-              href={"https://www.linkedin.com/company/mitti-labs/about/"}
-              rel=""
-              target="_blank"
-            >
+            <Link href={"https://www.mittilabs.earth"} rel="" target="_blank">
               {isMobile ? (
                 <>
                   <div className={styles.portfolioItem}>
@@ -306,6 +407,37 @@ const Portfolio = (props: Props) => {
                 </div>
               )}
             </Link>
+            <Link href={"https://carboninsurance.co/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobile}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/oka.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>carbon credit insurance</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      height={10}
+                      width={60}
+                      src={"/static/images/oka.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>carbon credit insurance</p>
+                  </div>
+                </div>
+              )}
+            </Link>
             <Link href={"https://www.reynko.com/"} rel="" target="_blank">
               {isMobile ? (
                 <>
@@ -350,7 +482,7 @@ const Portfolio = (props: Props) => {
                     </div>
                   </div>
                   <div className={styles.textContainerMobile}>
-                    <p>Regenerative Farming Credit Financing</p>
+                    <p>Regenerative farming Credit Financing</p>
                   </div>
                 </>
               ) : (
@@ -363,7 +495,38 @@ const Portfolio = (props: Props) => {
                     />
                   </div>
                   <div className={styles.textContainer}>
-                    <p>Regenerative Farming Credit Financing</p>
+                    <p>Regenerative farming Credit Financing</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <Link href={"https://www.texture.energy/"} rel="" target="_blank">
+              {isMobile ? (
+                <>
+                  <div className={styles.portfolioItem}>
+                    <div className={styles.imageContainerMobileLong}>
+                      <Image
+                        height={10}
+                        width={75}
+                        src={"/static/images/texture.png"}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.textContainerMobile}>
+                    <p>distributed energy in one place</p>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.portfolioItem}>
+                  <div className={styles.imageContainerLong}>
+                    <Image
+                      height={10}
+                      width={75}
+                      src={"/static/images/texture.png"}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p>distributed energy in one place</p>
                   </div>
                 </div>
               )}

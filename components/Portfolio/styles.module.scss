@@ -17,6 +17,7 @@
   line-height: 3rem;
   text-align: left;
   width: 100%;
+
 }
 .navContainer {
   display: flex;
@@ -66,6 +67,9 @@
 .portfolioItem:hover .imageContainerLong {
   display: none; /* hide the image container on hover */
 }
+.portfolioItem:hover .imageContainerLonger {
+  display: none; /* hide the image container on hover */
+}
 .portfolioItem:hover .imageContainerTall {
   display: none; /* hide the image container on hover */
 }
@@ -99,6 +103,9 @@
 }
 .imageContainerLong img {
   min-width: 115px;
+}
+.imageContainerLonger img {
+  min-width: 140px;
 }
 .textContainer {
   display: none; /* hide the text container by default */
@@ -144,6 +151,9 @@
   background-color: transparent;
 }
 .imageContainerMobileLong:hover {
+  background-color: transparent;
+}
+.imageContainerMobileLonger:hover {
   background-color: transparent;
 }
 .email {
@@ -203,6 +213,14 @@
     align-items: center;
   }
   .imageContainerMobileLong {
+    /* set width and height of the container to match the image size */
+    width: 80px;
+    height: 40px;
+    display: flex; /* add flexbox to center child elements */
+    justify-content: center;
+    align-items: center;
+  }
+  .imageContainerMobileLonger {
     /* set width and height of the container to match the image size */
     width: 80px;
     height: 40px;
@@ -309,5 +327,9 @@
   .portfolioItem:hover {
     min-height: 108px;
     min-width: 200px;
+  }
+  .portfolioHolder {
+    height: 65vh;
+    overflow: scroll;
   }
 }
