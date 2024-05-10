@@ -44,3 +44,21 @@ video {
 }
 
 // COLOR TOKENS
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  transition: background-color 5000s ease-in-out 0s;
+  color: rgb(0, 0, 0);
+  -webkit-font-family: "Inconsolata", serif;
+   -webkit-color: #ddd7c9;
+   -webkit-letter-spacing: 0.05rem;
+   -webkit-font-size: 0.75rem;
+}

@@ -1,8 +1,18 @@
 .header {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 100;
+}
+
+.header2 {
   font-family: "Inconsolata", serif;
   color: #ddd7c9;
   letter-spacing: 0.05rem;
   font-size: 0.75rem;
   transition: all 1s ease-in-out;
   z-index: 100;
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
