@@ -41,7 +41,7 @@ const Header = (props: Props) => {
 
   return (
     <div className={`${styles.header} ${isFadeIn ? styles.fadeIn : ""}`}>
-      <div className="absolute top w-full">
+      <div className="absolute top-0 left-0 right-0 w-full">
         <div className="p-7 flex flex-row-reverse">
           <div className={styles.header2}>
             <div
