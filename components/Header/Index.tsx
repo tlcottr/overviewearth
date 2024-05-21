@@ -47,7 +47,7 @@ const Header = (props: Props) => {
             >
               {isSubscribed ? (
                 <span className="px-2 w-full flex flex-row items-center justify-center">
-                  Thanks for signing up
+                  {isMobile ? "Thank you" : "Thanks for singing up"}
                 </span>
               ) : isModalOpen ? (
                 <form
