@@ -42,7 +42,7 @@ const Header = (props: Props) => {
               className={`cursor-pointer bg-[#EBE9DC] text-black uppercase flex flex-row justify-between items-center ${
                 isModalOpen
                   ? "h-[24px] md:h-[30px] w-full md:w-[400px] rounded-[4px] justify-between items-center"
-                  : "h-[24px] md:h-[30px] w-[130px] md:w-[170px] rounded-[4px] hover:opacity-[75%]"
+                  : "h-[24px] md:h-[30px] w-[130px] md:w-[170px] rounded-[4px] font-semibold hover:opacity-[75%]"
               } transition-all ${isSubscribed ? "pointer-events-none" : ""}`}
             >
               {isSubscribed ? (
