@@ -42,7 +42,7 @@ const Header = (props: Props) => {
   return (
     <div className={`${styles.header} ${isFadeIn ? styles.fadeIn : ""}`}>
       <div className="absolute top-0 left-0 right-0 w-full">
-        <div className="p-7 flex flex-row-reverse">
+        <div className="p-[1rem] md:p-7 flex flex-row font-inconsolata w-full">
           <div className={styles.header2}>
             <div
               onClick={() => {
@@ -50,8 +50,8 @@ const Header = (props: Props) => {
               }}
               className={`cursor-pointer bg-[#EBE9DC] text-black uppercase flex flex-row justify-between items-center ${
                 isModalOpen
-                  ? "h-[30px] w-[400px] rounded-[4px] justify-between items-center"
-                  : "h-[30px] w-[170px] rounded-[4px] font-bold hover:opacity-[75%]"
+                  ? "h-[24px] md:h-[30px] w-full md:w-[400px] rounded-[4px] justify-between items-center"
+                  : "h-[24px] md:h-[30px] w-[130px] md:w-[170px] rounded-[4px] font-bold hover:opacity-[75%]"
               } transition-all ${isSubscribed ? "pointer-events-none" : ""}`}
             >
               {isSubscribed ? (
@@ -74,7 +74,7 @@ const Header = (props: Props) => {
                     onClick={email ? undefined : toggleModal}
                     className={`text-white h-full px-2 font-bold rounded-r-[4px] transition-all expo-out ${
                       email
-                        ? "bg-[#2798FF] hover:bg-[#1F76C6]"
+                        ? "bg-[#8D8D8C] hover:bg-[#7B7B7B]"
                         : "bg-[#B1B0AA] hover:bg-[#7C8185]"
                     }`}
                   >
@@ -82,7 +82,7 @@ const Header = (props: Props) => {
                   </button>
                 </form>
               ) : (
-                <span className="px-2 w-full flex flex-row items-center justify-center">
+                <span className="px-2 w-full flex flex-row items-center justify-center text-[0.55rem] md:text-xs select-none">
                   Join our newsletter ↗
                 </span>
               )}
