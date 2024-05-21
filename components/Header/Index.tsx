@@ -5,37 +5,28 @@ import { isMobile } from "react-device-detect";
 type Props = {};
 
 const Header = (props: Props) => {
-  // State to control the modal visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // State to track the input value
   const [email, setEmail] = useState("");
-  // State to track subscription status
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isFadeIn, setIsFadeIn] = useState(false);
 
-  // Function to toggle the modal state (only if not subscribed)
   const toggleModal = () => {
     if (!isSubscribed) {
       setIsModalOpen(!isModalOpen);
     }
   };
 
-  // Function to handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate successful subscription (replace this with your actual submission logic)
-    setIsSubscribed(true); // Mark the subscription as successful
-    setEmail(""); // Optionally clear the email input
-    setIsModalOpen(false); // Automatically close the modal
+    setIsSubscribed(true);
+    setEmail("");
+    setIsModalOpen(false);
   };
 
   useEffect(() => {
-    const timeoutId = setTimeout(
-      () => {
-        setIsFadeIn(true);
-      },
-      isMobile ? 9000 : 11000
-    );
+    const timeoutId = setTimeout(() => {
+      setIsFadeIn(true);
+    }, isMobile ? 9000 : 11000);
     return () => clearTimeout(timeoutId);
   }, []);
 
@@ -51,7 +42,7 @@ const Header = (props: Props) => {
               className={`cursor-pointer bg-[#EBE9DC] text-black uppercase flex flex-row justify-between items-center ${
                 isModalOpen
                   ? "h-[24px] md:h-[30px] w-full md:w-[400px] rounded-[4px] justify-between items-center"
-                  : "h-[24px] md:h-[30px] w-[130px] md:w-[170px] rounded-[4px] font-bold hover:opacity-[75%]"
+                  : "h-[24px] md:h-[30px] w-[140px] md:w-[170px] rounded-[4px] hover:opacity-[75%]"
               } transition-all ${isSubscribed ? "pointer-events-none" : ""}`}
             >
               {isSubscribed ? (

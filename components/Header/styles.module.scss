@@ -2,6 +2,9 @@
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: 100;
+  font-family: "Inconsolata", serif;
+  color: var(--text-dark);
+  letter-spacing: 0.05rem;
 }
 
 .header2 {
