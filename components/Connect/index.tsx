@@ -41,6 +41,7 @@ const Contact = (props: Props) => {
       handleSwipeDown();
     }
   });
+  
   return (
     <>
       <div className={styles.arrowContainer}>
