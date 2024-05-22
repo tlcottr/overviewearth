@@ -8,7 +8,12 @@ import NavContext from "../NavContext";
 import styles from "./styles.module.scss";
 import Video from "../Video";
 
-const MobileWrapper: React.FC = () => {
+interface Props {
+  teamData: any; // Replace 'any' with the appropriate type for 'teamData'
+  aboutData: any; // Replace 'any' with the appropriate type for 'aboutData'
+}
+
+const MobileWrapper: React.FC<Props> = ({ teamData, aboutData }) => {
   const navContext = useContext(NavContext) as {
     showAbout: boolean;
     showContact: boolean;
@@ -80,7 +85,7 @@ const MobileWrapper: React.FC = () => {
                 opacity: navContext.showAbout ? 1 : 0,
               }}
             >
-              <About />
+              <About initialData={aboutData} />
             </div>
             <div
               className={styles.portfolioContainer}
@@ -102,7 +107,7 @@ const MobileWrapper: React.FC = () => {
                 opacity: navContext.showTeam ? 1 : 0,
               }}
             >
-              <Team />
+              <Team initialData={teamData} />
             </div>
             <div
               className={styles.contactContainer}

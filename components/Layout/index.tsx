@@ -31,7 +31,9 @@ const Layout = ({ children }: Props) => {
       <div className={styles.container}>
         <Header />
         {children}
-        <Footer />
+        <Footer onClose={function (): void {
+          throw new Error("Function not implemented.");
+        } } />
       </div>
     );
   }
