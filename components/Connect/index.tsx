@@ -6,7 +6,6 @@ import Return from "./Return";
 import Link from "next/link";
 import { useDrag } from "@use-gesture/react";
 import { isMobile } from "react-device-detect";
-import NewsletterSignup from "../NewsletterSignup";
 
 type Props = {};
 
@@ -41,7 +40,7 @@ const Contact = (props: Props) => {
       handleSwipeDown();
     }
   });
-  
+
   return (
     <>
       <div className={styles.arrowContainer}>
@@ -92,7 +91,7 @@ const Contact = (props: Props) => {
             </div>
           </div>
         </div>
-        <div {...bind()} className={styles.swipe}></div>
+        <div /*{...bind()}*/ className={styles.swipe}></div>
       </div>
     </>
   );
