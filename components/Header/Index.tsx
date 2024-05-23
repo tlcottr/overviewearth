@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import { isMobile } from "react-device-detect";
-import { subscribe } from "../../pages/api/subscribeService";
 import { ClipLoader } from "react-spinners";
-import dotenv from "dotenv";
+import axios from 'axios';
 
 type Props = {};
 
@@ -21,19 +20,32 @@ const Header = (props: Props) => {
     }
   };
 
+  const subscribe = async (email: string) => {
+    try {
+      const response = await axios.post('/api/subscribe', { email });
+      if (response.status === 200) {
+        setIsSubscribed(true);
+        setEmail("");
+        setIsModalOpen(false);
+        setTimeout(() => {
+          setIsSubscribed(false);
+        }, 3000); // Reset after 3 seconds
+      } else {
+        throw new Error(response.data.message);
+      }
+    } catch (error) {
+      throw new Error(error.message || "Subscription failed. Please try again.");
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError(null);
     try {
       await subscribe(email);
-      setIsSubscribed(true);
-      setEmail("");
-      setIsModalOpen(false);
-      setTimeout(() => {
-        setIsSubscribed(false);
-      }, 3000); // Reset after 3 seconds
     } catch (error) {
-      setError("Subscription failed. Please try again.");
+      setError(error.message);
       console.error(error);
     } finally {
       setIsLoading(false);
@@ -103,7 +115,7 @@ const Header = (props: Props) => {
                       "Submit"
                     ) : (
                       "Close"
-                    )}{" "}
+                    )}
                   </button>
                 </form>
               ) : (
