@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { isMobile } from "react-device-detect";
 import { subscribe } from "../../pages/api/subscribeService";
 import { ClipLoader } from "react-spinners";
+import dotenv from "dotenv";
 
 type Props = {};
 
@@ -62,12 +63,12 @@ const Header = (props: Props) => {
                 error ? "bg-red-50" : "bg-[#EBE9DC]"
               } text-black uppercase flex flex-row justify-between items-center transition-all expo-out ${
                 isModalOpen
-                  ? "h-[24px] md:h-[30px] w-full md:w-[400px] rounded-[4px] justify-between items-center"
-                  : "h-[24px] md:h-[30px] w-[130px] md:w-[170px] rounded-[4px] font-medium hover:opacity-[75%]"
+                  ? "h-[26px] md:h-[30px] w-full md:w-[400px] rounded-[4px] justify-between items-center"
+                  : `h-[26px] md:h-[30px] w-[130px] md:w-[170px] rounded-[4px] font-medium hover:opacity-[75%]`
               } transition-all ${isSubscribed ? "pointer-events-none" : ""}`}
             >
               {isSubscribed ? (
-                <span className="px-2 w-full flex flex-row items-center justify-center">
+                <span className="px-2 w-full flex flex-row items-center justify-center text-[0.55rem] md:text-xs">
                   Thanks for signing up
                 </span>
               ) : isModalOpen ? (
@@ -76,6 +77,7 @@ const Header = (props: Props) => {
                   onSubmit={handleSubmit}
                 >
                   <input
+                    name="email"
                     placeholder="Enter your email"
                     className="w-full bg-transparent outline-none focus:outline-none px-2 rounded-l-[4px]"
                     value={email}

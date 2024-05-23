@@ -1,4 +1,6 @@
-// lib/subscribeService.ts
+import dotenv from "dotenv";
+dotenv.config();
+
 export interface SubscriptionData {
   email: string;
   reactivate_existing?: boolean;
@@ -12,14 +14,13 @@ export interface SubscriptionData {
 
 export const subscribe = async (email: string) => {
   const url =
-    "https://stoplight.io/mocks/beehiiv/v2/104190750/publications/pub_95dd320e-9772-416a-a483-39bd4515697e/subscriptions";
+    "https://api.beehiiv.com/v2/publications/pub_95dd320e-9772-416a-a483-39bd4515697e/subscriptions";
   const options = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      Authorization:
-        "Bearer 7Vo3IbT1s9Dk6oAFVvpSth5bMKAK7KiUNRiLNFxbRTAHLgxCmLh5LqZuErPjfD7B",
+      Authorization: `Bearer ${process.env.BEEHIIV_API_KEY}`,
     },
     body: JSON.stringify({
       email,

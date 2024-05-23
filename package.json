@@ -22,6 +22,7 @@
     "@types/react-touch": "^1.8.4",
     "@use-gesture/react": "^10.2.26",
     "concurrently": "^8.2.1",
+    "dotenv": "^16.4.5",
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
     "framer-motion": "^11.2.5",
