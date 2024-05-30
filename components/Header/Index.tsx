@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import { isMobile } from "react-device-detect";
 import { ClipLoader } from "react-spinners";
-import axios from 'axios';
+import axios from "axios";
 
 type Props = {};
 
@@ -22,7 +22,7 @@ const Header = (props: Props) => {
 
   const subscribe = async (email: string) => {
     try {
-      const response = await axios.post('/api/subscribe', { email });
+      const response = await axios.post("/api/subscribe", { email });
       if (response.status === 200) {
         setIsSubscribed(true);
         setEmail("");
@@ -34,7 +34,9 @@ const Header = (props: Props) => {
         throw new Error(response.data.message);
       }
     } catch (error) {
-      throw new Error(error.message || "Subscription failed. Please try again.");
+      throw new Error(
+        error.message || "Subscription failed. Please try again."
+      );
     }
   };
 
@@ -64,9 +66,11 @@ const Header = (props: Props) => {
 
   return (
     <div className={`${styles.header} ${isFadeIn ? styles.fadeIn : ""}`}>
-      <div className="absolute top-0 left-0 right-0 w-full">
-        <div className="p-[1rem] md:p-7 flex flex-row font-inconsolata w-full">
-          <div className={styles.header2}>
+      <div className={`absolute right-0 ${isModalOpen ? "left-0" : ""}`}>
+        <div className="p-[1rem] md:p-7 flex flex-row-reverse font-inconsolata">
+          <div
+            className={`z-[100] w-full flex flex-row justify-end md:z-auto md:w-auto md:flex-row-reverse md:justify-end ${styles.header2}`}
+          >
             <div
               onClick={() => {
                 if (!isSubscribed && !isModalOpen) toggleModal();
@@ -76,7 +80,7 @@ const Header = (props: Props) => {
               } text-black uppercase flex flex-row justify-between items-center transition-all expo-out ${
                 isModalOpen
                   ? "h-[26px] md:h-[30px] w-full md:w-[400px] rounded-[4px] justify-between items-center"
-                  : `h-[26px] md:h-[30px] w-[130px] md:w-[170px] rounded-[4px] font-medium hover:opacity-[75%]`
+                  : `h-[26px] md:h-[30px] w-[80px] md:w-[170px] rounded-[4px] font-medium hover:opacity-[75%]`
               } transition-all ${isSubscribed ? "pointer-events-none" : ""}`}
             >
               {isSubscribed ? (
@@ -120,7 +124,8 @@ const Header = (props: Props) => {
                 </form>
               ) : (
                 <span className="px-2 w-full flex flex-row items-center justify-center text-[0.55rem] md:text-xs select-none">
-                  Join our newsletter ↗
+                  <span className="block md:hidden">Newsletter ↗</span>
+                  <span className="hidden md:block">Join our newsletter ↗</span>
                 </span>
               )}
             </div>
