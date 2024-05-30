@@ -1,0 +1,26 @@
+.header {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 100;
+  font-family: "Inconsolata", serif;
+  color: var(--text-dark);
+  letter-spacing: 0.05rem;
+}
+
+.header2 {
+  font-family: "Inconsolata", serif;
+  color: #ddd7c9;
+  letter-spacing: 0.05rem;
+  font-size: 0.75rem;
+  transition: all 1s ease-in-out;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}

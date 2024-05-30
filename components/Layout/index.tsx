@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Footer";
 import styles from "./styles.module.scss";
 import OfflineFooter from "../OfflineFooter";
+import Header from "../Header/Index";
 
 type Props = { children: React.ReactNode };
 const OfflineLayout = () => {
@@ -28,8 +29,11 @@ const Layout = ({ children }: Props) => {
   } else {
     return (
       <div className={styles.container}>
+        <Header />
         {children}
-        <Footer />
+        <Footer onClose={function (): void {
+          throw new Error("Function not implemented.");
+        } } />
       </div>
     );
   }

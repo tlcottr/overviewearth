@@ -11,6 +11,10 @@ export default function Home({ page }) {
         <title>Overview</title>
         <meta name="title" content="Overview" />
         <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <meta
           name="description"
           content="Overview invests in businesses mitigating methane and other super pollutants at the earliest stages.
 "

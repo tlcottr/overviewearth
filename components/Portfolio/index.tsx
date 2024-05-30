@@ -23,18 +23,18 @@ const Portfolio = (props: Props) => {
     setShowContact,
   } = useContext(NavContext);
 
-  const handleSwipeLeft = () => {
-    setShowAbout(false);
-    setShowPortfolio(!showPortfolio);
-    setShowTeam(false);
-    setShowContact(false);
-  };
+  // const handleSwipeLeft = () => {
+  //   setShowAbout(false);
+  //   setShowPortfolio(!showPortfolio);
+  //   setShowTeam(false);
+  //   setShowContact(false);
+  // };
 
-  const bind = useDrag(({ swipe: [swipeX] }) => {
-    if (swipeX <= 0.1 && isMobile) {
-      handleSwipeLeft();
-    }
-  });
+  // const bind = useDrag(({ swipe: [swipeX] }) => {
+  //   if (swipeX <= 0.1 && isMobile) {
+  //     handleSwipeLeft();
+  //   }
+  // });
 
   const handleCopy = () => {
     navigator.clipboard.writeText("contact@overview.earth");
@@ -56,7 +56,7 @@ const Portfolio = (props: Props) => {
   }, []);
   return (
     <div className={styles.navContainer}>
-      <div className={styles.container} {...bind()}>
+      <div className={styles.container} /*{...bind()}*/>
         <div className={styles.portfolioTop}>
           <span className={styles.border}>
             <h1 className={styles.title}>Portfolio</h1>
@@ -76,7 +76,7 @@ const Portfolio = (props: Props) => {
           </div>
         </div>
         <div className={styles.portfolioHolder}>
-          <div className={styles.portfolioGrid} {...bind()}>
+          <div className={styles.portfolioGrid} /*{...bind()}*/>
             <Link href={"https://www.alga.bio/"} rel="" target="_blank">
               {isMobile ? (
                 <>
@@ -86,6 +86,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/alga2.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -100,6 +101,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/alga2.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -121,6 +123,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/anthropogenic.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -135,6 +138,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/anthropogenic.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -152,6 +156,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/bluedot.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -166,6 +171,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/bluedot.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -183,6 +189,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/elio.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -197,6 +204,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={65}
                       src={"/static/images/elio.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -214,6 +222,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/emvolon.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -230,6 +239,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/emvolon.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -249,6 +259,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/mylk.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -263,6 +274,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/mylk.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -284,6 +296,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/highwood.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -298,6 +311,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/highwood.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -319,6 +333,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/miraterra.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -335,6 +350,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/miraterra.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -354,6 +370,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/mittilabs.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -368,6 +385,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/mittilabs.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -385,6 +403,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/mojave.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -399,6 +418,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/mojave.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -416,6 +436,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/oka.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -430,6 +451,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={60}
                       src={"/static/images/oka.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -447,6 +469,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/reynko.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -461,6 +484,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/reynko.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -478,6 +502,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/steward.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -492,6 +517,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/steward.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -509,6 +535,7 @@ const Portfolio = (props: Props) => {
                         height={10}
                         width={75}
                         src={"/static/images/texture.png"}
+                        alt="logo"
                       />
                     </div>
                   </div>
@@ -523,6 +550,7 @@ const Portfolio = (props: Props) => {
                       height={10}
                       width={75}
                       src={"/static/images/texture.png"}
+                      alt="logo"
                     />
                   </div>
                   <div className={styles.textContainer}>
@@ -533,7 +561,7 @@ const Portfolio = (props: Props) => {
             </Link>
           </div>
         </div>
-        <div {...bind()} className={styles.swipe}></div>
+        <div /*{...bind()}*/ className={styles.swipe}></div>
       </div>
       <div className={styles.arrowContainer}>
         <Return size={50} />

@@ -22,7 +22,11 @@ export const NavContext = createContext<NavContextType>({
   setShowContact: () => {},
 });
 
-export const NavProvider: React.FC = ({ children }) => {
+interface Props {
+  children: any;
+}
+
+export const NavProvider: React.FC<Props> = ({ children }) => {
   const [showAbout, setShowAbout] = useState(false);
   const [showPortfolio, setShowPortfolio] = useState(false);
   const [showTeam, setShowTeam] = useState(false);
